@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fec7b4656524ed4b5c8d5d9b5d930abb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fec7b4656524ed4b5c8d5d9b5d930abb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fec7b4656524ed4b5c8d5d9b5d930abb = L.map(
+                "map_fec7b4656524ed4b5c8d5d9b5d930abb",
+                {
+                    center: [10.0, 106.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_736a01f56c5ef19de63a94b1f1c805cf = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var marker_3763ab3ea81d968119e34b1aae0b05ae = L.marker(
+                [10.784116744995117, 106.65540313720703],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_029839df711e20fc70e51b1b06fc5008 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3763ab3ea81d968119e34b1aae0b05ae.setIcon(icon_029839df711e20fc70e51b1b06fc5008);
+        
+    
+        var popup_fdf172460f453d76fe37bc9d1c02e0ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd45a940f906d23b8a92c1d430260905 = $(`<div id="html_bd45a940f906d23b8a92c1d430260905" style="width: 100.0%; height: 100.0%;">Vehicle Number: 52LD3962 Location: (10.784116744995117, 106.65540313720703)</div>`)[0];
+                popup_fdf172460f453d76fe37bc9d1c02e0ac.setContent(html_bd45a940f906d23b8a92c1d430260905);
+            
+        
+
+        marker_3763ab3ea81d968119e34b1aae0b05ae.bindPopup(popup_fdf172460f453d76fe37bc9d1c02e0ac)
+        ;
+
+        
+    
+    
+            var marker_a94733ca902a1ab279acd553ebc6a34f = L.marker(
+                [10.802494049072266, 106.75247192382812],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_3c45e5ac933919436c5de303acf3a423 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a94733ca902a1ab279acd553ebc6a34f.setIcon(icon_3c45e5ac933919436c5de303acf3a423);
+        
+    
+        var popup_5704b16826df517fa284ef42e2c3ec6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d3112354a06c403ea32b57195c8631c = $(`<div id="html_5d3112354a06c403ea32b57195c8631c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-27846 Location: (10.802494049072266, 106.75247192382812)</div>`)[0];
+                popup_5704b16826df517fa284ef42e2c3ec6e.setContent(html_5d3112354a06c403ea32b57195c8631c);
+            
+        
+
+        marker_a94733ca902a1ab279acd553ebc6a34f.bindPopup(popup_5704b16826df517fa284ef42e2c3ec6e)
+        ;
+
+        
+    
+    
+            var marker_448654bdeb10bd101ac859e00483597d = L.marker(
+                [10.78405475616455, 106.65534210205078],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_75b317a8d035a949a3f07d5dea9b5bb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_448654bdeb10bd101ac859e00483597d.setIcon(icon_75b317a8d035a949a3f07d5dea9b5bb8);
+        
+    
+        var popup_c821af1bb85b5bf57fb322b2b86ccb76 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9377a8f58e0bf62ff3cef14a63318ef = $(`<div id="html_e9377a8f58e0bf62ff3cef14a63318ef" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00582 Location: (10.78405475616455, 106.65534210205078)</div>`)[0];
+                popup_c821af1bb85b5bf57fb322b2b86ccb76.setContent(html_e9377a8f58e0bf62ff3cef14a63318ef);
+            
+        
+
+        marker_448654bdeb10bd101ac859e00483597d.bindPopup(popup_c821af1bb85b5bf57fb322b2b86ccb76)
+        ;
+
+        
+    
+    
+            var marker_58e6eb6d58f08c627e29fd67e9e16d24 = L.marker(
+                [10.784045219421387, 106.65518951416016],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_4de88bbbe49f14332acead2e0e5a3e24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_58e6eb6d58f08c627e29fd67e9e16d24.setIcon(icon_4de88bbbe49f14332acead2e0e5a3e24);
+        
+    
+        var popup_cde898ce6f00c8ddd8ed0a2498b282ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_037722b4c3ac3b87204132e9c45e4b60 = $(`<div id="html_037722b4c3ac3b87204132e9c45e4b60" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53S8407 Location: (10.784045219421387, 106.65518951416016)</div>`)[0];
+                popup_cde898ce6f00c8ddd8ed0a2498b282ef.setContent(html_037722b4c3ac3b87204132e9c45e4b60);
+            
+        
+
+        marker_58e6eb6d58f08c627e29fd67e9e16d24.bindPopup(popup_cde898ce6f00c8ddd8ed0a2498b282ef)
+        ;
+
+        
+    
+    
+            var marker_241528caeb000e1484e2da237dcd92f4 = L.marker(
+                [10.784059524536133, 106.65531158447266],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b387279c94ad12b7bfbe097e6ebb946a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_241528caeb000e1484e2da237dcd92f4.setIcon(icon_b387279c94ad12b7bfbe097e6ebb946a);
+        
+    
+        var popup_aa344e9feb495841a1cd219bc2bd05bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb0c75be258e33bb3fe549f9390b5588 = $(`<div id="html_cb0c75be258e33bb3fe549f9390b5588" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51LD5774 Location: (10.784059524536133, 106.65531158447266)</div>`)[0];
+                popup_aa344e9feb495841a1cd219bc2bd05bb.setContent(html_cb0c75be258e33bb3fe549f9390b5588);
+            
+        
+
+        marker_241528caeb000e1484e2da237dcd92f4.bindPopup(popup_aa344e9feb495841a1cd219bc2bd05bb)
+        ;
+
+        
+    
+    
+            var marker_1766adc7c70892f2f628d636ddfc3276 = L.marker(
+                [10.783960342407227, 106.65502166748047],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_4a248c7d05ccc346d0c16d2cc5b16913 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1766adc7c70892f2f628d636ddfc3276.setIcon(icon_4a248c7d05ccc346d0c16d2cc5b16913);
+        
+    
+        var popup_82c493812520ba1c490ec22296249267 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b068d2ae5e4e72d54e67d95dc5ec1c6 = $(`<div id="html_6b068d2ae5e4e72d54e67d95dc5ec1c6" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00537 Location: (10.783960342407227, 106.65502166748047)</div>`)[0];
+                popup_82c493812520ba1c490ec22296249267.setContent(html_6b068d2ae5e4e72d54e67d95dc5ec1c6);
+            
+        
+
+        marker_1766adc7c70892f2f628d636ddfc3276.bindPopup(popup_82c493812520ba1c490ec22296249267)
+        ;
+
+        
+    
+    
+            var marker_50999595b2a8316992f0eef5f15f74d4 = L.marker(
+                [10.78470516204834, 106.6551513671875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_daa9ee56a951b5babb268537cf91d13c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_50999595b2a8316992f0eef5f15f74d4.setIcon(icon_daa9ee56a951b5babb268537cf91d13c);
+        
+    
+        var popup_f08dcb7b2f4e2461e52767335e7b67b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a26fc7c2a340411a60f8b213032c15c = $(`<div id="html_9a26fc7c2a340411a60f8b213032c15c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00583 Location: (10.78470516204834, 106.6551513671875)</div>`)[0];
+                popup_f08dcb7b2f4e2461e52767335e7b67b8.setContent(html_9a26fc7c2a340411a60f8b213032c15c);
+            
+        
+
+        marker_50999595b2a8316992f0eef5f15f74d4.bindPopup(popup_f08dcb7b2f4e2461e52767335e7b67b8)
+        ;
+
+        
+    
+    
+            var marker_b0d06e6951a431a380a4bf60f08f874d = L.marker(
+                [10.7839937210083, 106.65491485595703],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_bed8c4e9ec179579d9c51776669bab06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b0d06e6951a431a380a4bf60f08f874d.setIcon(icon_bed8c4e9ec179579d9c51776669bab06);
+        
+    
+        var popup_0a2af99887eb78b910b2981d81a8562b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73d27e3fb333b12102d6b52a65d84f6b = $(`<div id="html_73d27e3fb333b12102d6b52a65d84f6b" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00641 Location: (10.7839937210083, 106.65491485595703)</div>`)[0];
+                popup_0a2af99887eb78b910b2981d81a8562b.setContent(html_73d27e3fb333b12102d6b52a65d84f6b);
+            
+        
+
+        marker_b0d06e6951a431a380a4bf60f08f874d.bindPopup(popup_0a2af99887eb78b910b2981d81a8562b)
+        ;
+
+        
+    
+    
+            var marker_cc8d64fc0da5d95c2813d4e80ce7fe0b = L.marker(
+                [10.441587448120117, 106.42449951171875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_35152f55d037c819cb8711f8925fd381 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cc8d64fc0da5d95c2813d4e80ce7fe0b.setIcon(icon_35152f55d037c819cb8711f8925fd381);
+        
+    
+        var popup_3eaecdc4498c719e891e7961fc98c4ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0aa9b556ab788047036f37e45c1c9a6d = $(`<div id="html_0aa9b556ab788047036f37e45c1c9a6d" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B21667 Location: (10.441587448120117, 106.42449951171875)</div>`)[0];
+                popup_3eaecdc4498c719e891e7961fc98c4ad.setContent(html_0aa9b556ab788047036f37e45c1c9a6d);
+            
+        
+
+        marker_cc8d64fc0da5d95c2813d4e80ce7fe0b.bindPopup(popup_3eaecdc4498c719e891e7961fc98c4ad)
+        ;
+
+        
+    
+    
+            var marker_723a065bcdb04556f07c525ef4f4427f = L.marker(
+                [10.784290313720703, 106.6553726196289],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_8675c38ac3908c5d9dec5c18671f11f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_723a065bcdb04556f07c525ef4f4427f.setIcon(icon_8675c38ac3908c5d9dec5c18671f11f4);
+        
+    
+        var popup_c68409bd1a5ac744417f1c9716e9b04b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c21a54ade29ed3782530a2e9e78621a = $(`<div id="html_6c21a54ade29ed3782530a2e9e78621a" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00611 Location: (10.784290313720703, 106.6553726196289)</div>`)[0];
+                popup_c68409bd1a5ac744417f1c9716e9b04b.setContent(html_6c21a54ade29ed3782530a2e9e78621a);
+            
+        
+
+        marker_723a065bcdb04556f07c525ef4f4427f.bindPopup(popup_c68409bd1a5ac744417f1c9716e9b04b)
+        ;
+
+        
+    
+    
+            var marker_de93ab945629957f31307bfe03789ef2 = L.marker(
+                [10.783967971801758, 106.65510559082031],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_eb41fdc78d3f3ce6f5327a7aab713855 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_de93ab945629957f31307bfe03789ef2.setIcon(icon_eb41fdc78d3f3ce6f5327a7aab713855);
+        
+    
+        var popup_43c6e39e44e6ec8c0b51e4f0ee638b3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ad87f57df27f7e69019edcba7f6902d = $(`<div id="html_1ad87f57df27f7e69019edcba7f6902d" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51LD5770 Location: (10.783967971801758, 106.65510559082031)</div>`)[0];
+                popup_43c6e39e44e6ec8c0b51e4f0ee638b3c.setContent(html_1ad87f57df27f7e69019edcba7f6902d);
+            
+        
+
+        marker_de93ab945629957f31307bfe03789ef2.bindPopup(popup_43c6e39e44e6ec8c0b51e4f0ee638b3c)
+        ;
+
+        
+    
+    
+            var marker_ef1c0438f3cad272ed02ebbb74b8c2a6 = L.marker(
+                [10.783994674682617, 106.65510559082031],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_d86f9ed6ec96046686a84486d53b9497 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ef1c0438f3cad272ed02ebbb74b8c2a6.setIcon(icon_d86f9ed6ec96046686a84486d53b9497);
+        
+    
+        var popup_cf3abf1c092aedafc6335d303b5e701a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a3fd86d4147d8e407e68950f7f0219f = $(`<div id="html_7a3fd86d4147d8e407e68950f7f0219f" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00551 Location: (10.783994674682617, 106.65510559082031)</div>`)[0];
+                popup_cf3abf1c092aedafc6335d303b5e701a.setContent(html_7a3fd86d4147d8e407e68950f7f0219f);
+            
+        
+
+        marker_ef1c0438f3cad272ed02ebbb74b8c2a6.bindPopup(popup_cf3abf1c092aedafc6335d303b5e701a)
+        ;
+
+        
+    
+    
+            var marker_eeef566ae98497a0e3e1947366a2b4b7 = L.marker(
+                [10.78459644317627, 106.65541076660156],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_d790c3a89bae555e2db9802e0f2fdeb3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_eeef566ae98497a0e3e1947366a2b4b7.setIcon(icon_d790c3a89bae555e2db9802e0f2fdeb3);
+        
+    
+        var popup_df2c5bcfa47ae1ad4f50f33e0b0efee5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5137f00dd44b503b7aedb4db7806a0d9 = $(`<div id="html_5137f00dd44b503b7aedb4db7806a0d9" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00516 Location: (10.78459644317627, 106.65541076660156)</div>`)[0];
+                popup_df2c5bcfa47ae1ad4f50f33e0b0efee5.setContent(html_5137f00dd44b503b7aedb4db7806a0d9);
+            
+        
+
+        marker_eeef566ae98497a0e3e1947366a2b4b7.bindPopup(popup_df2c5bcfa47ae1ad4f50f33e0b0efee5)
+        ;
+
+        
+    
+    
+            var marker_55adb036d9fa98a608839c0480f9663c = L.marker(
+                [10.784116744995117, 106.65501403808594],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_dbf04f87e2d224b9fb1b574708961558 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_55adb036d9fa98a608839c0480f9663c.setIcon(icon_dbf04f87e2d224b9fb1b574708961558);
+        
+    
+        var popup_0d7c8676f1f120d99c25723e37eca368 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d09140d8e427cdbbc06fa23e2886101f = $(`<div id="html_d09140d8e427cdbbc06fa23e2886101f" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00550 Location: (10.784116744995117, 106.65501403808594)</div>`)[0];
+                popup_0d7c8676f1f120d99c25723e37eca368.setContent(html_d09140d8e427cdbbc06fa23e2886101f);
+            
+        
+
+        marker_55adb036d9fa98a608839c0480f9663c.bindPopup(popup_0d7c8676f1f120d99c25723e37eca368)
+        ;
+
+        
+    
+    
+            var marker_5eee7e1e12a5c8f983354f8c4d7d07d1 = L.marker(
+                [10.78410530090332, 106.6550064086914],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_bcee3ab9c93f1ff9c31d160d8807318d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5eee7e1e12a5c8f983354f8c4d7d07d1.setIcon(icon_bcee3ab9c93f1ff9c31d160d8807318d);
+        
+    
+        var popup_4aec4837fbe5796dc0ebb7114e440eb8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23cf8416a4bf6855690eaee1da3f33d3 = $(`<div id="html_23cf8416a4bf6855690eaee1da3f33d3" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00633 Location: (10.78410530090332, 106.6550064086914)</div>`)[0];
+                popup_4aec4837fbe5796dc0ebb7114e440eb8.setContent(html_23cf8416a4bf6855690eaee1da3f33d3);
+            
+        
+
+        marker_5eee7e1e12a5c8f983354f8c4d7d07d1.bindPopup(popup_4aec4837fbe5796dc0ebb7114e440eb8)
+        ;
+
+        
+    
+    
+            var marker_e6a1d7273daa98217a9cc372267a03df = L.marker(
+                [10.441587448120117, 106.42449951171875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b98b378e67f48238f755e835b668ef08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e6a1d7273daa98217a9cc372267a03df.setIcon(icon_b98b378e67f48238f755e835b668ef08);
+        
+    
+        var popup_c1ec7c33341536cd5bcf6af1be32163e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e973d1948b45dc2f976ffe7fa9b550d4 = $(`<div id="html_e973d1948b45dc2f976ffe7fa9b550d4" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B21667 Location: (10.441587448120117, 106.42449951171875)</div>`)[0];
+                popup_c1ec7c33341536cd5bcf6af1be32163e.setContent(html_e973d1948b45dc2f976ffe7fa9b550d4);
+            
+        
+
+        marker_e6a1d7273daa98217a9cc372267a03df.bindPopup(popup_c1ec7c33341536cd5bcf6af1be32163e)
+        ;
+
+        
+    
+    
+            var marker_c6127ad161eff20a3c0cb6c06ce9d829 = L.marker(
+                [10.78441333770752, 106.6553726196289],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_7cac75166bf4683056f2ae56c4a2ec75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c6127ad161eff20a3c0cb6c06ce9d829.setIcon(icon_7cac75166bf4683056f2ae56c4a2ec75);
+        
+    
+        var popup_2e4f2b6dd23fa8eb3e73c3c7aa5fd7f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97c588f07d2d29b2cc82b4d90f1a8e68 = $(`<div id="html_97c588f07d2d29b2cc82b4d90f1a8e68" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00577 Location: (10.78441333770752, 106.6553726196289)</div>`)[0];
+                popup_2e4f2b6dd23fa8eb3e73c3c7aa5fd7f1.setContent(html_97c588f07d2d29b2cc82b4d90f1a8e68);
+            
+        
+
+        marker_c6127ad161eff20a3c0cb6c06ce9d829.bindPopup(popup_2e4f2b6dd23fa8eb3e73c3c7aa5fd7f1)
+        ;
+
+        
+    
+    
+            var marker_2d6ad7c25dd44bde5d931fd529c9e7b7 = L.marker(
+                [10.783987045288086, 106.65454864501953],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_e481317b1ae3c5e38567654bd4ee0cdf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2d6ad7c25dd44bde5d931fd529c9e7b7.setIcon(icon_e481317b1ae3c5e38567654bd4ee0cdf);
+        
+    
+        var popup_24d2ef276cbf12656ce9cdbabed2cf3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4440f365f43c2f97b2bf0fb8710e862e = $(`<div id="html_4440f365f43c2f97b2bf0fb8710e862e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00647 Location: (10.783987045288086, 106.65454864501953)</div>`)[0];
+                popup_24d2ef276cbf12656ce9cdbabed2cf3d.setContent(html_4440f365f43c2f97b2bf0fb8710e862e);
+            
+        
+
+        marker_2d6ad7c25dd44bde5d931fd529c9e7b7.bindPopup(popup_24d2ef276cbf12656ce9cdbabed2cf3d)
+        ;
+
+        
+    
+    
+            var marker_b0b48a5a3763e2f31b36101e46b10cc2 = L.marker(
+                [10.784364700317383, 106.65538024902344],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_de8a5a3befc248e0b1fef4f0f73c42e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b0b48a5a3763e2f31b36101e46b10cc2.setIcon(icon_de8a5a3befc248e0b1fef4f0f73c42e4);
+        
+    
+        var popup_300664adc786130e7e3d4af704c81415 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd3681503ef8b3a5204ec1af98029a70 = $(`<div id="html_bd3681503ef8b3a5204ec1af98029a70" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00610 Location: (10.784364700317383, 106.65538024902344)</div>`)[0];
+                popup_300664adc786130e7e3d4af704c81415.setContent(html_bd3681503ef8b3a5204ec1af98029a70);
+            
+        
+
+        marker_b0b48a5a3763e2f31b36101e46b10cc2.bindPopup(popup_300664adc786130e7e3d4af704c81415)
+        ;
+
+        
+    
+    
+            var marker_992de436196dd11eda5e1aa25ff226b3 = L.marker(
+                [10.784078598022461, 106.65533447265625],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_e712d2b4aae0c2b5de3bed166d28e7a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_992de436196dd11eda5e1aa25ff226b3.setIcon(icon_e712d2b4aae0c2b5de3bed166d28e7a0);
+        
+    
+        var popup_a18e0cdfa48b5b5ec51dfdf5cd26a526 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1daa374c5ecd28a6aaf623cb8aca4f9f = $(`<div id="html_1daa374c5ecd28a6aaf623cb8aca4f9f" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD10215 Location: (10.784078598022461, 106.65533447265625)</div>`)[0];
+                popup_a18e0cdfa48b5b5ec51dfdf5cd26a526.setContent(html_1daa374c5ecd28a6aaf623cb8aca4f9f);
+            
+        
+
+        marker_992de436196dd11eda5e1aa25ff226b3.bindPopup(popup_a18e0cdfa48b5b5ec51dfdf5cd26a526)
+        ;
+
+        
+    
+    
+            var marker_9a1b374beeed999507142320b14fc43c = L.marker(
+                [10.7843017578125, 106.65544128417969],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_d8a56dabd802ff572421090b149b2a16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9a1b374beeed999507142320b14fc43c.setIcon(icon_d8a56dabd802ff572421090b149b2a16);
+        
+    
+        var popup_c4e36f9ee367f17afccf571e190ef389 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18491e3c8208c47710478b0a7fe5b758 = $(`<div id="html_18491e3c8208c47710478b0a7fe5b758" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD10159 Location: (10.7843017578125, 106.65544128417969)</div>`)[0];
+                popup_c4e36f9ee367f17afccf571e190ef389.setContent(html_18491e3c8208c47710478b0a7fe5b758);
+            
+        
+
+        marker_9a1b374beeed999507142320b14fc43c.bindPopup(popup_c4e36f9ee367f17afccf571e190ef389)
+        ;
+
+        
+    
+    
+            var marker_914e0e609fcf08778ebea4f3611280a5 = L.marker(
+                [10.784138679504395, 106.6550064086914],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_c9124bec4ec614847fc47178cd601f1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_914e0e609fcf08778ebea4f3611280a5.setIcon(icon_c9124bec4ec614847fc47178cd601f1b);
+        
+    
+        var popup_f9d26a01e3eb231b6f3c3ddaa7cc515b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37b4b23768285caa6a97e6ea628e8e3a = $(`<div id="html_37b4b23768285caa6a97e6ea628e8e3a" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00638 Location: (10.784138679504395, 106.6550064086914)</div>`)[0];
+                popup_f9d26a01e3eb231b6f3c3ddaa7cc515b.setContent(html_37b4b23768285caa6a97e6ea628e8e3a);
+            
+        
+
+        marker_914e0e609fcf08778ebea4f3611280a5.bindPopup(popup_f9d26a01e3eb231b6f3c3ddaa7cc515b)
+        ;
+
+        
+    
+    
+            var marker_f348ab390eb254b4930210b5917d091f = L.marker(
+                [10.784123420715332, 106.65541076660156],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_6f9d13687a5fb7467f42bae34dafd8d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f348ab390eb254b4930210b5917d091f.setIcon(icon_6f9d13687a5fb7467f42bae34dafd8d1);
+        
+    
+        var popup_97fd538882fbb60f5538e2d3085e0db0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49fbfca6d51a5324396ea182f3d91647 = $(`<div id="html_49fbfca6d51a5324396ea182f3d91647" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51LD9601 Location: (10.784123420715332, 106.65541076660156)</div>`)[0];
+                popup_97fd538882fbb60f5538e2d3085e0db0.setContent(html_49fbfca6d51a5324396ea182f3d91647);
+            
+        
+
+        marker_f348ab390eb254b4930210b5917d091f.bindPopup(popup_97fd538882fbb60f5538e2d3085e0db0)
+        ;
+
+        
+    
+    
+            var marker_c13afdcef25444274c4879ffa5816f16 = L.marker(
+                [10.784048080444336, 106.65493774414062],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_ca182f27f2ec969406b330c513eac780 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c13afdcef25444274c4879ffa5816f16.setIcon(icon_ca182f27f2ec969406b330c513eac780);
+        
+    
+        var popup_ba2d665e52800227b8ae47ea3ab52a7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_27d1dd72715d9630346aca62abfa53da = $(`<div id="html_27d1dd72715d9630346aca62abfa53da" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00514 Location: (10.784048080444336, 106.65493774414062)</div>`)[0];
+                popup_ba2d665e52800227b8ae47ea3ab52a7e.setContent(html_27d1dd72715d9630346aca62abfa53da);
+            
+        
+
+        marker_c13afdcef25444274c4879ffa5816f16.bindPopup(popup_ba2d665e52800227b8ae47ea3ab52a7e)
+        ;
+
+        
+    
+    
+            var marker_a893d15449a58f3afda0952efbbde4c6 = L.marker(
+                [10.802391052246094, 106.75253295898438],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_7c67734b31b6a185eb7d41484d75037a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a893d15449a58f3afda0952efbbde4c6.setIcon(icon_7c67734b31b6a185eb7d41484d75037a);
+        
+    
+        var popup_caf60acc5ec85dcf75a292b66e32bee1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3f744e85fef388a16ebd8dc050c0a73 = $(`<div id="html_e3f744e85fef388a16ebd8dc050c0a73" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02534 Location: (10.802391052246094, 106.75253295898438)</div>`)[0];
+                popup_caf60acc5ec85dcf75a292b66e32bee1.setContent(html_e3f744e85fef388a16ebd8dc050c0a73);
+            
+        
+
+        marker_a893d15449a58f3afda0952efbbde4c6.bindPopup(popup_caf60acc5ec85dcf75a292b66e32bee1)
+        ;
+
+        
+    
+    
+            var marker_25b2414800e06bc3e6ca6212c398d17d = L.marker(
+                [10.837980270385742, 106.46710968017578],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_14f8318ea3fcbd435e82aa6e5f408dc7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_25b2414800e06bc3e6ca6212c398d17d.setIcon(icon_14f8318ea3fcbd435e82aa6e5f408dc7);
+        
+    
+        var popup_cba19077a59c0aec3a2aebc116bee75a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab2c2bc6c22952a466081fc36e8b50e9 = $(`<div id="html_ab2c2bc6c22952a466081fc36e8b50e9" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53S0261 Location: (10.837980270385742, 106.46710968017578)</div>`)[0];
+                popup_cba19077a59c0aec3a2aebc116bee75a.setContent(html_ab2c2bc6c22952a466081fc36e8b50e9);
+            
+        
+
+        marker_25b2414800e06bc3e6ca6212c398d17d.bindPopup(popup_cba19077a59c0aec3a2aebc116bee75a)
+        ;
+
+        
+    
+    
+            var marker_d47bb9398128362e28f1347e0f5d0685 = L.marker(
+                [10.784614562988281, 106.65520477294922],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_842030d8f8d653e4542e0b2cd81d3c36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d47bb9398128362e28f1347e0f5d0685.setIcon(icon_842030d8f8d653e4542e0b2cd81d3c36);
+        
+    
+        var popup_16bf05b913a47b962a0731a2210be43e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed51486d54387910ee35e985e0f6141a = $(`<div id="html_ed51486d54387910ee35e985e0f6141a" style="width: 100.0%; height: 100.0%;">Vehicle Number: 50LD00596 Location: (10.784614562988281, 106.65520477294922)</div>`)[0];
+                popup_16bf05b913a47b962a0731a2210be43e.setContent(html_ed51486d54387910ee35e985e0f6141a);
+            
+        
+
+        marker_d47bb9398128362e28f1347e0f5d0685.bindPopup(popup_16bf05b913a47b962a0731a2210be43e)
+        ;
+
+        
+    
+    
+            var marker_a30f84a4f9a663fe4c68ab52f5ad753d = L.marker(
+                [10.78413200378418, 106.65550231933594],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_617a43a9021888d04195677a050c9813 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a30f84a4f9a663fe4c68ab52f5ad753d.setIcon(icon_617a43a9021888d04195677a050c9813);
+        
+    
+        var popup_1ca64272a0821d1c2a9ad9644083797e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b0840f6e30f7695922d105eaf66a80e = $(`<div id="html_1b0840f6e30f7695922d105eaf66a80e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 52LD3300 Location: (10.78413200378418, 106.65550231933594)</div>`)[0];
+                popup_1ca64272a0821d1c2a9ad9644083797e.setContent(html_1b0840f6e30f7695922d105eaf66a80e);
+            
+        
+
+        marker_a30f84a4f9a663fe4c68ab52f5ad753d.bindPopup(popup_1ca64272a0821d1c2a9ad9644083797e)
+        ;
+
+        
+    
+    
+            var marker_16b8bf18a6b0c896e11c71a9bea14349 = L.marker(
+                [10.802721977233887, 106.75259399414062],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5f5a7bd439174aa5047bda061d193ebb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_16b8bf18a6b0c896e11c71a9bea14349.setIcon(icon_5f5a7bd439174aa5047bda061d193ebb);
+        
+    
+        var popup_0748bb3f1e48a0d2e40d429297166d7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1b5b6579b0043962ceba7dc4c9e2918 = $(`<div id="html_a1b5b6579b0043962ceba7dc4c9e2918" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A09607 Location: (10.802721977233887, 106.75259399414062)</div>`)[0];
+                popup_0748bb3f1e48a0d2e40d429297166d7c.setContent(html_a1b5b6579b0043962ceba7dc4c9e2918);
+            
+        
+
+        marker_16b8bf18a6b0c896e11c71a9bea14349.bindPopup(popup_0748bb3f1e48a0d2e40d429297166d7c)
+        ;
+
+        
+    
+    
+            var marker_a5748e442311df79842745eeca5011c2 = L.marker(
+                [10.837550163269043, 106.6733627319336],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_0d37109f8e930e06344e5e62782b6bb5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a5748e442311df79842745eeca5011c2.setIcon(icon_0d37109f8e930e06344e5e62782b6bb5);
+        
+    
+        var popup_009f4aa39b5432e93bbe6b259865bf77 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9c723d56939c11670696823cb08577e = $(`<div id="html_f9c723d56939c11670696823cb08577e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51C20756 Location: (10.837550163269043, 106.6733627319336)</div>`)[0];
+                popup_009f4aa39b5432e93bbe6b259865bf77.setContent(html_f9c723d56939c11670696823cb08577e);
+            
+        
+
+        marker_a5748e442311df79842745eeca5011c2.bindPopup(popup_009f4aa39b5432e93bbe6b259865bf77)
+        ;
+
+        
+    
+    
+            var marker_f7e8db4ccc037c28026404d2e6eaf9eb = L.marker(
+                [11.131719589233398, 106.4454116821289],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_8e4e330a1a91755e781701782c48cd62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f7e8db4ccc037c28026404d2e6eaf9eb.setIcon(icon_8e4e330a1a91755e781701782c48cd62);
+        
+    
+        var popup_d6381848b33738dfaf5f16021f874ee5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_451666f6311651812c0dedf17b036919 = $(`<div id="html_451666f6311651812c0dedf17b036919" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B06733 Location: (11.131719589233398, 106.4454116821289)</div>`)[0];
+                popup_d6381848b33738dfaf5f16021f874ee5.setContent(html_451666f6311651812c0dedf17b036919);
+            
+        
+
+        marker_f7e8db4ccc037c28026404d2e6eaf9eb.bindPopup(popup_d6381848b33738dfaf5f16021f874ee5)
+        ;
+
+        
+    
+    
+            var marker_9cc24c1a779850ab44125f6eab0ec669 = L.marker(
+                [10.396644592285156, 107.1147232055664],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_265f9d5e00c4d61b3a9512da585f80bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9cc24c1a779850ab44125f6eab0ec669.setIcon(icon_265f9d5e00c4d61b3a9512da585f80bd);
+        
+    
+        var popup_75a80dcccfd64fecdd509e94a64dda8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_808b6935a1f17f0b8c727ef51569d3d2 = $(`<div id="html_808b6935a1f17f0b8c727ef51569d3d2" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-03422 Location: (10.396644592285156, 107.1147232055664)</div>`)[0];
+                popup_75a80dcccfd64fecdd509e94a64dda8c.setContent(html_808b6935a1f17f0b8c727ef51569d3d2);
+            
+        
+
+        marker_9cc24c1a779850ab44125f6eab0ec669.bindPopup(popup_75a80dcccfd64fecdd509e94a64dda8c)
+        ;
+
+        
+    
+    
+            var marker_5248601999f8e86f69ecb1b5ebe7b308 = L.marker(
+                [10.802391052246094, 106.75253295898438],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_487c4f552ac18f1d0581cb0a9aed1535 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5248601999f8e86f69ecb1b5ebe7b308.setIcon(icon_487c4f552ac18f1d0581cb0a9aed1535);
+        
+    
+        var popup_ef998585623960b0a44c32e9e7a7a834 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33d57002042c135e56898769e655ca50 = $(`<div id="html_33d57002042c135e56898769e655ca50" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02534 Location: (10.802391052246094, 106.75253295898438)</div>`)[0];
+                popup_ef998585623960b0a44c32e9e7a7a834.setContent(html_33d57002042c135e56898769e655ca50);
+            
+        
+
+        marker_5248601999f8e86f69ecb1b5ebe7b308.bindPopup(popup_ef998585623960b0a44c32e9e7a7a834)
+        ;
+
+        
+    
+    
+            var marker_ec36c90f42010d6efbcb540782910e77 = L.marker(
+                [10.80529499053955, 106.66880798339844],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_de1e3f157db1eee740817d6a37ad47ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ec36c90f42010d6efbcb540782910e77.setIcon(icon_de1e3f157db1eee740817d6a37ad47ed);
+        
+    
+        var popup_7cb191d3de01d9c38f6188bb7762b20c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f82495fc0d7d380f56a848bd5768de5 = $(`<div id="html_3f82495fc0d7d380f56a848bd5768de5" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B32490 Location: (10.80529499053955, 106.66880798339844)</div>`)[0];
+                popup_7cb191d3de01d9c38f6188bb7762b20c.setContent(html_3f82495fc0d7d380f56a848bd5768de5);
+            
+        
+
+        marker_ec36c90f42010d6efbcb540782910e77.bindPopup(popup_7cb191d3de01d9c38f6188bb7762b20c)
+        ;
+
+        
+    
+    
+            var marker_77e0870020bd31cb9f68af9963874266 = L.marker(
+                [10.833589553833008, 105.67108154296875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5e587f66794236ade785517c20198d29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_77e0870020bd31cb9f68af9963874266.setIcon(icon_5e587f66794236ade785517c20198d29);
+        
+    
+        var popup_ca2d82f47bd203a675cad2d0c2f5a0e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7a3b5271b09d11b650e62fb794f8a32 = $(`<div id="html_f7a3b5271b09d11b650e62fb794f8a32" style="width: 100.0%; height: 100.0%;">Vehicle Number: 62A07223 Location: (10.833589553833008, 105.67108154296875)</div>`)[0];
+                popup_ca2d82f47bd203a675cad2d0c2f5a0e2.setContent(html_f7a3b5271b09d11b650e62fb794f8a32);
+            
+        
+
+        marker_77e0870020bd31cb9f68af9963874266.bindPopup(popup_ca2d82f47bd203a675cad2d0c2f5a0e2)
+        ;
+
+        
+    
+    
+            var marker_07bfb50a9ec3cc1a2a9fdc42d5ab4e50 = L.marker(
+                [10.787864685058594, 106.72919464111328],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_6a5a1ba726a942e1cb9aeabffd2ede3c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_07bfb50a9ec3cc1a2a9fdc42d5ab4e50.setIcon(icon_6a5a1ba726a942e1cb9aeabffd2ede3c);
+        
+    
+        var popup_a7795f14de0006cfe243a81fda340162 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84c65e0cabbcfae51484f9cf9be5bbc9 = $(`<div id="html_84c65e0cabbcfae51484f9cf9be5bbc9" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-01258 Location: (10.787864685058594, 106.72919464111328)</div>`)[0];
+                popup_a7795f14de0006cfe243a81fda340162.setContent(html_84c65e0cabbcfae51484f9cf9be5bbc9);
+            
+        
+
+        marker_07bfb50a9ec3cc1a2a9fdc42d5ab4e50.bindPopup(popup_a7795f14de0006cfe243a81fda340162)
+        ;
+
+        
+    
+    
+            var marker_9d6bbdfc8d6bbe7cd59c748b85a55483 = L.marker(
+                [11.083433151245117, 106.23130798339844],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_6e39f071ed3c92970610a58a5d4717bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9d6bbdfc8d6bbe7cd59c748b85a55483.setIcon(icon_6e39f071ed3c92970610a58a5d4717bb);
+        
+    
+        var popup_15e77b3d3621230e14d658fc53c55222 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4c8fb44714bff7e99e1d6b5d1538ea5 = $(`<div id="html_e4c8fb44714bff7e99e1d6b5d1538ea5" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53M6548 Location: (11.083433151245117, 106.23130798339844)</div>`)[0];
+                popup_15e77b3d3621230e14d658fc53c55222.setContent(html_e4c8fb44714bff7e99e1d6b5d1538ea5);
+            
+        
+
+        marker_9d6bbdfc8d6bbe7cd59c748b85a55483.bindPopup(popup_15e77b3d3621230e14d658fc53c55222)
+        ;
+
+        
+    
+    
+            var marker_7a23bcaad924dfe3f300610d07395000 = L.marker(
+                [10.694526672363281, 106.70597839355469],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_2e17a2e06826d4574ce99a705d16df59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7a23bcaad924dfe3f300610d07395000.setIcon(icon_2e17a2e06826d4574ce99a705d16df59);
+        
+    
+        var popup_68d8de91340a755b077c7b9ff68d4efe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_31b612e12f79a32f5d47f107580e728f = $(`<div id="html_31b612e12f79a32f5d47f107580e728f" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B16622 Location: (10.694526672363281, 106.70597839355469)</div>`)[0];
+                popup_68d8de91340a755b077c7b9ff68d4efe.setContent(html_31b612e12f79a32f5d47f107580e728f);
+            
+        
+
+        marker_7a23bcaad924dfe3f300610d07395000.bindPopup(popup_68d8de91340a755b077c7b9ff68d4efe)
+        ;
+
+        
+    
+    
+            var marker_0711b1d84ef638115380f6580e5b263c = L.marker(
+                [10.694554328918457, 106.70573425292969],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_2440496be44e4027a960a5a4a0dbc8c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0711b1d84ef638115380f6580e5b263c.setIcon(icon_2440496be44e4027a960a5a4a0dbc8c4);
+        
+    
+        var popup_721cb829bdff2da100f899d6d41d7973 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dda0f90e12ea6be4e026f4ff23c2b076 = $(`<div id="html_dda0f90e12ea6be4e026f4ff23c2b076" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B27891 Location: (10.694554328918457, 106.70573425292969)</div>`)[0];
+                popup_721cb829bdff2da100f899d6d41d7973.setContent(html_dda0f90e12ea6be4e026f4ff23c2b076);
+            
+        
+
+        marker_0711b1d84ef638115380f6580e5b263c.bindPopup(popup_721cb829bdff2da100f899d6d41d7973)
+        ;
+
+        
+    
+    
+            var marker_d1c0277cff755a4ce4ff9065fdb56c9a = L.marker(
+                [10.536649703979492, 107.0398941040039],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_fec9f066e61e4ff36ce54f524dc594f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d1c0277cff755a4ce4ff9065fdb56c9a.setIcon(icon_fec9f066e61e4ff36ce54f524dc594f5);
+        
+    
+        var popup_5ec486da07c9af3092bcab064838e5a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4cc4e39f23d5cfb184668ddcc4f0c62 = $(`<div id="html_d4cc4e39f23d5cfb184668ddcc4f0c62" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72C-06539 Location: (10.536649703979492, 107.0398941040039)</div>`)[0];
+                popup_5ec486da07c9af3092bcab064838e5a9.setContent(html_d4cc4e39f23d5cfb184668ddcc4f0c62);
+            
+        
+
+        marker_d1c0277cff755a4ce4ff9065fdb56c9a.bindPopup(popup_5ec486da07c9af3092bcab064838e5a9)
+        ;
+
+        
+    
+    
+            var marker_dc22e3d57e625103ce12d49b7ef11a13 = L.marker(
+                [10.965109825134277, 106.50985717773438],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_48e1f2d8a1d5d847034cfcf160317d5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_dc22e3d57e625103ce12d49b7ef11a13.setIcon(icon_48e1f2d8a1d5d847034cfcf160317d5e);
+        
+    
+        var popup_dcf5d58ae1b1030d1b7eae10a43526c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_914e8a2935f5b79ec0861a3a0aff9283 = $(`<div id="html_914e8a2935f5b79ec0861a3a0aff9283" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B21963 Location: (10.965109825134277, 106.50985717773438)</div>`)[0];
+                popup_dcf5d58ae1b1030d1b7eae10a43526c3.setContent(html_914e8a2935f5b79ec0861a3a0aff9283);
+            
+        
+
+        marker_dc22e3d57e625103ce12d49b7ef11a13.bindPopup(popup_dcf5d58ae1b1030d1b7eae10a43526c3)
+        ;
+
+        
+    
+    
+            var marker_c31126e72587eb20b3e2e02d64cb36e6 = L.marker(
+                [10.364974021911621, 107.09525299072266],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_44af976f25b322cf4cb130091167aae3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c31126e72587eb20b3e2e02d64cb36e6.setIcon(icon_44af976f25b322cf4cb130091167aae3);
+        
+    
+        var popup_d36675ee8b402d547e2c7a9197d1333d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_805fba2616ecc1d4df41732702acf1bc = $(`<div id="html_805fba2616ecc1d4df41732702acf1bc" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-00433 Location: (10.364974021911621, 107.09525299072266)</div>`)[0];
+                popup_d36675ee8b402d547e2c7a9197d1333d.setContent(html_805fba2616ecc1d4df41732702acf1bc);
+            
+        
+
+        marker_c31126e72587eb20b3e2e02d64cb36e6.bindPopup(popup_d36675ee8b402d547e2c7a9197d1333d)
+        ;
+
+        
+    
+    
+            var marker_eb1c901e91d174734b083d8db5ecf3ea = L.marker(
+                [10.805516242980957, 106.66715240478516],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5190af672855097a2c37695cb9af1213 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_eb1c901e91d174734b083d8db5ecf3ea.setIcon(icon_5190af672855097a2c37695cb9af1213);
+        
+    
+        var popup_8b1e265c87a50bed6dbdd5298bcd868c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee8b1ca719f0f388cea51b92c14914c5 = $(`<div id="html_ee8b1ca719f0f388cea51b92c14914c5" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53N5010 Location: (10.805516242980957, 106.66715240478516)</div>`)[0];
+                popup_8b1e265c87a50bed6dbdd5298bcd868c.setContent(html_ee8b1ca719f0f388cea51b92c14914c5);
+            
+        
+
+        marker_eb1c901e91d174734b083d8db5ecf3ea.bindPopup(popup_8b1e265c87a50bed6dbdd5298bcd868c)
+        ;
+
+        
+    
+    
+            var marker_63f2b408ac9891a419152127ca2988cd = L.marker(
+                [10.365123748779297, 107.09561920166016],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_fe3c5c3067b552497c6071975752954d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_63f2b408ac9891a419152127ca2988cd.setIcon(icon_fe3c5c3067b552497c6071975752954d);
+        
+    
+        var popup_23566ebbe5c9bf9f15020ea23299c3f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32a67bd517ca67ac8bad5a1a58bbfdc9 = $(`<div id="html_32a67bd517ca67ac8bad5a1a58bbfdc9" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-00713 Location: (10.365123748779297, 107.09561920166016)</div>`)[0];
+                popup_23566ebbe5c9bf9f15020ea23299c3f4.setContent(html_32a67bd517ca67ac8bad5a1a58bbfdc9);
+            
+        
+
+        marker_63f2b408ac9891a419152127ca2988cd.bindPopup(popup_23566ebbe5c9bf9f15020ea23299c3f4)
+        ;
+
+        
+    
+    
+            var marker_5527357f52427b18c6bd8bb3b0b6377e = L.marker(
+                [19.324970245361328, 105.80409240722656],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_0605a15103fbbd2e8502d3db7ebabdfd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5527357f52427b18c6bd8bb3b0b6377e.setIcon(icon_0605a15103fbbd2e8502d3db7ebabdfd);
+        
+    
+        var popup_657a0febc1afc03c6b5570c7d416c101 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_330cb0d50e4a9dd0a2a5c6658d71973d = $(`<div id="html_330cb0d50e4a9dd0a2a5c6658d71973d" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-34689 Location: (19.324970245361328, 105.80409240722656)</div>`)[0];
+                popup_657a0febc1afc03c6b5570c7d416c101.setContent(html_330cb0d50e4a9dd0a2a5c6658d71973d);
+            
+        
+
+        marker_5527357f52427b18c6bd8bb3b0b6377e.bindPopup(popup_657a0febc1afc03c6b5570c7d416c101)
+        ;
+
+        
+    
+    
+            var marker_f1d71a1ca3758734187d0312c5c54507 = L.marker(
+                [10.966523170471191, 106.6679916381836],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5b2735d6d8def07017d34ee45e693242 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f1d71a1ca3758734187d0312c5c54507.setIcon(icon_5b2735d6d8def07017d34ee45e693242);
+        
+    
+        var popup_b8dac867c1473afa96a414ddfa50cb88 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f975af289315cff121069fe4bde0e7e4 = $(`<div id="html_f975af289315cff121069fe4bde0e7e4" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B18127 Location: (10.966523170471191, 106.6679916381836)</div>`)[0];
+                popup_b8dac867c1473afa96a414ddfa50cb88.setContent(html_f975af289315cff121069fe4bde0e7e4);
+            
+        
+
+        marker_f1d71a1ca3758734187d0312c5c54507.bindPopup(popup_b8dac867c1473afa96a414ddfa50cb88)
+        ;
+
+        
+    
+    
+            var marker_97414abe71cbf52826b83d07051968fb = L.marker(
+                [10.80298137664795, 106.65377044677734],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_14d06c935afd47ab60c94f7459754f5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_97414abe71cbf52826b83d07051968fb.setIcon(icon_14d06c935afd47ab60c94f7459754f5f);
+        
+    
+        var popup_03752bfd5c027dee072c49220e529f78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a5bdc757492d18ff187f81ecd47ed67 = $(`<div id="html_0a5bdc757492d18ff187f81ecd47ed67" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B17445 Location: (10.80298137664795, 106.65377044677734)</div>`)[0];
+                popup_03752bfd5c027dee072c49220e529f78.setContent(html_0a5bdc757492d18ff187f81ecd47ed67);
+            
+        
+
+        marker_97414abe71cbf52826b83d07051968fb.bindPopup(popup_03752bfd5c027dee072c49220e529f78)
+        ;
+
+        
+    
+    
+            var marker_ee8ecd7c047e5db96eec9b0160f93367 = L.marker(
+                [10.78884506225586, 106.65443420410156],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_fb14cc6937079de4bb207471b355f28b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ee8ecd7c047e5db96eec9b0160f93367.setIcon(icon_fb14cc6937079de4bb207471b355f28b);
+        
+    
+        var popup_32ee30d41ca66390e2d4d9b0c52be103 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba7b4c061b73edc4bdadd3f39e584f93 = $(`<div id="html_ba7b4c061b73edc4bdadd3f39e584f93" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B27270 Location: (10.78884506225586, 106.65443420410156)</div>`)[0];
+                popup_32ee30d41ca66390e2d4d9b0c52be103.setContent(html_ba7b4c061b73edc4bdadd3f39e584f93);
+            
+        
+
+        marker_ee8ecd7c047e5db96eec9b0160f93367.bindPopup(popup_32ee30d41ca66390e2d4d9b0c52be103)
+        ;
+
+        
+    
+    
+            var marker_fb9088ee3897c12c18c60d9d5f8f9285 = L.marker(
+                [19.34901237487793, 105.79119873046875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_af3b8b4d279c94f3e9e0a69250700439 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fb9088ee3897c12c18c60d9d5f8f9285.setIcon(icon_af3b8b4d279c94f3e9e0a69250700439);
+        
+    
+        var popup_13f569a6287456bcef3ff7bdd2534cb1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74dee5b0a2b8f080a667a2c95dcb1e28 = $(`<div id="html_74dee5b0a2b8f080a667a2c95dcb1e28" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-32593 Location: (19.34901237487793, 105.79119873046875)</div>`)[0];
+                popup_13f569a6287456bcef3ff7bdd2534cb1.setContent(html_74dee5b0a2b8f080a667a2c95dcb1e28);
+            
+        
+
+        marker_fb9088ee3897c12c18c60d9d5f8f9285.bindPopup(popup_13f569a6287456bcef3ff7bdd2534cb1)
+        ;
+
+        
+    
+    
+            var marker_e74b6f80acf1bc4e5f529fd6a848c645 = L.marker(
+                [10.569726943969727, 106.59382629394531],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_d05905f596c4e7efc454449f641f5381 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e74b6f80acf1bc4e5f529fd6a848c645.setIcon(icon_d05905f596c4e7efc454449f641f5381);
+        
+    
+        var popup_372cce9e481cebb5d19bb2ce234cb995 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_682eef39cbdb37e9a8557a7e950d7cbd = $(`<div id="html_682eef39cbdb37e9a8557a7e950d7cbd" style="width: 100.0%; height: 100.0%;">Vehicle Number: 62B00808 Location: (10.569726943969727, 106.59382629394531)</div>`)[0];
+                popup_372cce9e481cebb5d19bb2ce234cb995.setContent(html_682eef39cbdb37e9a8557a7e950d7cbd);
+            
+        
+
+        marker_e74b6f80acf1bc4e5f529fd6a848c645.bindPopup(popup_372cce9e481cebb5d19bb2ce234cb995)
+        ;
+
+        
+    
+    
+            var marker_f0d3abb8e47b11eb2c7cdca015ee6d38 = L.marker(
+                [10.365406036376953, 107.0950927734375],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_941c35960442e97074643c9483cce878 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f0d3abb8e47b11eb2c7cdca015ee6d38.setIcon(icon_941c35960442e97074643c9483cce878);
+        
+    
+        var popup_cafbb0a2a627062cf6ad462963eb289d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33cbf01de9351dc8f3dfd68de637c53e = $(`<div id="html_33cbf01de9351dc8f3dfd68de637c53e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-28946 Location: (10.365406036376953, 107.0950927734375)</div>`)[0];
+                popup_cafbb0a2a627062cf6ad462963eb289d.setContent(html_33cbf01de9351dc8f3dfd68de637c53e);
+            
+        
+
+        marker_f0d3abb8e47b11eb2c7cdca015ee6d38.bindPopup(popup_cafbb0a2a627062cf6ad462963eb289d)
+        ;
+
+        
+    
+    
+            var marker_2906356782f2fe67b86b43fad697c104 = L.marker(
+                [10.54765796661377, 106.40646362304688],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_bc6d911ccaeb04c55a859dad1f02d75c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2906356782f2fe67b86b43fad697c104.setIcon(icon_bc6d911ccaeb04c55a859dad1f02d75c);
+        
+    
+        var popup_f3ffc514d4c020cb6419609d3a3a96cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9aa42be9654a5ecd7a63565f9a681e52 = $(`<div id="html_9aa42be9654a5ecd7a63565f9a681e52" style="width: 100.0%; height: 100.0%;">Vehicle Number: 62B-01322 Location: (10.54765796661377, 106.40646362304688)</div>`)[0];
+                popup_f3ffc514d4c020cb6419609d3a3a96cc.setContent(html_9aa42be9654a5ecd7a63565f9a681e52);
+            
+        
+
+        marker_2906356782f2fe67b86b43fad697c104.bindPopup(popup_f3ffc514d4c020cb6419609d3a3a96cc)
+        ;
+
+        
+    
+    
+            var marker_334cc6db7473c8cb0b98734e6968a735 = L.marker(
+                [10.804200172424316, 106.69013214111328],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b4cbb184b8a40ed7d9f11000ccc1f751 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_334cc6db7473c8cb0b98734e6968a735.setIcon(icon_b4cbb184b8a40ed7d9f11000ccc1f751);
+        
+    
+        var popup_555da531c07f386c9c90449f7f7219b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7107a3dd0f3351dd20ed19d844100e2c = $(`<div id="html_7107a3dd0f3351dd20ed19d844100e2c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B05082 Location: (10.804200172424316, 106.69013214111328)</div>`)[0];
+                popup_555da531c07f386c9c90449f7f7219b6.setContent(html_7107a3dd0f3351dd20ed19d844100e2c);
+            
+        
+
+        marker_334cc6db7473c8cb0b98734e6968a735.bindPopup(popup_555da531c07f386c9c90449f7f7219b6)
+        ;
+
+        
+    
+    
+            var marker_376be7b416a74c9023dcb617ff1bb5f7 = L.marker(
+                [10.694808006286621, 106.70571899414062],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_2729fbe333c3b47c46bec59808506bc2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_376be7b416a74c9023dcb617ff1bb5f7.setIcon(icon_2729fbe333c3b47c46bec59808506bc2);
+        
+    
+        var popup_2a50c603b69961af5a37bd6a5dba74be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f8b84958e41965129fb3b08d09aa41a = $(`<div id="html_3f8b84958e41965129fb3b08d09aa41a" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B22560 Location: (10.694808006286621, 106.70571899414062)</div>`)[0];
+                popup_2a50c603b69961af5a37bd6a5dba74be.setContent(html_3f8b84958e41965129fb3b08d09aa41a);
+            
+        
+
+        marker_376be7b416a74c9023dcb617ff1bb5f7.bindPopup(popup_2a50c603b69961af5a37bd6a5dba74be)
+        ;
+
+        
+    
+    
+            var marker_a4b54bb1d682a2665d5e3722694b1534 = L.marker(
+                [10.804935455322266, 106.66768646240234],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b76fdf80d73e7ba969409cd5eb3d66f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a4b54bb1d682a2665d5e3722694b1534.setIcon(icon_b76fdf80d73e7ba969409cd5eb3d66f7);
+        
+    
+        var popup_c8fdb2ced3d4e76205d9594c435587d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b61fad43456087c5f8aaaf0bc4bb4e8d = $(`<div id="html_b61fad43456087c5f8aaaf0bc4bb4e8d" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B32493 Location: (10.804935455322266, 106.66768646240234)</div>`)[0];
+                popup_c8fdb2ced3d4e76205d9594c435587d5.setContent(html_b61fad43456087c5f8aaaf0bc4bb4e8d);
+            
+        
+
+        marker_a4b54bb1d682a2665d5e3722694b1534.bindPopup(popup_c8fdb2ced3d4e76205d9594c435587d5)
+        ;
+
+        
+    
+    
+            var marker_2332b6987f41e58f916f09ba79d8fb29 = L.marker(
+                [15.38344669342041, 108.8102798461914],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_9ca8581d0edfaf9ed084140010130ac1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2332b6987f41e58f916f09ba79d8fb29.setIcon(icon_9ca8581d0edfaf9ed084140010130ac1);
+        
+    
+        var popup_cf87d356fa60f5aab71351d9947b8876 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4ba13911e3a02c200fb67a6c0f2a57c = $(`<div id="html_c4ba13911e3a02c200fb67a6c0f2a57c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-19051 Location: (15.38344669342041, 108.8102798461914)</div>`)[0];
+                popup_cf87d356fa60f5aab71351d9947b8876.setContent(html_c4ba13911e3a02c200fb67a6c0f2a57c);
+            
+        
+
+        marker_2332b6987f41e58f916f09ba79d8fb29.bindPopup(popup_cf87d356fa60f5aab71351d9947b8876)
+        ;
+
+        
+    
+    
+            var marker_4f7028060b60377e59e84335688fc4b9 = L.marker(
+                [10.814464569091797, 106.77389526367188],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_a6a55595ca869d86e942bc056a973448 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4f7028060b60377e59e84335688fc4b9.setIcon(icon_a6a55595ca869d86e942bc056a973448);
+        
+    
+        var popup_7e906d989d06ab7d1dbf59d25c34ffc5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_156696ba2274a1cb813fe162e7562e4d = $(`<div id="html_156696ba2274a1cb813fe162e7562e4d" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B06549 Location: (10.814464569091797, 106.77389526367188)</div>`)[0];
+                popup_7e906d989d06ab7d1dbf59d25c34ffc5.setContent(html_156696ba2274a1cb813fe162e7562e4d);
+            
+        
+
+        marker_4f7028060b60377e59e84335688fc4b9.bindPopup(popup_7e906d989d06ab7d1dbf59d25c34ffc5)
+        ;
+
+        
+    
+    
+            var marker_1011db112d60cf95d31fb72e15b4bed7 = L.marker(
+                [10.770281791687012, 106.64105224609375],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_7920adf7554b69dca54a97a1e98f68e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1011db112d60cf95d31fb72e15b4bed7.setIcon(icon_7920adf7554b69dca54a97a1e98f68e7);
+        
+    
+        var popup_1bf19666fe036d174a4236a7986d5aa4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_473e23a05fd6cd81fd46e90d559da9ab = $(`<div id="html_473e23a05fd6cd81fd46e90d559da9ab" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53N4966 Location: (10.770281791687012, 106.64105224609375)</div>`)[0];
+                popup_1bf19666fe036d174a4236a7986d5aa4.setContent(html_473e23a05fd6cd81fd46e90d559da9ab);
+            
+        
+
+        marker_1011db112d60cf95d31fb72e15b4bed7.bindPopup(popup_1bf19666fe036d174a4236a7986d5aa4)
+        ;
+
+        
+    
+    
+            var marker_fb687d8de74b846dca597267f120d7a8 = L.marker(
+                [10.740528106689453, 106.61248779296875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_3ff3e8c49ed4211b13236a3e29b7af9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fb687d8de74b846dca597267f120d7a8.setIcon(icon_3ff3e8c49ed4211b13236a3e29b7af9c);
+        
+    
+        var popup_3bf9b96ed39681474ebe47d77f13ed5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_99f629e582e633d1d7cf58dfec67a33c = $(`<div id="html_99f629e582e633d1d7cf58dfec67a33c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B12611 Location: (10.740528106689453, 106.61248779296875)</div>`)[0];
+                popup_3bf9b96ed39681474ebe47d77f13ed5e.setContent(html_99f629e582e633d1d7cf58dfec67a33c);
+            
+        
+
+        marker_fb687d8de74b846dca597267f120d7a8.bindPopup(popup_3bf9b96ed39681474ebe47d77f13ed5e)
+        ;
+
+        
+    
+    
+            var marker_50a5b7b50bcc4e7592b24ebb15aacd13 = L.marker(
+                [10.770381927490234, 106.64104461669922],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_7b45fd81239a27ad8cf1f994c710040e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_50a5b7b50bcc4e7592b24ebb15aacd13.setIcon(icon_7b45fd81239a27ad8cf1f994c710040e);
+        
+    
+        var popup_72124282a45991ae79bd36dd708716b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4bdf7b94d1276ce199315e53b82e3d6e = $(`<div id="html_4bdf7b94d1276ce199315e53b82e3d6e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B21808 Location: (10.770381927490234, 106.64104461669922)</div>`)[0];
+                popup_72124282a45991ae79bd36dd708716b5.setContent(html_4bdf7b94d1276ce199315e53b82e3d6e);
+            
+        
+
+        marker_50a5b7b50bcc4e7592b24ebb15aacd13.bindPopup(popup_72124282a45991ae79bd36dd708716b5)
+        ;
+
+        
+    
+    
+            var marker_f9de7439bbc1e0078f477eb3d4f1d99c = L.marker(
+                [10.365262031555176, 107.09519958496094],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_69424625f2d191dab691d7fa6a2680a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f9de7439bbc1e0078f477eb3d4f1d99c.setIcon(icon_69424625f2d191dab691d7fa6a2680a2);
+        
+    
+        var popup_5d27bf0d8d6c8373e873c4ff0626dee7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_560145883633cad680bb191ef24064d0 = $(`<div id="html_560145883633cad680bb191ef24064d0" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-21938 Location: (10.365262031555176, 107.09519958496094)</div>`)[0];
+                popup_5d27bf0d8d6c8373e873c4ff0626dee7.setContent(html_560145883633cad680bb191ef24064d0);
+            
+        
+
+        marker_f9de7439bbc1e0078f477eb3d4f1d99c.bindPopup(popup_5d27bf0d8d6c8373e873c4ff0626dee7)
+        ;
+
+        
+    
+    
+            var marker_11e04f0d3b6109e9a39ef10e5dcbf15c = L.marker(
+                [10.804983139038086, 106.66734313964844],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5d309965c380c6629a6960de292aa805 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_11e04f0d3b6109e9a39ef10e5dcbf15c.setIcon(icon_5d309965c380c6629a6960de292aa805);
+        
+    
+        var popup_46b97391c440a46f7566928d39175e5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e9c285a6a0da7eae3cdcec21524c1cb = $(`<div id="html_4e9c285a6a0da7eae3cdcec21524c1cb" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B20923 Location: (10.804983139038086, 106.66734313964844)</div>`)[0];
+                popup_46b97391c440a46f7566928d39175e5a.setContent(html_4e9c285a6a0da7eae3cdcec21524c1cb);
+            
+        
+
+        marker_11e04f0d3b6109e9a39ef10e5dcbf15c.bindPopup(popup_46b97391c440a46f7566928d39175e5a)
+        ;
+
+        
+    
+    
+            var marker_b25fd6991091696442280bd5edd76f1c = L.marker(
+                [10.80530071258545, 106.66876983642578],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_f93f15b5b7cf0771b99b691d9e77a99b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b25fd6991091696442280bd5edd76f1c.setIcon(icon_f93f15b5b7cf0771b99b691d9e77a99b);
+        
+    
+        var popup_4cbc093619641d3b18eafdb52cc141a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e680e21c4c6a051e53ee7d0e741e9e1c = $(`<div id="html_e680e21c4c6a051e53ee7d0e741e9e1c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B32931 Location: (10.80530071258545, 106.66876983642578)</div>`)[0];
+                popup_4cbc093619641d3b18eafdb52cc141a2.setContent(html_e680e21c4c6a051e53ee7d0e741e9e1c);
+            
+        
+
+        marker_b25fd6991091696442280bd5edd76f1c.bindPopup(popup_4cbc093619641d3b18eafdb52cc141a2)
+        ;
+
+        
+    
+    
+            var marker_4e5b52557915cbad320036121fb275b5 = L.marker(
+                [10.36623477935791, 107.09513092041016],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_656c1d5171bd57e45e907e7a0eb980d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4e5b52557915cbad320036121fb275b5.setIcon(icon_656c1d5171bd57e45e907e7a0eb980d2);
+        
+    
+        var popup_468be748ea9493429336624cfcdf5ed6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62918637273ea62bb006ab12003fc4a6 = $(`<div id="html_62918637273ea62bb006ab12003fc4a6" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-21573 Location: (10.36623477935791, 107.09513092041016)</div>`)[0];
+                popup_468be748ea9493429336624cfcdf5ed6.setContent(html_62918637273ea62bb006ab12003fc4a6);
+            
+        
+
+        marker_4e5b52557915cbad320036121fb275b5.bindPopup(popup_468be748ea9493429336624cfcdf5ed6)
+        ;
+
+        
+    
+    
+            var marker_6d0ac3d4831b9f38979206431e8cbdc6 = L.marker(
+                [10.640359878540039, 107.0291519165039],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_14278266ded322655c32b42ba73685f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6d0ac3d4831b9f38979206431e8cbdc6.setIcon(icon_14278266ded322655c32b42ba73685f4);
+        
+    
+        var popup_ffb1219166dc25a1b93e50d05273e349 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d203c5858a3d565d6e5854e0ee70513b = $(`<div id="html_d203c5858a3d565d6e5854e0ee70513b" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-00810 Location: (10.640359878540039, 107.0291519165039)</div>`)[0];
+                popup_ffb1219166dc25a1b93e50d05273e349.setContent(html_d203c5858a3d565d6e5854e0ee70513b);
+            
+        
+
+        marker_6d0ac3d4831b9f38979206431e8cbdc6.bindPopup(popup_ffb1219166dc25a1b93e50d05273e349)
+        ;
+
+        
+    
+    
+            var marker_1e3042a94599023cd0d94208b5a5acd0 = L.marker(
+                [10.68362808227539, 106.55010223388672],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_84a5f17a3c3ebdc5a1e965ca52eddb3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1e3042a94599023cd0d94208b5a5acd0.setIcon(icon_84a5f17a3c3ebdc5a1e965ca52eddb3a);
+        
+    
+        var popup_7864902fd4f34e30f33fbabb3972830a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1db3e35a538e5c519ffadb267a052918 = $(`<div id="html_1db3e35a538e5c519ffadb267a052918" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B08169 Location: (10.68362808227539, 106.55010223388672)</div>`)[0];
+                popup_7864902fd4f34e30f33fbabb3972830a.setContent(html_1db3e35a538e5c519ffadb267a052918);
+            
+        
+
+        marker_1e3042a94599023cd0d94208b5a5acd0.bindPopup(popup_7864902fd4f34e30f33fbabb3972830a)
+        ;
+
+        
+    
+    
+            var marker_ca17db52bf301997aa15b04b29f80356 = L.marker(
+                [10.78894329071045, 106.85951232910156],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_ac609dcbf820dd6a6234b590b0eb7020 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ca17db52bf301997aa15b04b29f80356.setIcon(icon_ac609dcbf820dd6a6234b590b0eb7020);
+        
+    
+        var popup_04085d68944c887b49309089c15ede58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ca94ceca0fd5fade7e9a73474480a2d = $(`<div id="html_6ca94ceca0fd5fade7e9a73474480a2d" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B02336 Location: (10.78894329071045, 106.85951232910156)</div>`)[0];
+                popup_04085d68944c887b49309089c15ede58.setContent(html_6ca94ceca0fd5fade7e9a73474480a2d);
+            
+        
+
+        marker_ca17db52bf301997aa15b04b29f80356.bindPopup(popup_04085d68944c887b49309089c15ede58)
+        ;
+
+        
+    
+    
+            var marker_021d8a71e9e872bdaea84ded79cf4334 = L.marker(
+                [10.797300338745117, 106.64330291748047],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_6e6d7cc62c4b8565ba9bfa874688a9ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_021d8a71e9e872bdaea84ded79cf4334.setIcon(icon_6e6d7cc62c4b8565ba9bfa874688a9ef);
+        
+    
+        var popup_1bf6a94909053907adc5f38de3b1c0d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44908ccbbf98c19c314638ee2ef48697 = $(`<div id="html_44908ccbbf98c19c314638ee2ef48697" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B28629 Location: (10.797300338745117, 106.64330291748047)</div>`)[0];
+                popup_1bf6a94909053907adc5f38de3b1c0d9.setContent(html_44908ccbbf98c19c314638ee2ef48697);
+            
+        
+
+        marker_021d8a71e9e872bdaea84ded79cf4334.bindPopup(popup_1bf6a94909053907adc5f38de3b1c0d9)
+        ;
+
+        
+    
+    
+            var marker_d6a960d253285809dfdd5bd6e25ba4df = L.marker(
+                [10.857627868652344, 106.66622161865234],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b6127cc85ba267d5436f4270b614cf5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d6a960d253285809dfdd5bd6e25ba4df.setIcon(icon_b6127cc85ba267d5436f4270b614cf5c);
+        
+    
+        var popup_866330dccd7db342b2927f076d7816a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a42c04d6ef4a80e061ab7ee99cd34235 = $(`<div id="html_a42c04d6ef4a80e061ab7ee99cd34235" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B14725 Location: (10.857627868652344, 106.66622161865234)</div>`)[0];
+                popup_866330dccd7db342b2927f076d7816a8.setContent(html_a42c04d6ef4a80e061ab7ee99cd34235);
+            
+        
+
+        marker_d6a960d253285809dfdd5bd6e25ba4df.bindPopup(popup_866330dccd7db342b2927f076d7816a8)
+        ;
+
+        
+    
+    
+            var marker_98ad75b09bbaffb80130d0bd38f81cb3 = L.marker(
+                [10.41694164276123, 107.2860336303711],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_4928a6ee43e866799d6cc6a788c453b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_98ad75b09bbaffb80130d0bd38f81cb3.setIcon(icon_4928a6ee43e866799d6cc6a788c453b8);
+        
+    
+        var popup_51b0ac72abc96e210adec07c872deba0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_295f849a2d07e1c3395c873ab27be536 = $(`<div id="html_295f849a2d07e1c3395c873ab27be536" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-01688 Location: (10.41694164276123, 107.2860336303711)</div>`)[0];
+                popup_51b0ac72abc96e210adec07c872deba0.setContent(html_295f849a2d07e1c3395c873ab27be536);
+            
+        
+
+        marker_98ad75b09bbaffb80130d0bd38f81cb3.bindPopup(popup_51b0ac72abc96e210adec07c872deba0)
+        ;
+
+        
+    
+    
+            var marker_12ff5afc3e5a466088412fa1ee1a6803 = L.marker(
+                [10.364859580993652, 107.0956039428711],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_8ffaad80fad3ce64252de4befb729090 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_12ff5afc3e5a466088412fa1ee1a6803.setIcon(icon_8ffaad80fad3ce64252de4befb729090);
+        
+    
+        var popup_a44407b65a85c54c1afa33873207a0f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5980cbce72848856cf0a1fd3f820e99c = $(`<div id="html_5980cbce72848856cf0a1fd3f820e99c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02669 Location: (10.364859580993652, 107.0956039428711)</div>`)[0];
+                popup_a44407b65a85c54c1afa33873207a0f6.setContent(html_5980cbce72848856cf0a1fd3f820e99c);
+            
+        
+
+        marker_12ff5afc3e5a466088412fa1ee1a6803.bindPopup(popup_a44407b65a85c54c1afa33873207a0f6)
+        ;
+
+        
+    
+    
+            var marker_a51e804f28202534926d62518fae3e10 = L.marker(
+                [10.805473327636719, 106.66753387451172],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_086100237eaea69a42ad91fced2f2f32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a51e804f28202534926d62518fae3e10.setIcon(icon_086100237eaea69a42ad91fced2f2f32);
+        
+    
+        var popup_9876480e60a3b61f797f7a2162323f5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d28ee4a9ff8ceadb22a456964e0eba85 = $(`<div id="html_d28ee4a9ff8ceadb22a456964e0eba85" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53N4396 Location: (10.805473327636719, 106.66753387451172)</div>`)[0];
+                popup_9876480e60a3b61f797f7a2162323f5c.setContent(html_d28ee4a9ff8ceadb22a456964e0eba85);
+            
+        
+
+        marker_a51e804f28202534926d62518fae3e10.bindPopup(popup_9876480e60a3b61f797f7a2162323f5c)
+        ;
+
+        
+    
+    
+            var marker_1d8c12d4a4375feef38f6b330965d09e = L.marker(
+                [10.805171966552734, 106.66736602783203],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_349ab0bb5c59e7e0408eb032274c067a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1d8c12d4a4375feef38f6b330965d09e.setIcon(icon_349ab0bb5c59e7e0408eb032274c067a);
+        
+    
+        var popup_9d6d947fbc978e2e4e68c954aebb28e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a39b519df78515ec0ec4fe7ca351d3f9 = $(`<div id="html_a39b519df78515ec0ec4fe7ca351d3f9" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B25423 Location: (10.805171966552734, 106.66736602783203)</div>`)[0];
+                popup_9d6d947fbc978e2e4e68c954aebb28e1.setContent(html_a39b519df78515ec0ec4fe7ca351d3f9);
+            
+        
+
+        marker_1d8c12d4a4375feef38f6b330965d09e.bindPopup(popup_9d6d947fbc978e2e4e68c954aebb28e1)
+        ;
+
+        
+    
+    
+            var marker_7ba0a6b41faf7bf98c7f97ddbb89102f = L.marker(
+                [10.771381378173828, 106.6412582397461],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_d81b147d84574c2bfb794eaaae2afc0a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7ba0a6b41faf7bf98c7f97ddbb89102f.setIcon(icon_d81b147d84574c2bfb794eaaae2afc0a);
+        
+    
+        var popup_be2e63f743ebce287dd02b82896ee861 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fc1b829dd49c67dcc367627bbd1e528 = $(`<div id="html_2fc1b829dd49c67dcc367627bbd1e528" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B22008 Location: (10.771381378173828, 106.6412582397461)</div>`)[0];
+                popup_be2e63f743ebce287dd02b82896ee861.setContent(html_2fc1b829dd49c67dcc367627bbd1e528);
+            
+        
+
+        marker_7ba0a6b41faf7bf98c7f97ddbb89102f.bindPopup(popup_be2e63f743ebce287dd02b82896ee861)
+        ;
+
+        
+    
+    
+            var marker_d9ed7a06f16719e10e34d357d24d0d61 = L.marker(
+                [10.771394729614258, 106.64129638671875],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_8528abd56f7b1bb45696dd92b322fd4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d9ed7a06f16719e10e34d357d24d0d61.setIcon(icon_8528abd56f7b1bb45696dd92b322fd4d);
+        
+    
+        var popup_9bd5d871080b72e70a7bd6a046a0faf9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9948f39f05608e4a8211d2a04aaf5b89 = $(`<div id="html_9948f39f05608e4a8211d2a04aaf5b89" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B22180 Location: (10.771394729614258, 106.64129638671875)</div>`)[0];
+                popup_9bd5d871080b72e70a7bd6a046a0faf9.setContent(html_9948f39f05608e4a8211d2a04aaf5b89);
+            
+        
+
+        marker_d9ed7a06f16719e10e34d357d24d0d61.bindPopup(popup_9bd5d871080b72e70a7bd6a046a0faf9)
+        ;
+
+        
+    
+    
+            var marker_13859ac9bf89261820978405e939edfb = L.marker(
+                [10.771236419677734, 106.64092254638672],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_659173827dfe7fa3e7395fb7ad8cd6e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_13859ac9bf89261820978405e939edfb.setIcon(icon_659173827dfe7fa3e7395fb7ad8cd6e2);
+        
+    
+        var popup_4192f4dd92e442c545d8701695798a1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7ce107d9f7ee107f1d3c22a669e61eb = $(`<div id="html_a7ce107d9f7ee107f1d3c22a669e61eb" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B22177 Location: (10.771236419677734, 106.64092254638672)</div>`)[0];
+                popup_4192f4dd92e442c545d8701695798a1e.setContent(html_a7ce107d9f7ee107f1d3c22a669e61eb);
+            
+        
+
+        marker_13859ac9bf89261820978405e939edfb.bindPopup(popup_4192f4dd92e442c545d8701695798a1e)
+        ;
+
+        
+    
+    
+            var marker_ac2ca4f21225a4beb8735ff7f6469e52 = L.marker(
+                [19.325035095214844, 105.80388641357422],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_fa9092b8e819f93a7dd169678b0b14a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ac2ca4f21225a4beb8735ff7f6469e52.setIcon(icon_fa9092b8e819f93a7dd169678b0b14a5);
+        
+    
+        var popup_967a2a7f7fedf7120ea839e6e150edcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_831087b024626477f8b4b67383055fba = $(`<div id="html_831087b024626477f8b4b67383055fba" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-31010 Location: (19.325035095214844, 105.80388641357422)</div>`)[0];
+                popup_967a2a7f7fedf7120ea839e6e150edcd.setContent(html_831087b024626477f8b4b67383055fba);
+            
+        
+
+        marker_ac2ca4f21225a4beb8735ff7f6469e52.bindPopup(popup_967a2a7f7fedf7120ea839e6e150edcd)
+        ;
+
+        
+    
+    
+            var marker_88fc08af43bd7533470e31029a0000cf = L.marker(
+                [10.365835189819336, 107.09495544433594],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5248c3f3e10c6a4e91c1cb1f709034e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_88fc08af43bd7533470e31029a0000cf.setIcon(icon_5248c3f3e10c6a4e91c1cb1f709034e4);
+        
+    
+        var popup_864050cfff8c85deee7040a0ef2eabb4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9d9ac38ba8caea36092b905635218d0 = $(`<div id="html_e9d9ac38ba8caea36092b905635218d0" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-01488 Location: (10.365835189819336, 107.09495544433594)</div>`)[0];
+                popup_864050cfff8c85deee7040a0ef2eabb4.setContent(html_e9d9ac38ba8caea36092b905635218d0);
+            
+        
+
+        marker_88fc08af43bd7533470e31029a0000cf.bindPopup(popup_864050cfff8c85deee7040a0ef2eabb4)
+        ;
+
+        
+    
+    
+            var marker_16744ee9e433e4fd01b4709c95b96568 = L.marker(
+                [15.384272575378418, 108.81025695800781],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_ded2a4bc202826852bedfb8a56d630cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_16744ee9e433e4fd01b4709c95b96568.setIcon(icon_ded2a4bc202826852bedfb8a56d630cf);
+        
+    
+        var popup_89a05b717b7ed93786f47720a3e61ab3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d075830609cd0fbe4b0d6f953c3d5b2 = $(`<div id="html_5d075830609cd0fbe4b0d6f953c3d5b2" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02301 Location: (15.384272575378418, 108.81025695800781)</div>`)[0];
+                popup_89a05b717b7ed93786f47720a3e61ab3.setContent(html_5d075830609cd0fbe4b0d6f953c3d5b2);
+            
+        
+
+        marker_16744ee9e433e4fd01b4709c95b96568.bindPopup(popup_89a05b717b7ed93786f47720a3e61ab3)
+        ;
+
+        
+    
+    
+            var marker_593244cdb8387e9ae129f08c8649c830 = L.marker(
+                [10.366148948669434, 107.09512329101562],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5732109bdf975d47c9f69cf92f207446 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_593244cdb8387e9ae129f08c8649c830.setIcon(icon_5732109bdf975d47c9f69cf92f207446);
+        
+    
+        var popup_3d589c0deaa884bff4e37043ae472836 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d735f38c5ae9a53ca8913dcd0cdfde6e = $(`<div id="html_d735f38c5ae9a53ca8913dcd0cdfde6e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-01346 Location: (10.366148948669434, 107.09512329101562)</div>`)[0];
+                popup_3d589c0deaa884bff4e37043ae472836.setContent(html_d735f38c5ae9a53ca8913dcd0cdfde6e);
+            
+        
+
+        marker_593244cdb8387e9ae129f08c8649c830.bindPopup(popup_3d589c0deaa884bff4e37043ae472836)
+        ;
+
+        
+    
+    
+            var marker_24fffe4e19f34e417804ebbca2029f64 = L.marker(
+                [10.365989685058594, 107.09535217285156],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_02c662c9ccfe462601ee80cab7f90c01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_24fffe4e19f34e417804ebbca2029f64.setIcon(icon_02c662c9ccfe462601ee80cab7f90c01);
+        
+    
+        var popup_5c490c33dfb58b412ff8e1c31d6ad8f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43db225536e2a4a19cc8e2ecf87a026c = $(`<div id="html_43db225536e2a4a19cc8e2ecf87a026c" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-03232 Location: (10.365989685058594, 107.09535217285156)</div>`)[0];
+                popup_5c490c33dfb58b412ff8e1c31d6ad8f1.setContent(html_43db225536e2a4a19cc8e2ecf87a026c);
+            
+        
+
+        marker_24fffe4e19f34e417804ebbca2029f64.bindPopup(popup_5c490c33dfb58b412ff8e1c31d6ad8f1)
+        ;
+
+        
+    
+    
+            var marker_f2af0401347aaaa1fb42c856d0d9b77d = L.marker(
+                [16.81414031982422, 107.10507202148438],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_9f884726071ac2602f56eb3e14357a80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f2af0401347aaaa1fb42c856d0d9b77d.setIcon(icon_9f884726071ac2602f56eb3e14357a80);
+        
+    
+        var popup_02cfdbeb34679dbc0e4683213f0cd43c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ef71cc5e2e65086696cd91f3b684bca = $(`<div id="html_8ef71cc5e2e65086696cd91f3b684bca" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-19782 Location: (16.81414031982422, 107.10507202148438)</div>`)[0];
+                popup_02cfdbeb34679dbc0e4683213f0cd43c.setContent(html_8ef71cc5e2e65086696cd91f3b684bca);
+            
+        
+
+        marker_f2af0401347aaaa1fb42c856d0d9b77d.bindPopup(popup_02cfdbeb34679dbc0e4683213f0cd43c)
+        ;
+
+        
+    
+    
+            var marker_ce71c859ad8e5d2b1968e0d9dcb7856d = L.marker(
+                [10.771293640136719, 106.64100646972656],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b938f814cacd42d08023d9e63a216e76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ce71c859ad8e5d2b1968e0d9dcb7856d.setIcon(icon_b938f814cacd42d08023d9e63a216e76);
+        
+    
+        var popup_b20432b211759bf6a6bf0ab850bbadd8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d14e5012c79f68b6de19611b85898510 = $(`<div id="html_d14e5012c79f68b6de19611b85898510" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B22165 Location: (10.771293640136719, 106.64100646972656)</div>`)[0];
+                popup_b20432b211759bf6a6bf0ab850bbadd8.setContent(html_d14e5012c79f68b6de19611b85898510);
+            
+        
+
+        marker_ce71c859ad8e5d2b1968e0d9dcb7856d.bindPopup(popup_b20432b211759bf6a6bf0ab850bbadd8)
+        ;
+
+        
+    
+    
+            var marker_0886d67b95e1481ea00f9aec3087a507 = L.marker(
+                [10.951098442077637, 106.51871490478516],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_5f7442dc103794e122f28573f0354f32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0886d67b95e1481ea00f9aec3087a507.setIcon(icon_5f7442dc103794e122f28573f0354f32);
+        
+    
+        var popup_71cb4675d321ea69e8b76a0d61a219f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f783af1723c5eb0bb2753b712e12d7f8 = $(`<div id="html_f783af1723c5eb0bb2753b712e12d7f8" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B23483 Location: (10.951098442077637, 106.51871490478516)</div>`)[0];
+                popup_71cb4675d321ea69e8b76a0d61a219f1.setContent(html_f783af1723c5eb0bb2753b712e12d7f8);
+            
+        
+
+        marker_0886d67b95e1481ea00f9aec3087a507.bindPopup(popup_71cb4675d321ea69e8b76a0d61a219f1)
+        ;
+
+        
+    
+    
+            var marker_ed983f036669990dc9040ca864af02f6 = L.marker(
+                [10.3650484085083, 107.09559631347656],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_1accf1f94fe00a3e7efcb4b83a79931a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ed983f036669990dc9040ca864af02f6.setIcon(icon_1accf1f94fe00a3e7efcb4b83a79931a);
+        
+    
+        var popup_2d98f3a346d02478b99666b5b899c6ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d86c2c7bc1b92212b79fbbbc38d85f3 = $(`<div id="html_4d86c2c7bc1b92212b79fbbbc38d85f3" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-03143 Location: (10.3650484085083, 107.09559631347656)</div>`)[0];
+                popup_2d98f3a346d02478b99666b5b899c6ca.setContent(html_4d86c2c7bc1b92212b79fbbbc38d85f3);
+            
+        
+
+        marker_ed983f036669990dc9040ca864af02f6.bindPopup(popup_2d98f3a346d02478b99666b5b899c6ca)
+        ;
+
+        
+    
+    
+            var marker_eb39efa39d01ee5755bf758914939230 = L.marker(
+                [10.802536964416504, 106.75248718261719],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_14b0749813c87179596953a3a9d944cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_eb39efa39d01ee5755bf758914939230.setIcon(icon_14b0749813c87179596953a3a9d944cd);
+        
+    
+        var popup_f3571c0589f207c067e7c6959c7ab0bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffe31bc5965349d5e4540409e8e5f6ad = $(`<div id="html_ffe31bc5965349d5e4540409e8e5f6ad" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-27320 Location: (10.802536964416504, 106.75248718261719)</div>`)[0];
+                popup_f3571c0589f207c067e7c6959c7ab0bb.setContent(html_ffe31bc5965349d5e4540409e8e5f6ad);
+            
+        
+
+        marker_eb39efa39d01ee5755bf758914939230.bindPopup(popup_f3571c0589f207c067e7c6959c7ab0bb)
+        ;
+
+        
+    
+    
+            var marker_c8af52ac0a1abd917c7fad4e0c502e70 = L.marker(
+                [19.348264694213867, 105.79148864746094],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_4197963daba9cbecbb07a24ad049cd73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c8af52ac0a1abd917c7fad4e0c502e70.setIcon(icon_4197963daba9cbecbb07a24ad049cd73);
+        
+    
+        var popup_bf5eb0fc18507cccb4e600910811bf97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6ae6fe8995a13c369429d58a3ee5e2a = $(`<div id="html_e6ae6fe8995a13c369429d58a3ee5e2a" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72A-25184 Location: (19.348264694213867, 105.79148864746094)</div>`)[0];
+                popup_bf5eb0fc18507cccb4e600910811bf97.setContent(html_e6ae6fe8995a13c369429d58a3ee5e2a);
+            
+        
+
+        marker_c8af52ac0a1abd917c7fad4e0c502e70.bindPopup(popup_bf5eb0fc18507cccb4e600910811bf97)
+        ;
+
+        
+    
+    
+            var marker_8ec6d52eb67449040bbff93ef2857719 = L.marker(
+                [10.36567497253418, 107.09515380859375],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_ee6ebd00e4dbd7155e34192e15016ba4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8ec6d52eb67449040bbff93ef2857719.setIcon(icon_ee6ebd00e4dbd7155e34192e15016ba4);
+        
+    
+        var popup_0e27a2fb91ff47a4aae01c9d02346858 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9e06e70a04b0960a569e03168b52115 = $(`<div id="html_c9e06e70a04b0960a569e03168b52115" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02400 Location: (10.36567497253418, 107.09515380859375)</div>`)[0];
+                popup_0e27a2fb91ff47a4aae01c9d02346858.setContent(html_c9e06e70a04b0960a569e03168b52115);
+            
+        
+
+        marker_8ec6d52eb67449040bbff93ef2857719.bindPopup(popup_0e27a2fb91ff47a4aae01c9d02346858)
+        ;
+
+        
+    
+    
+            var marker_a90b4faa344a4888c21e48d4d57fd071 = L.marker(
+                [9.947532653808594, 105.86002349853516],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_6350475ba580fe1aeb58bb49ba405cf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a90b4faa344a4888c21e48d4d57fd071.setIcon(icon_6350475ba580fe1aeb58bb49ba405cf0);
+        
+    
+        var popup_a680857389d4d17b4a0f78996f059eae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b2a5ed100e0ab2fc18ee054f9071c32 = $(`<div id="html_1b2a5ed100e0ab2fc18ee054f9071c32" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02363 Location: (9.947532653808594, 105.86002349853516)</div>`)[0];
+                popup_a680857389d4d17b4a0f78996f059eae.setContent(html_1b2a5ed100e0ab2fc18ee054f9071c32);
+            
+        
+
+        marker_a90b4faa344a4888c21e48d4d57fd071.bindPopup(popup_a680857389d4d17b4a0f78996f059eae)
+        ;
+
+        
+    
+    
+            var marker_3528df66d836065ca5e896539520a650 = L.marker(
+                [10.356558799743652, 107.0960693359375],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_1cd5c0a1b8d4815731511e5fd34d9b1c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3528df66d836065ca5e896539520a650.setIcon(icon_1cd5c0a1b8d4815731511e5fd34d9b1c);
+        
+    
+        var popup_a18898ab22b9ff0dd11f56f1a27af0cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_875103bb2112ee41141fa97d18bdab3f = $(`<div id="html_875103bb2112ee41141fa97d18bdab3f" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-00285 Location: (10.356558799743652, 107.0960693359375)</div>`)[0];
+                popup_a18898ab22b9ff0dd11f56f1a27af0cb.setContent(html_875103bb2112ee41141fa97d18bdab3f);
+            
+        
+
+        marker_3528df66d836065ca5e896539520a650.bindPopup(popup_a18898ab22b9ff0dd11f56f1a27af0cb)
+        ;
+
+        
+    
+    
+            var marker_b852de57cec7432fa59831a711bfd979 = L.marker(
+                [10.366171836853027, 107.09474182128906],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_6446d536f0448166b3ddde4e167ba97b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b852de57cec7432fa59831a711bfd979.setIcon(icon_6446d536f0448166b3ddde4e167ba97b);
+        
+    
+        var popup_ed1a7a221af4593561f71792a36ba0f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8cebd3c3a4d0916815345b71a87d0da5 = $(`<div id="html_8cebd3c3a4d0916815345b71a87d0da5" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B03125 Location: (10.366171836853027, 107.09474182128906)</div>`)[0];
+                popup_ed1a7a221af4593561f71792a36ba0f3.setContent(html_8cebd3c3a4d0916815345b71a87d0da5);
+            
+        
+
+        marker_b852de57cec7432fa59831a711bfd979.bindPopup(popup_ed1a7a221af4593561f71792a36ba0f3)
+        ;
+
+        
+    
+    
+            var marker_308a631b09f0808155a1332e08c396eb = L.marker(
+                [10.356490135192871, 107.09624481201172],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_8286e95431aadf1c4eed7f2717293dee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_308a631b09f0808155a1332e08c396eb.setIcon(icon_8286e95431aadf1c4eed7f2717293dee);
+        
+    
+        var popup_86086bb379f75344410d2773fbc88071 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df12c8e156eda33494d92ab84c2951ad = $(`<div id="html_df12c8e156eda33494d92ab84c2951ad" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72C-03106 Location: (10.356490135192871, 107.09624481201172)</div>`)[0];
+                popup_86086bb379f75344410d2773fbc88071.setContent(html_df12c8e156eda33494d92ab84c2951ad);
+            
+        
+
+        marker_308a631b09f0808155a1332e08c396eb.bindPopup(popup_86086bb379f75344410d2773fbc88071)
+        ;
+
+        
+    
+    
+            var marker_895661e2913e3633afb5747da5cdd671 = L.marker(
+                [10.968196868896484, 106.48341369628906],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_0dcffa0c729b2385aa115fe8b7c8a86c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_895661e2913e3633afb5747da5cdd671.setIcon(icon_0dcffa0c729b2385aa115fe8b7c8a86c);
+        
+    
+        var popup_ff239125fce2ea187f88bc42e56f2f0d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b281b95be84a072e4c6d8cbc48695d00 = $(`<div id="html_b281b95be84a072e4c6d8cbc48695d00" style="width: 100.0%; height: 100.0%;">Vehicle Number: 53N5223 Location: (10.968196868896484, 106.48341369628906)</div>`)[0];
+                popup_ff239125fce2ea187f88bc42e56f2f0d.setContent(html_b281b95be84a072e4c6d8cbc48695d00);
+            
+        
+
+        marker_895661e2913e3633afb5747da5cdd671.bindPopup(popup_ff239125fce2ea187f88bc42e56f2f0d)
+        ;
+
+        
+    
+    
+            var marker_d301d71e7f6ac79688dea668524cdad4 = L.marker(
+                [10.805520057678223, 106.66783905029297],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_2e11dcb5a53a3fec55d23eed620defff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d301d71e7f6ac79688dea668524cdad4.setIcon(icon_2e11dcb5a53a3fec55d23eed620defff);
+        
+    
+        var popup_02fc4a673a1791aedbbaab2d3ac20d91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_124ce93ee373b9f6bea3f00c17e5cd98 = $(`<div id="html_124ce93ee373b9f6bea3f00c17e5cd98" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B25531 Location: (10.805520057678223, 106.66783905029297)</div>`)[0];
+                popup_02fc4a673a1791aedbbaab2d3ac20d91.setContent(html_124ce93ee373b9f6bea3f00c17e5cd98);
+            
+        
+
+        marker_d301d71e7f6ac79688dea668524cdad4.bindPopup(popup_02fc4a673a1791aedbbaab2d3ac20d91)
+        ;
+
+        
+    
+    
+            var marker_e685185791e2c2c3a381f8f8f1e9d99c = L.marker(
+                [10.837499618530273, 106.6729965209961],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b68c141960c0be621b92b18a7153765b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e685185791e2c2c3a381f8f8f1e9d99c.setIcon(icon_b68c141960c0be621b92b18a7153765b);
+        
+    
+        var popup_668217ce49392f8f9100613cc7859b29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d752acac272e07ae729673ea3b8c762 = $(`<div id="html_9d752acac272e07ae729673ea3b8c762" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51C65728 Location: (10.837499618530273, 106.6729965209961)</div>`)[0];
+                popup_668217ce49392f8f9100613cc7859b29.setContent(html_9d752acac272e07ae729673ea3b8c762);
+            
+        
+
+        marker_e685185791e2c2c3a381f8f8f1e9d99c.bindPopup(popup_668217ce49392f8f9100613cc7859b29)
+        ;
+
+        
+    
+    
+            var marker_6372b28d009ed10efd3fd24fc1988ada = L.marker(
+                [10.256190299987793, 105.85032653808594],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_79e8550d415832e74ed313a1fb74dae4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6372b28d009ed10efd3fd24fc1988ada.setIcon(icon_79e8550d415832e74ed313a1fb74dae4);
+        
+    
+        var popup_59bc9541345db65c34a3465adf3e4570 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_852d435226d2874e8976e6dca8b4a33e = $(`<div id="html_852d435226d2874e8976e6dca8b4a33e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B40551 Location: (10.256190299987793, 105.85032653808594)</div>`)[0];
+                popup_59bc9541345db65c34a3465adf3e4570.setContent(html_852d435226d2874e8976e6dca8b4a33e);
+            
+        
+
+        marker_6372b28d009ed10efd3fd24fc1988ada.bindPopup(popup_59bc9541345db65c34a3465adf3e4570)
+        ;
+
+        
+    
+    
+            var marker_0339742ae68fc420d6f5b97509a2e3eb = L.marker(
+                [10.365511894226074, 107.09553527832031],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_19a0a61c0acce617b0d25a9cb4ca87f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0339742ae68fc420d6f5b97509a2e3eb.setIcon(icon_19a0a61c0acce617b0d25a9cb4ca87f4);
+        
+    
+        var popup_8fcffcc99c33c456ad03afd4ba8b1e41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9473abe8c5ff608d017e28861a2d0158 = $(`<div id="html_9473abe8c5ff608d017e28861a2d0158" style="width: 100.0%; height: 100.0%;">Vehicle Number: 72B-02509 Location: (10.365511894226074, 107.09553527832031)</div>`)[0];
+                popup_8fcffcc99c33c456ad03afd4ba8b1e41.setContent(html_9473abe8c5ff608d017e28861a2d0158);
+            
+        
+
+        marker_0339742ae68fc420d6f5b97509a2e3eb.bindPopup(popup_8fcffcc99c33c456ad03afd4ba8b1e41)
+        ;
+
+        
+    
+    
+            var marker_37ef0ce58a23a3ab374220f589cc40d0 = L.marker(
+                [10.817331314086914, 106.71243286132812],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_7eabc0005ca7c6978f3671f1d67d0bc4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_37ef0ce58a23a3ab374220f589cc40d0.setIcon(icon_7eabc0005ca7c6978f3671f1d67d0bc4);
+        
+    
+        var popup_5d9bbcbe9ee1a88f709ddcd0771b1d8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c01c614d4163a89d5c1141baf78c992e = $(`<div id="html_c01c614d4163a89d5c1141baf78c992e" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B21915 Location: (10.817331314086914, 106.71243286132812)</div>`)[0];
+                popup_5d9bbcbe9ee1a88f709ddcd0771b1d8e.setContent(html_c01c614d4163a89d5c1141baf78c992e);
+            
+        
+
+        marker_37ef0ce58a23a3ab374220f589cc40d0.bindPopup(popup_5d9bbcbe9ee1a88f709ddcd0771b1d8e)
+        ;
+
+        
+    
+    
+            var marker_c3128ad2d785f175edc990cec089adf6 = L.marker(
+                [13.570755004882812, 109.28228759765625],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_b531d639cfb464a6132e78208c475765 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c3128ad2d785f175edc990cec089adf6.setIcon(icon_b531d639cfb464a6132e78208c475765);
+        
+    
+        var popup_d4bc929e9aac993b62bbbec5b88abf0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ecd429b9ce2854b96dd28a4476f40d16 = $(`<div id="html_ecd429b9ce2854b96dd28a4476f40d16" style="width: 100.0%; height: 100.0%;">Vehicle Number: 51B15849 Location: (13.570755004882812, 109.28228759765625)</div>`)[0];
+                popup_d4bc929e9aac993b62bbbec5b88abf0b.setContent(html_ecd429b9ce2854b96dd28a4476f40d16);
+            
+        
+
+        marker_c3128ad2d785f175edc990cec089adf6.bindPopup(popup_d4bc929e9aac993b62bbbec5b88abf0b)
+        ;
+
+        
+    
+    
+            var marker_ca2ae2de92c72e9dde634685877e8281 = L.marker(
+                [10.953615188598633, 106.95335388183594],
+                {}
+            ).addTo(map_fec7b4656524ed4b5c8d5d9b5d930abb);
+        
+    
+            var icon_d728cb697d8c5c92e8f2c9e2a37e9405 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bus", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ca2ae2de92c72e9dde634685877e8281.setIcon(icon_d728cb697d8c5c92e8f2c9e2a37e9405);
+        
+    
+        var popup_d94ee9de2467d38e4740d0459502aacd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b8c0ea6c070af3d95b31fd2fc5513d1 = $(`<div id="html_1b8c0ea6c070af3d95b31fd2fc5513d1" style="width: 100.0%; height: 100.0%;">Vehicle Number: 61B00861 Location: (10.953615188598633, 106.95335388183594)</div>`)[0];
+                popup_d94ee9de2467d38e4740d0459502aacd.setContent(html_1b8c0ea6c070af3d95b31fd2fc5513d1);
+            
+        
+
+        marker_ca2ae2de92c72e9dde634685877e8281.bindPopup(popup_d94ee9de2467d38e4740d0459502aacd)
+        ;
+
+        
+    
+</script>
+</html>
