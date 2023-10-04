@@ -10,11 +10,17 @@ pipeline {
 
         stage('Build') {
             steps {
-                
+                sh 'cd machine_learning'
+                sh 'python3 linear_regression.py'
             }
         }
 
-        stage()
+        stage('Test') {
+            steps {
+                sh 'cd machine_learning'
+                sh 'python3 -m pytest'
+            }
+        }
     }
     
 }
