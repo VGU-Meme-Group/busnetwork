@@ -39,7 +39,7 @@ const createRoutineMachineLayer = () => {
     // getDistance()
     return L.Routing.control({
       waypoints: 
-        getWaypoints().slice(0, 36).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+        getWaypoints().slice(0,36).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
       ,
       lineOptions: {
         styles: [{ color: "#FF6F00", weight: 5 }]
@@ -55,7 +55,7 @@ const createRoutineMachineLayer = () => {
       ]
       
     }).on('routeselected', (e) => {
-      Object.assign(segments, e.route.instructions)
+      Object.assign(segments, e.route.summary)
     })
 
   };
