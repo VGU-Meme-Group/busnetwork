@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-right: auto;
+            margin-left:  auto;
+            max-width: 1800px;
+            padding-right: 10px;
+            padding-left:  10px;
+        }
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            color: black;
+            text-align: center;
+
+            margin: 10px;
+            
+            padding: 20px;
+            background-color: rgb(253, 182, 156);
+            border-style: solid;
+            border-radius: 10px;
+        }
+        #mapid {
+            margin: 10px;
+            border-style: solid;
+            border-radius: 10px;
+            height: 800px;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 50%;
+            background-color: #fff;
+        }
+        label, input {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bus Network</h1>
+    <div style="display: flex;">
+        <div id="mapid"></div>
+        <form method="POST">
+            <label for="lat">Enter Latitude:</label><br>
+            <input type="text" id="lat" name="lat"><br>
+            <label for="lon"><h3>Enter Longitude:</h3></label><br>
+            <input type="text" id="lon" name="lon"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+
+        
+    </div>
+
+    <script>
+        var mymap = L.map('mapid').setView([{{ lat }}, {{ lon }}], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(mymap);
+        L.marker([{{ lat }}, {{ lon }}]).addTo(mymap);
+    </script>
+
+</body>
+</html>
