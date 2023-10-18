@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import './App.scss'
 import data from '../src/assets/sample.json'
-import RoutingMachine from './RoutingMachine';
+import RoutingMachine, { RoutingMachine2, RoutingMachine3, RoutingMachine4 } from './RoutingMachine';
 import { GetSegments } from './RoutingMachine';
 
 function App(props) {
@@ -20,10 +20,13 @@ function App(props) {
   useEffect(() => {
     setStops(Object.entries(data))
     setPaths(Object.assign(paths, GetSegments().options.instructions))
-    console.log(paths)
-  }, [])
+
+  },[])
 
 
+
+
+ 
   
   function LocationMarker({pos, onMove, id, name}){
     return(
@@ -51,8 +54,8 @@ function App(props) {
       </div>
       <div className='map-container'>
         <MapContainer className='map-wrapper' center={position} zoomSnap={0.5} zoom={15}>
-          <TileLayer attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}" ext = {'png'}
+          <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" ext = {'png'}
                     ></TileLayer>
           {
             stops.map((stop, index) => {
@@ -69,6 +72,9 @@ function App(props) {
             
           }
           <RoutingMachine></RoutingMachine>
+          <RoutingMachine2></RoutingMachine2>
+          <RoutingMachine3></RoutingMachine3>
+          <RoutingMachine4></RoutingMachine4>
         </MapContainer>
       </div>
       <div className={isClicked ? 'segments-container' : 'segments-container expanded'} onClick={() => setIsClicked(!isClicked)}>
