@@ -29,174 +29,168 @@ const setWaypoints = (props) =>{
 let segments = []
 
 
+// const createRoutingMachineLayer = () => {
 
-
-var instance = L.routing.control({
-  waypoints: 
-        getWaypoints().slice(0,36).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1]))),
-  show: false,
-  addWaypoints: false,
-  routeWhileDragging: true,
-  draggableWaypoints: true,
-  fitSelectedRoutes: true,
-  showAlternatives: false
-})
-
-// instance.on('routeselected', (e) => {
-//   console.log(e)
-// })
-instance.on('routesfound', (e) => {
-  console.log(e)
-})
-
-
-const createRoutineMachineLayer = () => {
+//     return L.Routing.control({
+//       waypoints: 
+//         getWaypoints().slice(0, 55).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+//       ,
+//       lineOptions: {
+//         styles: [{ color: "green", weight: 5 }]
+//       },
+//       addWaypoints: false,
+//       routeWhileDragging: false,
+//       draggableWaypoints: false,
+//       fitSelectedRoutes: true,
+//       showAlternatives: false
+      
+//     })
     
-    // console.log()
-  
-    // getDistance()
-    return L.Routing.control({
-      waypoints: 
-        getWaypoints().slice(0,8).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+
+//   };
+
+  const createRoutingMachineLayer = () =>{
+    const control =  L.Routing.control({
+      waypoints 
+        // getWaypoints().slice(0, 55).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+        // [
+        //   L.latLng(pos1[0][0], pos1[0][1]),
+        //   L.latLng(pos1[1][0], pos1[1][1])
+        // ]
+        // [
+        //   L.latLng(props[0][0], props[0][1]),
+        //   L.latLng(props[1][0], props[1][1])
+        // ]
       ,
       lineOptions: {
-        styles: [{ color: "green", weight: 5 }]
+        styles: [{ color: routeColor, weight: 5 }]
       },
-      show: false,
+      createMarker: function(waypointIndex, waypoint, numberOfWaypoints ){
+        console.log(waypoint)
+        return L.marker(waypoint.latLng).bindPopup(`${waypoint.latLng}`)
+      },
       addWaypoints: false,
-      routeWhileDragging: true,
-      draggableWaypoints: true,
-      fitSelectedRoutes: true,
-      showAlternatives: false,
-      instructions : [
-        segments
-      ]
-      
-    })
-    .on('routeselected', (e) => {
-      Object.assign(segments, e.route)
-      // console.log(e.route.instructions)
-      // L.polyline(e.route.coordinates, {
-      //   color: '#44C',
-      //   weight: 1
-      // })
-      // console.log(e)
+      routeWhileDragging: false,
+      draggableWaypoints: false,
+      fitSelectedRoutes: false,
+      showAlternatives: false
     })
 
-  };
-const createRoutineMachineLayer2 = () => {
+    return control
+  }
+// const createRoutineMachineLayer2 = () => {
     
-    // console.log()
+//     // console.log()
   
-    // getDistance()
-    return L.Routing.control({
-      waypoints: 
-        getWaypoints().slice(8,12).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
-      ,
-      lineOptions: {
-        styles: [{ color: "yellow", weight: 5 }]
-      },
-      show: false,
-      addWaypoints: false,
-      routeWhileDragging: true,
-      draggableWaypoints: true,
-      fitSelectedRoutes: true,
-      showAlternatives: false,
-      instructions : [
-        segments
-      ]
+//     // getDistance()
+//     return L.Routing.control({
+//       waypoints: 
+//         getWaypoints().slice(8,12).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+//       ,
+//       lineOptions: {
+//         styles: [{ color: "yellow", weight: 5 }]
+//       },
+//       show: false,
+//       addWaypoints: false,
+//       routeWhileDragging: true,
+//       draggableWaypoints: true,
+//       fitSelectedRoutes: true,
+//       showAlternatives: false,
+//       instructions : [
+//         segments
+//       ]
       
-    })
-    .on('routeselected', (e) => {
-      Object.assign(segments, e.route)
-      // console.log(e.route.instructions)
-      // L.polyline(e.route.coordinates, {
-      //   color: '#44C',
-      //   weight: 1
-      // })
-      // console.log(e)
-    })
+//     })
+//     .on('routeselected', (e) => {
+//       Object.assign(segments, e.route)
+//       // console.log(e.route.instructions)
+//       // L.polyline(e.route.coordinates, {
+//       //   color: '#44C',
+//       //   weight: 1
+//       // })
+//       // console.log(e)
+//     })
 
-  };
-const createRoutineMachineLayer3 = () => {
+//   };
+// const createRoutineMachineLayer3 = () => {
     
-    // console.log()
+//     // console.log()
   
-    // getDistance()
-    return L.Routing.control({
-      waypoints: 
-        getWaypoints().slice(12,20).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
-      ,
-      lineOptions: {
-        styles: [{ color: "red", weight: 5 }]
-      },
-      show: false,
-      addWaypoints: false,
-      routeWhileDragging: true,
-      draggableWaypoints: true,
-      fitSelectedRoutes: true,
-      showAlternatives: false,
-      instructions : [
-        segments
-      ]
+//     // getDistance()
+//     return L.Routing.control({
+//       waypoints: 
+//         getWaypoints().slice(12,20).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+//       ,
+//       lineOptions: {
+//         styles: [{ color: "red", weight: 5 }]
+//       },
+//       show: false,
+//       addWaypoints: false,
+//       routeWhileDragging: true,
+//       draggableWaypoints: true,
+//       fitSelectedRoutes: true,
+//       showAlternatives: false,
+//       instructions : [
+//         segments
+//       ]
       
-    })
-    .on('routeselected', (e) => {
-      Object.assign(segments, e.route)
-      // console.log(e.route.instructions)
-      // L.polyline(e.route.coordinates, {
-      //   color: '#44C',
-      //   weight: 1
-      // })
-      // console.log(e)
-    })
+//     })
+//     .on('routeselected', (e) => {
+//       Object.assign(segments, e.route)
+//       // console.log(e.route.instructions)
+//       // L.polyline(e.route.coordinates, {
+//       //   color: '#44C',
+//       //   weight: 1
+//       // })
+//       // console.log(e)
+//     })
 
-  };
+//   };
 
-const createRoutineMachineLayer4 = () => {
+// const createRoutineMachineLayer4 = () => {
     
-    // console.log()
+//     // console.log()
   
-    // getDistance()
-    return L.Routing.control({
-      waypoints: 
-        getWaypoints().slice(20,36).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
-      ,
-      lineOptions: {
-        styles: [{ color: "green", weight: 5 }]
-      },
-      show: false,
-      addWaypoints: false,
-      routeWhileDragging: true,
-      draggableWaypoints: true,
-      fitSelectedRoutes: true,
-      showAlternatives: false,
-      instructions : [
-        segments
-      ]
+//     // getDistance()
+//     return L.Routing.control({
+//       waypoints: 
+//         getWaypoints().slice(20,36).map((point) => L.latLng(parseFloat(point[0]), parseFloat(point[1])))
+//       ,
+//       lineOptions: {
+//         styles: [{ color: "green", weight: 5 }]
+//       },
+//       show: false,
+//       addWaypoints: false,
+//       routeWhileDragging: true,
+//       draggableWaypoints: true,
+//       fitSelectedRoutes: true,
+//       showAlternatives: false,
+//       instructions : [
+//         segments
+//       ]
       
-    })
-    .on('routeselected', (e) => {
-      Object.assign(segments, e.route)
-      // console.log(e.route.instructions)
-      // L.polyline(e.route.coordinates, {
-      //   color: '#44C',
-      //   weight: 1
-      // })
-      // console.log(e)
-    })
+//     })
+//     .on('routeselected', (e) => {
+//       Object.assign(segments, e.route)
+//       // console.log(e.route.instructions)
+//       // L.polyline(e.route.coordinates, {
+//       //   color: '#44C',
+//       //   weight: 1
+//       // })
+//       // console.log(e)
+//     })
 
-  };
-
-
-export const GetSegments = createRoutineMachineLayer
+//   };
 
 
-export const RoutingMachine2 = createControlComponent(createRoutineMachineLayer2)
-export const RoutingMachine3 = createControlComponent(createRoutineMachineLayer3)
-export const RoutingMachine4 = createControlComponent(createRoutineMachineLayer4)
+export const GetSegments = createRoutingMachineLayer
 
-const RoutingMachine = createControlComponent(createRoutineMachineLayer);
+
+// export const RoutingMachine2 = createControlComponent(createRoutineMachineLayer2)
+// export const RoutingMachine3 = createControlComponent(createRoutineMachineLayer3)
+// export const RoutingMachine4 = createControlComponent(createRoutineMachineLayer4)
+
+const RoutingMachine = createControlComponent(createRoutingMachineLayer);
 
 
 

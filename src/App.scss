@@ -63,10 +63,10 @@
     flex-direction: column;
     row-gap: 30px;
     padding: 20px;
-    cursor: pointer;
     transition: 0.3s ease;
     &.expanded{
-      height: max-content;
+      height: 600px;
+      overflow-y: scroll;
       transition: 0.3s ease;
     }
 

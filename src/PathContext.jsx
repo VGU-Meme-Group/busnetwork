@@ -1,8 +1,12 @@
-import { createContext, useState, useEffect } from "react";
-
+import { createContext, useState, useEffect, createElement } from "react";
+import L, { control } from "leaflet"
+import { createControlComponent } from "@react-leaflet/core";
 export const PathContext = createContext({})
 
 export const PathProvider = ({children}) => {
-    const [segments, setSegments] = useState([])
-    return <PathContext.Provider value={segments, setSegments}></PathContext.Provider>
+
+
+    
+    
+    return <PathContext.Provider></PathContext.Provider>
 }
