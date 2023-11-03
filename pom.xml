@@ -13,6 +13,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Project-spring-boot-with-kafka</name>
 	<description>Demo project for Spring Boot with kafka</description>
+	<modules>
+		<module>kafka-producer</module>
+	</modules>
+	<packaging>pom</packaging>
 	<properties>
 		<java.version>16</java.version>
 	</properties>
