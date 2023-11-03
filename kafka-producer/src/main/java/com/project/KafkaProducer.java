@@ -26,11 +26,11 @@ public class KafkaProducer {
     @Scheduled(fixedRate = 3000)
 
     public void fetchRealTime() throws Exception {
-        System.out.println("Hello World1");
+        //System.out.println("Hello World1");
 
         try {
             URL url = new URL("http://gtfs.gcrta.org/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb");
-            System.out.println("Hello World2");
+            //System.out.println("Hello World2");
             FeedMessage feed = FeedMessage.parseFrom(url.openStream());
             for (FeedEntity entity : feed.getEntityList()) {
                 if (entity.hasVehicle()) {
