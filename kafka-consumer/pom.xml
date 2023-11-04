@@ -8,7 +8,21 @@
         <artifactId>Project-spring-boot-with-kafka</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <dependencies>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/me.paulschwarz/spring-dotenv -->
+        <dependency>
+            <groupId>me.paulschwarz</groupId>
+            <artifactId>spring-dotenv</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+
+    </dependencies>
     <groupId>net.javaguides</groupId>
     <artifactId>kafka-consumer</artifactId>
 
