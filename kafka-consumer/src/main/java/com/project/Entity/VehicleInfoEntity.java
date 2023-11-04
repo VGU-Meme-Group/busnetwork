@@ -17,7 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class VehicleInfoEntity {
 
     @Id
-    private ObjectId id;
+    private String id; // use String id, because we want the id in the log message to be in hexString
 
     private Trip trip;
 

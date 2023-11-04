@@ -31,7 +31,7 @@ public class KafkaConsumer {
 //        LOGGER.info(String.format(vehicleInfo.toString()));
         
         // the received message is in JSON format of the VehicleInfoEntity
-        // But, this JSON is then deserialized into VehicleInfoEntity object, due to the property specified in application.properties in Kafka Consumer
+        // But, this JSON is then deserialized into VehicleInfoEntity object (defined in the Kafka-Consumer module, not in the Kafla-Producer module), due to the property specified in application.properties in Kafka Consumer
         // insert this object into MongoDB
         vehicleInfoRepository.save(vehicleInfo);
         // use objectMapper.writeValueAsString(): to serialize Java Object to JSON string
