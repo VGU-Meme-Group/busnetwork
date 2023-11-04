@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# ignore the vehicle_position.json file
+vehicle_position.json
