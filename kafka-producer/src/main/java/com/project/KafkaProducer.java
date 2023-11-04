@@ -21,29 +21,34 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service // @Service annotation for this KafkaProducer class, so that Spring Boot will scan this class as a BEAN. Without this annotation, Spring Boot will NOT treat this class as a Spring Bean, and it will not work
 public class KafkaProducer {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaProducer.class);
     @Value("${kafka.topic.name}")
     private String kafkaTopic;
 
+    // KafkaTemplate is used to send messages to Topic
+    // KafkaTemplate<String, VehicleInfoEntity>: defines the "key", and "value" data type of a Kafka Message
+    // "Key": is used to route, and partition Kafka messages to Kafka Topic
+    // "Value": is used to specify the data type of the message's payload. Here, we send VehicleInfoEntity object as the message's payload
     private KafkaTemplate<String, VehicleInfoEntity> kafkaTemplate;
 
+    // property injection for ObjectMapper object from "Jackson" dependency, which is used to: convert between Java object to JSON
     @Autowired
     private ObjectMapper objectMapper;
 
+    // constructor dependency injection for KafkaTemplate
     public KafkaProducer(KafkaTemplate<String, VehicleInfoEntity> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    @Scheduled(fixedRate = 3000)
-
+    @Scheduled(fixedRate = 3000) // run this function again to fetch realtime data every 3 second
     public void fetchRealTime() throws Exception {
-        //System.out.println("Hello World1");
 
         try {
             URL url = new URL("http://gtfs.gcrta.org/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb");
-            //System.out.println("Hello World2");
+
+            // parse/read the realtime data from .pb to FeedMessage object, which is the structure of a message, defined in the .proto file
             FeedMessage feed = FeedMessage.parseFrom(url.openStream());
             for (FeedEntity entity : feed.getEntityList()) {
                 if (entity.hasVehicle()) {
@@ -52,6 +57,9 @@ public class KafkaProducer {
 //
 //                    // Send the vehicle information to the Kafka topic
 //                    kafkaTemplate.send(kafkaTopic, vehicleInfo);
+
+                    //-------------------------------------------------------------
+                    // Process for Kafka Producer to parse and convert realtime data (in protobuff format) to JSON
                     Trip trip = new Trip(entity.getVehicle().getTrip().getTripId(),
                             entity.getVehicle().getTrip().getRouteId(),
                             entity.getVehicle().getTrip().getDirectionId(),
@@ -64,20 +72,33 @@ public class KafkaProducer {
                             entity.getVehicle().getPosition().getLongitude(),
                             entity.getVehicle().getPosition().getBearing(),
                             entity.getVehicle().getPosition().getSpeed());
-                    VehicleInfoEntity vehicleInfoEntity = new VehicleInfoEntity(null,
+
+                    // Use ObjectId.get() to generate a unique ObjectId
+                    ObjectId id = ObjectId.get();
+                    String hexId = id.toHexString();
+
+                    VehicleInfoEntity vehicleInfoEntity = new VehicleInfoEntity(hexId,
                             trip,
                             vehicle,
                             position,
                             entity.getVehicle().getTimestamp()
                     );
 
+                    // serialize VehicleInfoEntity object to JSON string
                     String json = objectMapper.writeValueAsString(vehicleInfoEntity);
-                    //kafkaTemplate.send(kafkaTopic, json);
+                    //--------------------------------------------------------
+
+
+                    // build the message to be sent to Topic (the message's payload is VehicleInfoEntity object, which is a Java Object, not JSON)
                     Message<VehicleInfoEntity> message = MessageBuilder
                             .withPayload(vehicleInfoEntity)
                                     .setHeader(KafkaHeaders.TOPIC, "gtfs-realtime")
                                             .build();
+                    // use KafkaTemplate to send the message (contain Java Object) to Topic.
+                    // But, the Java Object is automatically converted/serialized to JSON, due to the property specified in application.properties of Kafka Producer
+                    // Therefore, JSON format of VehicleInfoEntity will be sent to Topic
                     kafkaTemplate.send(message);
+                    // log the message payload (which is the VehicleInfoEntity object serialized in JSON) to the console
                     LOGGER.info(json);
                 }
             }

@@ -18,7 +18,7 @@ public class VehicleInfoEntity {
 
     @Id
     //@Field("id")
-    private ObjectId id;
+    private String id; // use String id, so that Kafka Producer can store the hexString of the id in its object
 
     private Trip trip;
 

@@ -17,5 +17,6 @@ public class Position {
 
     private double bearing;
 
+    // set the default value for speed to be 0, if speed is missing in the realtime data
     private double speed = 0;
 }
