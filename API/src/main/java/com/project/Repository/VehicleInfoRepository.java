@@ -9,4 +9,6 @@ import java.util.List;
 public interface VehicleInfoRepository extends MongoRepository<VehicleInfoEntity, String> {
 
     List<VehicleInfoEntity> findByTimeStampBefore(long timeStamp);
+
+    void deleteByTimeStampBefore(long timeStamp);
 }

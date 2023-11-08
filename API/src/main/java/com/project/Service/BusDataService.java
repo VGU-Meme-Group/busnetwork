@@ -17,4 +17,9 @@ public class BusDataService {
         long timestampToDeleteBefore = System.currentTimeMillis() - (3600 * 1000); // Delete data older than 1 hour (in milliseconds)
         return vehicleInfoRepository.findByTimeStampBefore(timestampToDeleteBefore);
     }
+
+    public void deleteBusDataLessThanOneHour() {
+        long timestampToDeleteBefore = System.currentTimeMillis() - (3600 * 1000);
+        vehicleInfoRepository.deleteByTimeStampBefore(timestampToDeleteBefore);
+    }
 }
