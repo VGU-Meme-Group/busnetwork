@@ -42,7 +42,7 @@ public class KafkaProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    @Scheduled(fixedRate = 3000) // run this function again to fetch realtime data every 3 second
+    @Scheduled(fixedRate = 60000) // run this function again to fetch realtime data every 1 minute
     public void fetchRealTime() throws Exception {
 
         try {
