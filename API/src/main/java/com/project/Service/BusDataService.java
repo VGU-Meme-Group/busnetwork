@@ -22,4 +22,12 @@ public class BusDataService {
         long timestampToDeleteBefore = System.currentTimeMillis() - (3600 * 1000);
         vehicleInfoRepository.deleteByTimeStampBefore(timestampToDeleteBefore);
     }
+
+    public VehicleInfoEntity getLatestBusData(String vehicleId) {
+        return vehicleInfoRepository.findTopByVehicleIdOrderByTimeStampDesc(vehicleId);
+    }
+
+    public List<VehicleInfoEntity> getAllBusData() {
+        return vehicleInfoRepository.findAll();
+    }
 }
