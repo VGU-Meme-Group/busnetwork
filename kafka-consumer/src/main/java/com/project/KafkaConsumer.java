@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class KafkaConsumer {
 
@@ -33,7 +35,21 @@ public class KafkaConsumer {
         // the received message is in JSON format of the VehicleInfoEntity
         // But, this JSON is then deserialized into VehicleInfoEntity object (defined in the Kafka-Consumer module, not in the Kafla-Producer module), due to the property specified in application.properties in Kafka Consumer
         // insert this object into MongoDB
-        vehicleInfoRepository.save(vehicleInfo);
+
+        Optional<VehicleInfoEntity> existingVehicleInfoEntity = vehicleInfoRepository.findByVehicleId(vehicleInfo.getVehicle().getId());
+        if(existingVehicleInfoEntity.isPresent()) {
+            VehicleInfoEntity entity = existingVehicleInfoEntity.get();
+            entity.setTrip(vehicleInfo.getTrip());
+            entity.setVehicle(vehicleInfo.getVehicle());
+            entity.setPosition(vehicleInfo.getPosition());
+            entity.setTimeStamp(vehicleInfo.getTimeStamp());
+
+            vehicleInfoRepository.save(entity);
+        } else {
+            vehicleInfoRepository.save(vehicleInfo);
+        }
+
+
         // use objectMapper.writeValueAsString(): to serialize Java Object to JSON string
         String json = objectMapper.writeValueAsString(vehicleInfo);
         // log the JSON string of the VehicleInfoEntity object, to the console
