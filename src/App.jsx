@@ -211,7 +211,7 @@ function App() {
         <div className='indicate-wrapper'>
           <div className='left'>
             <h2>Level 1 </h2>
-            <h3>( speed &le; 7 )</h3>
+            <h3>( speed &gt; 15 )</h3>
           </div>
           <div className='right one'></div>
         </div>
@@ -226,7 +226,7 @@ function App() {
         <div className='indicate-wrapper'>
           <div className='left'>
             <h2>Level 3 </h2>
-            <h3>( speed &gt; 15 )</h3>
+            <h3>( speed &le; 7 )</h3>
           </div>
           <div className='right three'></div>
         </div>
