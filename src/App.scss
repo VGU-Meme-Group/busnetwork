@@ -117,7 +117,7 @@
   }
 
   .bus-container{
-    width: 280px;
+    width: 320px;
     height: max-content;
     position: absolute;
     overflow-y: scroll;
@@ -302,7 +302,29 @@
       }
     }
 
+    .bus-bottom{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      border-radius: 4px;
+      background-color: #FF6F00;
+      transition: 0.3s ease;
+      margin-top: 5px;
+      cursor: pointer;
+      &:hover{
+        background-color: #ff9e1e;
+        transition: 0.3s ease;
+      }
 
+      .title{
+        font-family: "Gabarito";
+        color: #efefef;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
     
   }
 }

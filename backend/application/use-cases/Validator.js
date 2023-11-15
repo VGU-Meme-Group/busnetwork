@@ -45,10 +45,6 @@ const retrieveShape = (array, min) => {
     }
 }
 
-const test = (length) => {
-    console.log(length)
-
-}
 
 const arrivedCheck = (stop1, stop2, lookup) =>{
     const oneLookup = [(lookup[0] - stop1.stop_lat), (lookup[1] - stop1.stop_lon)]

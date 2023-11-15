@@ -1,13 +1,16 @@
 
-export const colorCheck = (speed) => {
+export const colorCheck = (speed, updateLevel) => {
     const color = ["#0ED87A", '#F5F400', '#F50016']
     if(speed <= 7){
+        updateLevel(3)
         return color[2]
     }
     else if(speed > 7 && speed <= 15){
+        updateLevel(2)
         return color[1]
     }
     else{
+        updateLevel(1)
         return color[0]
     }
 }
