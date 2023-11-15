@@ -1,5 +1,4 @@
-import data from '../assets/sample211.json'
-
+import axios from 'axios'
 
 // {
 //     __id : data[i].__id,
@@ -9,25 +8,27 @@ import data from '../assets/sample211.json'
 // }
 
 function makeColor() {
-    var color = "";
-    for(var i = 0; i < 3; i++) {
-        var sub = Math.floor(Math.random() * 256).toString(16);
-        color += (sub.length == 1 ? "0" + sub : sub);
-    }
-    return "#" + color;
+    // var color = "";
+    // for(var i = 0; i < 3; i++) {
+    //     var sub = Math.floor(Math.random() * 256).toString(16);
+    //     color += (sub.length == 1 ? "0" + sub : sub);
+    // }
+    // return "#" + color;
+    const colors = ["red" , "yellow", "orange", "lightgreen", "#6096B4"]
+    // return colors[Math.floor(Math.random() * colors.length)]
+    return colors[4]
 }
 
-function dataProcessing(data, array, index, color){
-    // console.log(array)
-    // console.log(array[index - 1][0])
+function dataProcessing(data, array, index){
+    // console.log(index)
+    // console.log(data[0].__id)
 
-    for(let i = 0, j = data.length; i <= j; i++){
-        // console.log(data[i])
-        if(data[i+1] === undefined) return array
-        const newArray = [
+    for(let i = 0, j = data.length; i < j; i++){
+        if(data[i + 1] === undefined) return
+        const newArray = 
             {
                 __id : data[i].__id,
-                color : color,
+                color : makeColor(),
                 stop_src : {
                     stop_lat : parseFloat(data[i]?.shape_lat),
                     stop_lon : parseFloat(data[i]?.shape_lon)
@@ -37,49 +38,68 @@ function dataProcessing(data, array, index, color){
                     stop_lon : parseFloat(data[i+1]?.shape_lon)
                 }
             }
-        ]
-        array[index - 1][0].segments.push(newArray)
-        
+        // console.log(newArray)
+        const request = async () => {
+                    try {
+                        const url = `http://localhost:3812/createSegments/${index}`
+                        const res = await axios.post(url, newArray)
+                    } catch (error) {
+                        console.log(error)
+                    }
+                }
+        request()
+
+        // array[index - 1].segments.push(newArray)
     }
 
     // return array
 }
 
-async function dataImport(){
 
-    const start = 1
-    const end = 3
-    const routes = []
-    const segments = []
-    for(let i = 1; i <= 211; i++)
-    {
-        let index = i
-        await import(`../assets/sample${i}.json`).then(json => {
+
+
+
+//segment 1 : 1 -> 20
+async function dataImport(start){
+    try {
+        const routes = []
+
+
+        let index
+        await import(`../assets/sample${start}.json`).then(json => {
             // console.log(json.default)
             // console.log(index)
-            const newArray = [
+            const newArray = 
                 {
-                    routeId : json.default[0].shape_id,
+                    shapeId : json.default[0].shape_id,
                     segments : []
                 }
-            ]
+            index = newArray.shapeId
             routes.push(newArray)
+            const request = async () => {
+                try {
+                    const res = await axios.post("http://localhost:3812/createRoutes", newArray)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            request()
             return json.default
         }).then((data) => {
-            const color = makeColor()
-            return dataProcessing(data, routes , index, color)
+            // const color = makeColor()
+            return dataProcessing(data, routes , index)
         }).then((processedData) => {
             return processedData
         })
+        // }
+        // return routes
+    } catch (error) {
+        console.log(error)
     }
-    return routes
+    
 }
 
 
-function makeSegments (data, index) {
-    console.log(data)
-    console.log(index)
-}
 
 
 async function CreateSegments (){
@@ -117,9 +137,72 @@ async function CreateSegments (){
 }
 
 
+
 async function checkSegments(){
     const variable = await CreateSegments()
     // console.log(variable)
     return variable
 }
-export const shape = await checkSegments()
+// export const shape = await checkSegments()
+
+export function postSegments(){
+    try {
+        console.log("Hi")
+        let start = 1
+        const end = 211
+        let timeStep = 120000
+        // dataImport(start)
+        // const timer = setInterval(() => {
+        //     console.log("hello")
+        // }, timeStep)
+
+        var timer = setInterval(() => {
+            if(start > end){
+                clearInterval(timer)
+            }
+            else{
+                dataImport(start)
+                start++
+            }
+        }, timeStep)
+
+        
+        // if(start > end){
+        //     clearInterval(timer)
+        // }
+        
+        
+
+
+    } catch (error) {
+        console.log(error)
+    }
+    
+    // const data = JSON.stringify(segments)
+    // const customConfig = {
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // }
+    // const request = await axios.post("http://localhost:3812/createSegments", data, customConfig)
+    // console.log(request.data)
+    // console.log(segments)
+}
+
+export async function deleteSegments(){
+    console.log("deleteSegments")
+    const request = await axios.delete("http://localhost:3812/deleteSegments")
+}
+export async function getSegments(){
+    console.log("GetSegments")
+    try {
+        const request = await axios.get("http://localhost:3812/getSegments")
+        .then((res) => {
+            // console.log(res.data)
+            return res.data
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+

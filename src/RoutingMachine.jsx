@@ -2,7 +2,6 @@ import {useState, useEffect, useContext} from 'react'
 import L, { control } from "leaflet"
 import "leaflet-routing-machine";
 import { createControlComponent } from "@react-leaflet/core";
-import data from '../src/assets/sample.json'
 import { Marker } from 'react-leaflet';
 
 const getWaypoints = () =>{
