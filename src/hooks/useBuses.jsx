@@ -12,7 +12,7 @@ export const useBuses = (socket) => {
     }
 
     useEffect(() => {
-        setInterval(fetchBusesSocket(), 60000)
+        setInterval(fetchBusesSocket(), 45000)
     }, [buses])
 
     return buses
