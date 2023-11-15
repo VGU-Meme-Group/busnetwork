@@ -102,13 +102,15 @@ function App() {
         )
       }
     }
-    // else if(focus.length !== 0){
-    //   setArrived(2)
-    // }
+    else if(focus.length !== 0){
+      setArrived(2)
+    }
   }
 
 
-
+  // whenCreated={(map) => {
+  //   mapRef.current = map
+  // }}
 
   return (
     <div className='page-wrapper'>
@@ -118,10 +120,7 @@ function App() {
         <MapContainer className='map-wrapper' 
           center={[41.42, -81.63]} 
           zoomSnap={0.2} 
-          zoom={13} 
-          whenCreated={(map) => {
-					  mapRef.current = map
-				  }}>
+          zoom={13} >
           <TileLayer attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}' ext = {'png'}
                     ></TileLayer>
@@ -149,8 +148,8 @@ function App() {
             updateClicked={updateClicked} updateVehicle={updateVehicle} 
             updateArrived={updateArrived} updatePaths={updatePaths} updateStatus={updateStatus}>
           </RenderBuses>
-          <Fly pos = {coordinate}></Fly>
-          {isClicked === false && <Fly pos = {center} status = {isClicked}></Fly>}
+          {/* <Fly pos = {coordinate}></Fly> */}
+          {isClicked === false && <Fly pos = {center} status = {isClicked} updateClicked ={updateClicked}></Fly>}
         </MapContainer>
       </div>
       {

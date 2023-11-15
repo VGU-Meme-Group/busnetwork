@@ -12,8 +12,8 @@ export const useBuses = (socket) => {
     }
 
     useEffect(() => {
-        fetchBusesSocket()
-    }, [])
+        setInterval(fetchBusesSocket(), 60000)
+    }, [buses])
 
     return buses
 }

@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
 
     socket.on("get-buses", async () => {
         try {
-            const collectionName = 'vehicle'
+            const collectionName = 'vehicle_2'
             const query = await findAll(realtimeDB, collectionName)
             socket.emit("receive-all-routes", query)
           } catch (error) {
