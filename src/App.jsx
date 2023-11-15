@@ -199,15 +199,6 @@ function App() {
                   <h2 className='title'>{level}</h2>
                 </div>
               </div>
-              {/* <div className='box predict'>
-                <div className='box-upper'>
-                  <h2 className='title'>Predict</h2>
-                  <div className='sep'></div>
-                </div>
-                <div className='box-bottom'>
-                  <h2 className='title'>Congestion level</h2>
-                </div>
-              </div> */}
             </div>
           </div>
           <div className='bus-bottom'>
@@ -219,21 +210,23 @@ function App() {
         <h1>Congestion level</h1>
         <div className='indicate-wrapper'>
           <div className='left'>
-            <h2>Level 1 :</h2>
+            <h2>Level 1 </h2>
+            <h3>( speed &le; 7 )</h3>
           </div>
           <div className='right one'></div>
         </div>
         <div className='indicate-wrapper'>
           <div className='left'>
-            <h2>Level 2 :</h2>
+            <h2>Level 2 </h2>
+            <h3>( 7 &gt; speed &ge; 15)</h3>
           </div>
           <div className='right two'>
-
           </div>
         </div>
         <div className='indicate-wrapper'>
           <div className='left'>
-            <h2>Level 3 :</h2>
+            <h2>Level 3 </h2>
+            <h3>( speed &gt; 15 )</h3>
           </div>
           <div className='right three'></div>
         </div>

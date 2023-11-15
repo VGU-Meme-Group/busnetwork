@@ -56,7 +56,7 @@
   }
 
   .description-container{
-    width: 220px;
+    width: 280px;
     height: max-content;
     position: absolute;
     right: 20px;
@@ -69,6 +69,8 @@
     z-index: 30000 !important;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 15px;
     padding: 20px;
     h1{
@@ -86,6 +88,7 @@
       width: 100%;
       column-gap: 5px;
       align-items: center;
+      justify-content: space-between;
       h2{
         color: #efefef;
         font-family: "Gabarito";
@@ -93,12 +96,22 @@
         font-size: 16px;
       }
       .left{
-        width: 40%;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+
+        h3{
+          color: #efefef;
+          font-family: "Gabarito";
+          font-weight: 400;
+          font-size: 14px;
+        }
       }
 
       .right{
         height: 3px;
-        width: 25%;
+        width: 45%;
         &.one{
           background-color: #0ED87A;
         }
