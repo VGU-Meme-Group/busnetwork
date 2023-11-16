@@ -20,7 +20,7 @@ describe('Test Validator function', () => {
         const point = [[1], [1]];
         const minArr = [];
         const output = Validator(array, point, minArr);
-        expect(output).toEqual(undefined); // adjust this based on your function's expected output
+        expect(output).toEqual(undefined); // expected output
     });
 });
 
