@@ -16,7 +16,8 @@ function connection() {
               deprecationErrors: true,
             }
         });
-        return client
+        client.connect();   // add after running test case
+        return client;
     }
 
     return {

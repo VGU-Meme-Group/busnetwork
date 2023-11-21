@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon main.js",
     "socket": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "jest": {
+    "setupFiles": ["./jest.setup.js"]
   }
 }
