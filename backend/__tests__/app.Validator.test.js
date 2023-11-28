@@ -1,3 +1,5 @@
+// This test will mock up the data and then test the functions of the Validator if they give desired results
+
 const { Validator, minimumDistance, retrieveShape, arrivedCheck } = require('../application/use-cases/Validator');
 
 describe('Test Validator function', () => {

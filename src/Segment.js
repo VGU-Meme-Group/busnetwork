@@ -1,7 +1,5 @@
 import data from './assets/sample.json'
 
-
-
 function CreateSegments (){
     const size = data.length
     const segments = []

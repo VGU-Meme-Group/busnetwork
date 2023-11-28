@@ -1,4 +1,5 @@
-// connection.test.js
+// This test will mock the MongoClient and dotenv modules and verify that the connectToMongo function is called correctly.
+
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const dotenv = require('dotenv');
 jest.mock('mongodb');
