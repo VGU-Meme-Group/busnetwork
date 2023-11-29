@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -39,14 +40,20 @@ public class KafkaConsumer {
         Optional<VehicleInfoEntity> existingVehicleInfoEntity = vehicleInfoRepository.findByVehicleId(vehicleInfo.getVehicle().getId());
         if(existingVehicleInfoEntity.isPresent()) {
             VehicleInfoEntity entity = existingVehicleInfoEntity.get();
-            entity.setTrip(vehicleInfo.getTrip());
-            entity.setVehicle(vehicleInfo.getVehicle());
-            entity.setPosition(vehicleInfo.getPosition());
-            entity.setTimeStamp(vehicleInfo.getTimeStamp());
+            if(!Objects.equals(entity.getTrip().getRoute_id(), "66") && !Objects.equals(entity.getTrip().getRoute_id(), "67")) {
+                entity.setTrip(vehicleInfo.getTrip());
+                entity.setVehicle(vehicleInfo.getVehicle());
+                entity.setPosition(vehicleInfo.getPosition());
+                entity.setTimeStamp(vehicleInfo.getTimeStamp());
 
-            vehicleInfoRepository.save(entity);
+                vehicleInfoRepository.save(entity);
+            }
+
         } else {
-            vehicleInfoRepository.save(vehicleInfo);
+            if(!Objects.equals(vehicleInfo.getTrip().getRoute_id(), "66") && !Objects.equals(vehicleInfo.getTrip().getRoute_id(), "67")) {
+                vehicleInfoRepository.save(vehicleInfo);
+            }
+
         }
 
 
