@@ -1,6 +1,8 @@
 require('dotenv').config()
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
+
+
 function connection() {
     const username = process.env.MONGODB_ATLAS_USER
     const pass = process.env.MONGODB_ATLAS_PASSWORD
@@ -19,10 +21,15 @@ function connection() {
         return client
     }
 
+
+
     return {
         connectToMongo
     }
 }
+
+
+
 
 exports.DBconnection =  connection
 

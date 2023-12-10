@@ -10,6 +10,8 @@ const findMinDistance = (point1, point2, lookup) => {
 
     const length1 = findLengthOfVector(oneLookup)
     const length2 = findLengthOfVector(twoLookup)
+    // console.log("Length1: " + length1)
+    // console.log("Length2: " + length2)
     if(length1 > length2){
         return length2
     }else{
@@ -33,7 +35,9 @@ const minimumDistance = (array, min) => {
         if(item.distance < min){
             min = item.distance
         }
+        // console.log(item)
     }
+
     return min
 }
 
@@ -44,6 +48,13 @@ const retrieveShape = (array, min) => {
         }
     }
 }
+// const retrieveShape = (array, min) => {
+//     for(let item of array){
+//         if(min === item[0].distance){
+//             return item[0]
+//         }
+//     }
+// }
 
 
 const arrivedCheck = (stop1, stop2, lookup) =>{
@@ -62,10 +73,11 @@ const arrivedCheck = (stop1, stop2, lookup) =>{
 
 const Validator = (array, point, minArr) => {
     const segment = array[0].segments
-    let minArray = []
+    let segmentWithMinDist = []
     let min = Infinity
     // console.log(array[0].shapeId)
     // console.log(array)
+    
     for(let i = 0; i < segment.length; i++){
         const firstPoint = [[segment[i].stop_src.stop_lat], [segment[i].stop_src.stop_lon]]
         const secondPoint = [[segment[i].stop_dest.stop_lat], [segment[i].stop_dest.stop_lon]]
@@ -75,12 +87,12 @@ const Validator = (array, point, minArr) => {
             stop_dest : segment[i].stop_dest,
             distance : findMinDistance(firstPoint, secondPoint, point)
         }
-        minArray.push(object)    
+        segmentWithMinDist.push(object)    
     }
 
     const object = {
         shapeId : array[0].shapeId,
-        distance : minimumDistance(minArray, min),
+        distance : minimumDistance(segmentWithMinDist, min),
         first_stop : segment[0].stop_src,
         last_stop : segment[segment.length - 1].stop_dest
     }

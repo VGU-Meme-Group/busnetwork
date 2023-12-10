@@ -1,5 +1,4 @@
-import axios from "axios"
-async function fetchSegments(lookup, updatePaths, updateStatus){
+async function fetchSegments(axios, lookup, updatePaths, updateStatus){
 
     try {
         const request = await axios.get(`http://localhost:3812/getSegments/${lookup}`)

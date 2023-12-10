@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const useBuses = (socket) => {
@@ -11,8 +10,10 @@ export const useBuses = (socket) => {
         })
     }
 
+    
+
     useEffect(() => {
-        setInterval(fetchBusesSocket(), 45000)
+        setInterval(fetchBusesSocket(), 5000)
     }, [buses])
 
     return buses

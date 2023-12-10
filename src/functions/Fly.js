@@ -11,7 +11,7 @@ export const Fly = (pos) => {
     if(pos.status === false){
       if(pos){
         map.flyTo(pos.pos, 12)
-        updateClicked(true)
+        updateClicked(null)
       }
     }
     

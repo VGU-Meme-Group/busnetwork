@@ -15,14 +15,14 @@ export const colorCheck = (speed, updateLevel) => {
     }
 }
 
-const findLengthOfVector = (vector) => {
+export const findLengthOfVector = (vector) => {
     const x = Math.pow(vector[0], 2)
     const y = Math.pow(vector[1], 2)
     const result = Math.sqrt(x + y) * 1000
     return result
 }
 
-const dotProduct = (vector1, vector2) => {
+export const dotProduct = (vector1, vector2) => {
     // console.log("Vector 1 : " + vector1)
     // console.log("Vector 2 : " + vector2)
     const dot = (vector1[0] * vector2[0]) + (vector1[1] * vector2[1])
@@ -71,10 +71,9 @@ const minimumDistance = (array, min) => {
 }
 
 const retrieveSegment = (array, min) => {
-    console.log(array)
     for(let item of array){
         if(min === item.distance){
-            console.log(item)
+            // console.log(item)
             return item
         }
     }
