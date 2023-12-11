@@ -91,7 +91,7 @@ function App() {
 
   useEffect(() => {
     if(focus.length != 0){
-      setPredict(DirectionCheck(vehicle.position, paths, focus))
+      setPredict(DirectionCheck(vehicle.position, paths, focus, vehicle))
     }
   }, [focus])
 

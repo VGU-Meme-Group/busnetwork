@@ -51,7 +51,8 @@ const postNextSegments = async (payload) => {
     }
 }
 
-export const DirectionCheck = (busPosition, segmentsList, segment) => {
+export const DirectionCheck = (busPosition, segmentsList, segment, bus) => {
+    console.log(bus)
     const busCoord = [
         busPosition.latitude,
         busPosition.longitude
@@ -78,7 +79,8 @@ export const DirectionCheck = (busPosition, segmentsList, segment) => {
     const min2 = Math.abs(angle2 - bearing)
     const segmentId = parseInt(segment.segmentId)
     const max = 5
-    const array = []
+    let array = []
+    array.push(bus)
     if(min1 < min2){
         console.log("Bus is coming to endpoint 1")
 
@@ -95,7 +97,6 @@ export const DirectionCheck = (busPosition, segmentsList, segment) => {
     else{
         console.log("Bus is coming to endpoint 2")
 
-        const array = []
         for(let i = 1; i <= max; i++){
             const id = segmentId + i
             const object = {
@@ -106,6 +107,7 @@ export const DirectionCheck = (busPosition, segmentsList, segment) => {
         }
         postNextSegments(array)
     }
+    console.log(array)
     return array
     // console.log(bearing)
     // console.log(busCoord)
