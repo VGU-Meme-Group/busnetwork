@@ -26,8 +26,9 @@ def next_segments():
     with open('data/nextSegmentsResponse.json', 'w') as f:
         json.dump(data, f)
 
+    send_data()
+    
     return jsonify(data), 200   # return the data as response
-
 
 def send_data():
     # Import data
@@ -179,9 +180,9 @@ def send_data():
     response = requests.post('http://localhost:7612/receive-data', json=json_data)
     print(f"Response: {response.text}")
 
-scheduler = BackgroundScheduler()
-scheduler.add_job(send_data, 'interval', seconds = 2) 
-scheduler.start()
+# scheduler = BackgroundScheduler()
+# scheduler.add_job(send_data, 'interval', seconds = 2) 
+# scheduler.start()
 
 if __name__ == '__main__':
     app.run(port = 4242)
