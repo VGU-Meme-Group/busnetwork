@@ -1,27 +1,11 @@
 import axios from 'axios'
 
-// {
-//     __id : data[i].__id,
-//     shape_lat : data[i].shape_lat,
-//     shape_lon : data[i].shape_lon,
-//     shape_sequence : data[i].shape_sequence
-// }
-
 function makeColor() {
-    // var color = "";
-    // for(var i = 0; i < 3; i++) {
-    //     var sub = Math.floor(Math.random() * 256).toString(16);
-    //     color += (sub.length == 1 ? "0" + sub : sub);
-    // }
-    // return "#" + color;
     const colors = ["red" , "yellow", "orange", "lightgreen", "#6096B4"]
-    // return colors[Math.floor(Math.random() * colors.length)]
     return colors[4]
 }
 
 function dataProcessing(data, array, index){
-    // console.log(index)
-    // console.log(data[0].__id)
 
     for(let i = 0, j = data.length; i < j; i++){
         if(data[i + 1] === undefined) return

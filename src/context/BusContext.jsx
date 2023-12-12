@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import CoordsCheck from "../shape/CoordsCheck";
+// import CoordsCheck from "../shape/CoordsCheck";
 export const BusContext = createContext({})
 
 export const BusProvider = ({children}) => {
