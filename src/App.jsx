@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMapEvents, useMap } from 'react-leaflet'
 import 'leaflet-rotatedmarker'
 import io from 'socket.io-client'
-import axios from 'axios'
+import axios, { isAxiosError } from 'axios'
 import { FaBus } from 'react-icons/fa'
 // CSS
 import './App.scss'
@@ -32,7 +32,7 @@ function App() {
   const [coordinate, setCoordinate] = useState([])
   const [vehicle, setVehicle] = useState({})
   const [isClicked, setIsClicked] = useState(false)
-  const [isPressed, setIsPressed] = useState(null)
+  const [isPressed, setIsPressed] = useState(false)
   const [speed, setSpeed] = useState(null)
   const [arrived, setArrived] = useState(null)
   const [focus, setFocus] = useState([])
@@ -77,6 +77,14 @@ function App() {
     setLoading(value)
   }
 
+  function updatePressed(value){
+    setIsPressed(false)
+  }
+
+  const HandlePress = () => {
+    setIsPressed(true)
+  }
+
   const HandleClose = () => {
     setIsClicked(false)
     setPaths([])
@@ -89,11 +97,25 @@ function App() {
     }
   }, [paths])
 
+  async function GetPrediction(){
+    const result = await DirectionCheck(vehicle.position, paths, focus, vehicle)
+    setPredict(result)
+    // console.log(result)
+    return result
+  }
   useEffect(() => {
     if(focus.length != 0){
-      setPredict(DirectionCheck(vehicle.position, paths, focus, vehicle))
+      GetPrediction()
+      // setPredict(DirectionCheck(vehicle.position, paths, focus, vehicle))
     }
   }, [focus])
+
+  // useEffect(() => {
+  //   if(predict.length != 0){
+  //     console.log(predict)
+  //     // setPredict(DirectionCheck(vehicle.position, paths, focus, vehicle))
+  //   }
+  // }, [predict])
 
 
   // const PredictSegments = (props) => {
@@ -103,6 +125,27 @@ function App() {
   //     })
   //   }
   // }
+
+  const PredictedSegments = (props) => {
+    const array = []
+    if(props.predict.length !== 0){
+      props.predict.filter((item, index) => index != 0).map((item, index) => {
+        const coords = [[
+          item.stop_src.stop_lat,
+          item.stop_src.stop_lon
+        ],[
+          item.stop_dest.stop_lat,
+          item.stop_dest.stop_lon
+        ]]
+        const speed = item.predict_speed
+        const Segment = <Polyline key={item.index} color={colorCheck(speed)} positions={coords} weight={5}></Polyline>
+        array.push(Segment)
+    
+      })
+
+    }
+    return array
+  }
 
   const ColorSegment = (props) => {
     if(focus.length !== 0 && focus.onRoute !== false){
@@ -184,10 +227,11 @@ function App() {
           <RenderBuses data = {buses} axios = {axios}
             updateSpeed={updateSpeed} updateCoordinate={updateCoordinate} 
             updateClicked={updateClicked} updateVehicle={updateVehicle} updateLoading = {updateLoading}
-            updateArrived={updateArrived} updatePaths={updatePaths} updateStatus={updateStatus}>
+            updateArrived={updateArrived} updatePaths={updatePaths} updateStatus={updateStatus}
+            updatePressed={updatePressed}>
           </RenderBuses>
           <ColorSegment seg = {focus} speed = {speed} updateLevel = {updateLevel}></ColorSegment>
-
+          {isPressed === true && predict.length !== 0 && <PredictedSegments predict = {predict}></PredictedSegments>}
           {isClicked === false && <Fly pos = {center} status = {isClicked} updateClicked ={updateClicked}></Fly>}
         </MapContainer>
       </div>
@@ -247,7 +291,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className='bus-bottom'>
+          <div className='bus-bottom' onClick={HandlePress}>
             <h2 className='title'>Predict congestion level</h2>
           </div>
         </div>
@@ -257,24 +301,38 @@ function App() {
         <div className='indicate-wrapper'>
           <div className='left'>
             <h2>Level 1 </h2>
-            <h3>( speed &gt; 15 )</h3>
+            <h3>( speed &gt; 14 )</h3>
           </div>
           <div className='right one'></div>
         </div>
         <div className='indicate-wrapper'>
           <div className='left'>
             <h2>Level 2 </h2>
-            <h3>( 7 &lt; speed &le; 15)</h3>
+            <h3>( 11 &lt; speed &le; 14)</h3>
           </div>
-          <div className='right two'>
-          </div>
+          <div className='right two'></div>
         </div>
         <div className='indicate-wrapper'>
           <div className='left'>
             <h2>Level 3 </h2>
-            <h3>( speed &le; 7 )</h3>
+            <h3>( 8 &lt; speed &le; 11)</h3>
           </div>
           <div className='right three'></div>
+        </div>
+        <div className='indicate-wrapper'>
+          <div className='left'>
+            <h2>Level 4 </h2>
+            <h3>( 5 &lt; speed &le; 8)</h3>
+          </div>
+          <div className='right four'>
+          </div>
+        </div>
+        <div className='indicate-wrapper'>
+          <div className='left'>
+            <h2>Level 5 </h2>
+            <h3>( speed &le; 5 )</h3>
+          </div>
+          <div className='right five'></div>
         </div>
       </div>
     </div>

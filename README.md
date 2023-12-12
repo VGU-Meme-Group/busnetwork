@@ -1,7 +1,10 @@
 # Project Bus network
+## Requirements
+- Nodejs v21.4.0 or newer version
+- Python 3.12.1 or newer version
 
 
-# React + Vite
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

@@ -26,8 +26,10 @@ def next_segments():
     with open('data/nextSegmentsResponse.json', 'w') as f:
         json.dump(data, f)
 
-    return jsonify(data), 200   # return the data as response
-
+    processed = send_data()
+    print('Processed')
+    print(processed)
+    return jsonify(processed), 200   # return the data as response
 
 def send_data():
     # Import data
@@ -161,7 +163,7 @@ def send_data():
     for i, segment in enumerate(json_data, start=-1):
         if "segmentId" in segment:
             predict_speed_value = predicted_segment_speed[i][0] if i < len(predicted_segment_speed) else None
-            segment["predict_speed"] = str(predict_speed_value)
+            segment["predict_speed"] = float(predict_speed_value)
         
     with open('data/predicted_speed.json', 'w') as json_file:
         json.dump(json_data, json_file, indent=2)
@@ -173,15 +175,18 @@ def send_data():
     # Print the data
     for segment in json_data:
         print(segment)
+    print(f"Print jsonify")
+    print(json_data)
 
-    
+    return json_data
+    # return jsonify(json_data)
     # Send the data to the receiving server
-    response = requests.post('http://localhost:7612/receive-data', json=json_data)
+    # response = requests.post('http://localhost:7612/receive-data', json=json_data)
     print(f"Response: {response.text}")
 
-scheduler = BackgroundScheduler()
-scheduler.add_job(send_data, 'interval', seconds = 2) 
-scheduler.start()
+# scheduler = BackgroundScheduler()
+# scheduler.add_job(send_data, 'interval', seconds = 2) 
+# scheduler.start()
 
 if __name__ == '__main__':
     app.run(port = 4242)
