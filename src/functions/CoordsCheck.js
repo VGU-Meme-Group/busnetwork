@@ -1,18 +1,47 @@
 
 export const colorCheck = (speed, updateLevel) => {
-    const color = ["#0ED87A", '#F5F400', '#F50016']
-    if(speed <= 7){
-        updateLevel(3)
-        return color[2]
-    }
-    else if(speed > 7 && speed <= 15){
-        updateLevel(2)
-        return color[1]
+    // const color = ["#0ED87A", '#F5F400', '#F50016']
+    const color = ["#0ED87A", '#8DFC19', '#FCE519', '#F0710C', '#F50016']
+    if(updateLevel !== undefined){
+        if(speed <= 5){
+            updateLevel(5)
+            return color[4]
+        }
+        else if(speed > 5 && speed <= 8){
+            updateLevel(4)
+            return color[3]
+        }
+        else if(speed > 8 && speed <= 11){
+            updateLevel(3)
+            return color[2]
+        }
+        else if(speed > 11 && speed <= 14){
+            updateLevel(2)
+            return color[1]
+        }
+        else{
+            updateLevel(1)
+            return color[0]
+        }
     }
     else{
-        updateLevel(1)
-        return color[0]
+        if(speed <= 5){
+            return color[4]
+        }
+        else if(speed > 5 && speed <= 8){
+            return color[3]
+        }
+        else if(speed > 8 && speed <= 11){
+            return color[2]
+        }
+        else if(speed > 11 && speed <= 14){
+            return color[1]
+        }
+        else{
+            return color[0]
+        }
     }
+    
 }
 
 export const findLengthOfVector = (vector) => {

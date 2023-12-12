@@ -4,7 +4,7 @@ import fetchRoute from "../use-cases/fetchRoute"
 
 function LocationMarker({ axios,
     index ,pos, details, route, busCoord, updateSpeed, updateCoordinate, 
-    updateClicked, updateVehicle, updateArrived, updateStatus, updatePaths, updateLoading}){
+    updateClicked, updateVehicle, updateArrived, updateStatus, updatePaths, updateLoading, updatePressed}){
  
     // console.log(route)
     // console.log(speed)
@@ -27,6 +27,7 @@ function LocationMarker({ axios,
             updateSpeed(details.position.speed)
             updateVehicle(details)
             updateClicked(true)
+            updatePressed(false)
           }
         }}
         >

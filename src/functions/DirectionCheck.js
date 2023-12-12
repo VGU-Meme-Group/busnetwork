@@ -43,17 +43,22 @@ const calculateAngle = (busCoord, endpoint) => {
 }
 
 const postNextSegments = async (payload) => {
+    let test = []
     try {
         // console.log("Hallo from Direction Check")
         const request = await axios.post('http://localhost:4242/next-segments', payload)
-        .then((res) => console.log(res.data))
+        .then((res) => {
+            test = res.data.map((item) => item)
+            return test
+        })
     } catch (error) {
         console.log(error)
     }
+    return test
 }
 
 
-export const DirectionCheck = (busPosition, segmentsList, segment, bus) => {
+export const DirectionCheck = async (busPosition, segmentsList, segment, bus) => {
     console.log(bus)
     const busCoord = [
         busPosition.latitude,
@@ -80,8 +85,9 @@ export const DirectionCheck = (busPosition, segmentsList, segment, bus) => {
     const min1 = Math.abs(angle1 - bearing)
     const min2 = Math.abs(angle2 - bearing)
     const segmentId = parseInt(segment.segmentId)
-    const max = 10
+    const max = 40
     let array = []
+    let result = []
     array.push(bus)
     if(min1 < min2){
         console.log("Bus is coming to endpoint 1")
@@ -94,7 +100,8 @@ export const DirectionCheck = (busPosition, segmentsList, segment, bus) => {
             const found = segmentsList.find((item) => item.segmentId == object.nextId)
             array.push(found)
         }
-        postNextSegments(array)
+        result = await postNextSegments(array)
+        console.log(await postNextSegments(array))
     }
     else{
         console.log("Bus is coming to endpoint 2")
@@ -107,10 +114,11 @@ export const DirectionCheck = (busPosition, segmentsList, segment, bus) => {
             const found = segmentsList.find((item) => item.segmentId == object.nextId)
             array.push(found)
         }
-        postNextSegments(array)
+        console.log(await postNextSegments(array))
+        result = await postNextSegments(array)
     }
-    console.log(array)
-    return array
+    console.log(result)
+    return result
     // console.log(bearing)
     // console.log(busCoord)
     // console.log(busPosition)
