@@ -19,15 +19,10 @@
     "http": "^0.0.1-security",
     "mongodb": "^6.2.0",
     "mongoose": "^7.6.3",
-    "socket.io": "^4.7.2",
-    "supertest": "^6.3.3"
+    "socket.io": "^4.7.2"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.0.1"
-  },
-  "jest": {
-    "setupFiles": [
-      "./jest.setup.js"
-    ]
   }
 }

@@ -1,5 +1,4 @@
 const ArrivalCheck  = (prop) =>{
-    console.log(prop)
     const status = prop.status
     if(status === 1){
         return <h2 className='title'>At station</h2>

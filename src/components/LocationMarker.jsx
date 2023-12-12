@@ -1,10 +1,10 @@
 import { Marker } from "react-leaflet"
 import { BusIcon } from "./BusIcon"
-import fetchRoute from "../hooks/fetchRoute"
+import fetchRoute from "../use-cases/fetchRoute"
 
-function LocationMarker({
+function LocationMarker({ axios,
     index ,pos, details, route, busCoord, updateSpeed, updateCoordinate, 
-    updateClicked, updateVehicle, updateArrived, updateStatus, updatePaths}){
+    updateClicked, updateVehicle, updateArrived, updateStatus, updatePaths, updateLoading}){
  
     // console.log(route)
     // console.log(speed)
@@ -22,7 +22,7 @@ function LocationMarker({
             // console.log(route)
             // console.log(details)
             // FetchRoute(route, busCoord)
-            fetchRoute(route, busCoord, updateArrived, updatePaths, updateStatus)
+            fetchRoute(axios, route, busCoord, updateArrived, updatePaths, updateStatus, updateLoading)
             updateCoordinate(coord)
             updateSpeed(details.position.speed)
             updateVehicle(details)

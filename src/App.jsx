@@ -3,21 +3,22 @@ import { useState, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMapEvents, useMap } from 'react-leaflet'
 import 'leaflet-rotatedmarker'
 import io from 'socket.io-client'
-
+import axios from 'axios'
+import { FaBus } from 'react-icons/fa'
 // CSS
 import './App.scss'
 import "leaflet/dist/leaflet.css";
 
 // External functions
-import { colorCheck } from './shape/CoordsCheck';
-import CoordsCheck from './shape/CoordsCheck';
+import { colorCheck } from './functions/CoordsCheck';
+import CoordsCheck from './functions/CoordsCheck';
 import busPic from './assets/images/cleveBus.jpg'
-import { useBuses } from './hooks/useBuses';
+import { useBuses } from './use-cases/useBuses';
 import { Fly } from './functions/Fly';
 import ArrivalCheck from './functions/ArrivalCheck';
 import RenderBuses from './components/RenderBuses';
 import BusDetails from './components/BusDetails';
-
+import { DirectionCheck } from './functions/DirectionCheck'
 
 // Socket connection
 const socket = io.connect("http://localhost:5000")
@@ -30,14 +31,16 @@ function App() {
   const [routes, setRoutes] = useState([]) 
   const [coordinate, setCoordinate] = useState([])
   const [vehicle, setVehicle] = useState({})
-  const [isClicked, setIsClicked] = useState(null)
+  const [isClicked, setIsClicked] = useState(false)
+  const [isPressed, setIsPressed] = useState(null)
   const [speed, setSpeed] = useState(null)
   const [arrived, setArrived] = useState(null)
   const [focus, setFocus] = useState([])
   const [paths, setPaths] = useState([])
   const [status, setStatus] = useState(true) 
+  const [predict, setPredict] = useState([])
   const [level, setLevel] = useState(null)
-
+  const [loading, setLoading] = useState(false)
   function updateSpeed(value){
     setSpeed(value)
   }
@@ -70,6 +73,10 @@ function App() {
     setLevel(value)
   }
 
+  function updateLoading(value){
+    setLoading(value)
+  }
+
   const HandleClose = () => {
     setIsClicked(false)
     setPaths([])
@@ -81,7 +88,21 @@ function App() {
       setFocus(CoordsCheck(coordinate, paths)) 
     }
   }, [paths])
-  
+
+  useEffect(() => {
+    if(focus.length != 0){
+      setPredict(DirectionCheck(vehicle.position, paths, focus, vehicle))
+    }
+  }, [focus])
+
+
+  // const PredictSegments = (props) => {
+  //   if(predict.length !== 0){
+  //     predict.map((item) => {
+
+  //     })
+  //   }
+  // }
 
   const ColorSegment = (props) => {
     if(focus.length !== 0 && focus.onRoute !== false){
@@ -108,9 +129,28 @@ function App() {
   }
 
 
+
   // whenCreated={(map) => {
   //   mapRef.current = map
   // }}
+
+  const RenderLoading = () => {
+    return(
+      <div className='loading'>
+        <div className='overlay'>
+
+        </div>
+        <div className='inner-loading'>
+          <div className='inner-loading-two'>
+            <div className='text-wrapper'>
+              <FaBus className='icon'></FaBus>
+              <h3>Fetching data may take a few seconds to finish...</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className='page-wrapper'>
@@ -124,11 +164,9 @@ function App() {
           <TileLayer attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}' ext = {'png'}
                     ></TileLayer>
-
           {
             paths?.map((stop, index) => {
-
-                  const coords = [[
+                const coords = [[
                   stop?.stop_src.stop_lat,
                   stop?.stop_src.stop_lon
                 ],
@@ -142,18 +180,26 @@ function App() {
                 )
               })
           }
-          <ColorSegment seg = {focus} speed = {speed} updateLevel = {updateLevel}></ColorSegment>
-          <RenderBuses data = {buses} 
+          
+          <RenderBuses data = {buses} axios = {axios}
             updateSpeed={updateSpeed} updateCoordinate={updateCoordinate} 
-            updateClicked={updateClicked} updateVehicle={updateVehicle} 
+            updateClicked={updateClicked} updateVehicle={updateVehicle} updateLoading = {updateLoading}
             updateArrived={updateArrived} updatePaths={updatePaths} updateStatus={updateStatus}>
           </RenderBuses>
-          {/* <Fly pos = {coordinate}></Fly> */}
+          <ColorSegment seg = {focus} speed = {speed} updateLevel = {updateLevel}></ColorSegment>
+
           {isClicked === false && <Fly pos = {center} status = {isClicked} updateClicked ={updateClicked}></Fly>}
         </MapContainer>
       </div>
+
       {
-        vehicle.position !== undefined && isClicked === true && 
+        loading === true && <RenderLoading></RenderLoading>
+      }
+      
+      
+      
+      {
+        vehicle.position !== undefined && loading === true || isClicked === true &&
         <div className='bus-container'>
           <BusDetails details = {vehicle} handleEvent={HandleClose}></BusDetails>
           <div className='bus-middle'>

@@ -1,7 +1,6 @@
 #root {
   width: 100%;
 }
-
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
 
 .page-wrapper{
@@ -55,6 +54,73 @@
     }
   }
 
+  .loading{
+    height: 250px;
+    width: 250px;
+    z-index: 1005;
+    position: absolute;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .overlay{
+      position: absolute;
+      z-index: 999;
+      height: 100vh;
+      width: 100vw;
+      background-color: #19191980;
+    }
+    &.hidden{
+      background-color: transparent;
+    }
+    .inner-loading{
+      height: calc(250px * 80 / 100);
+      width: calc(250px * 80 / 100);
+      position: absolute;
+      z-index: 1001;
+      background-color: #ff8223;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.hidden{
+        background-color: transparent;
+      }
+      .inner-loading-two{
+        height: calc(250px * 60 / 100);
+        width: calc(250px * 60 / 100);
+        position: absolute;
+        z-index: 1002;
+        background-color: #ff913d;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .text-wrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #efefef;
+          row-gap: 10px;
+          padding: 20px;
+          .icon{
+            font-size: 25px;
+          }
+          h3{
+            text-align: center;
+            font-family: "Gabarito";
+            font-size: 12px;
+          }
+        }
+      }
+      
+    }
+  }
+
   .description-container{
     width: 280px;
     height: max-content;
@@ -66,7 +132,7 @@
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 8px;
     border: 1px solid rgba( 255, 255, 255, 0.5 );
-    z-index: 30000 !important;
+    z-index: 998 !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,7 +200,7 @@
     height: max-content;
     position: absolute;
     overflow-y: scroll;
-    background-color: #191919;
+    background-color: #191919;  
     top: 20px;
     left: 20px;
     border-radius: 8px;

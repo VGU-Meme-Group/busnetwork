@@ -46,7 +46,7 @@ public class KafkaProducer {
     public void fetchRealTime() throws Exception {
 
         try {
-            URL url = new URL("http://gtfs.gcrta.org/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb");
+            URL url = new URL("https://gtfs-rt.gcrta.vontascloud.com/TMGTFSRealTimeWebService/Vehicle/VehiclePositions.pb");
 
             // parse/read the realtime data from .pb to FeedMessage object, which is the structure of a message, defined in the .proto file
             FeedMessage feed = FeedMessage.parseFrom(url.openStream());
