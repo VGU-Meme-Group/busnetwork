@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error, r2_score
 
 # Import data
-json_data = open('training_data.json')
+json_data = open('data/trainingData.json')
 
 # Parse the JSON data
 data = json.load(json_data)
