@@ -6,3 +6,4 @@ require('cors');
 require('body-parser');
 require('socket.io');
 require('http');
+require('mongodb-memory-server');
