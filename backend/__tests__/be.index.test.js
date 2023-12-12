@@ -1,40 +1,71 @@
-const request = require('supertest');
-const app = require('../index');
+const http = require('http');
+const express = require('express');
+const { Server } = require('socket.io');
+const socketIOClient = require('socket.io-client');
+const supertest = require('supertest');
+const { DBconnection } = require('../repository/connection');
+const { findAll } = require('../application/use-cases/bus/findAll');
 
-describe('Test the root path', () => {
-    test('It should response the GET method', async () => {
-        const response = await request(app).get('/');
-        expect(response.statusCode).toBe(200);
+// Import your app from the main file
+const app = require('../index.js'); // Update with your actual file name
+
+describe('Express and Socket.IO Server Tests', () => {
+  let server;
+  let io;
+  let socket;
+
+  beforeAll((done) => {
+    server = http.createServer(app);
+    io = new Server(server);
+    server.listen(5000, done);
+  });
+
+  afterAll((done) => {
+    server.close(done);
+  });
+
+  beforeEach((done) => {
+    // Connect a socket for each test
+    socket = socketIOClient('http://localhost:5000');
+    socket.on('connect', done);
+  });
+
+  afterEach(() => {
+    // Disconnect the socket after each test
+    socket.disconnect();
+  });
+
+  describe('Socket.IO Connection', () => {
+    it('should connect to Socket.IO server', (done) => {
+      socket.on('connect', () => {
+        expect(socket.connected).toBe(true);
+        done();
+      });
     });
-});
+  });
 
-describe('Test socket.io events', () => {
-    let io, serverSocket, clientSocket;
+  describe('Socket.IO Events', () => {
+    it('should emit "receive-all-routes" event on "get-buses" event', (done) => {
+      const mockData = [{ route: 'Route 1' }, { route: 'Route 2' }];
 
-    beforeAll((done) => {
-        const httpServer = require('http').createServer().listen();
-        const port = httpServer.address().port;
-        io = require('socket.io')(httpServer);
+      // Mock the findAll function to return data
+      findAll.mockResolvedValueOnce(mockData);
 
-        io.on('connection', (socket) => {
-            serverSocket = socket;
-        });
+      socket.emit('get-buses');
 
-        clientSocket = require('socket.io-client')(`http://localhost:${port}`);
-        clientSocket.on('connect', done);
+      socket.on('receive-all-routes', (data) => {
+        expect(data).toEqual(mockData);
+        done();
+      });
+    });
+  });
+
+  describe('HTTP API Tests', () => {
+    it('should respond with 200 OK on GET /', async () => {
+      const response = await supertest(app).get('/');
+      expect(response.status).toBe(200);
     });
 
-    afterAll(() => {
-        io.close();
-        clientSocket.close();
-    });
-
-    test('should work', (done) => {
-        clientSocket.on('receive-all-routes', (data) => {
-            expect(data).toBeDefined();
-            done();
-        });
-
-        clientSocket.emit('get-buses');
-    });
+    // Add more HTTP API tests as needed
+  });
 });
