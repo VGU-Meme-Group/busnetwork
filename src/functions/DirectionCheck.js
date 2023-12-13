@@ -26,8 +26,8 @@ const filterSegments = (segment, coord) => {
 }
 
 const calculateAngle = (busCoord, endpoint) => {
-    console.log(busCoord)
-    console.log(endpoint)
+    // console.log(busCoord)
+    // console.log(endpoint)
     const startLat = toRadians(busCoord[0])
     const startLon = toRadians(busCoord[1])
     
@@ -59,7 +59,6 @@ const postNextSegments = async (payload) => {
 
 
 export const DirectionCheck = async (busPosition, segmentsList, segment, bus) => {
-    console.log(bus)
     const busCoord = [
         busPosition.latitude,
         busPosition.longitude
@@ -81,6 +80,9 @@ export const DirectionCheck = async (busPosition, segmentsList, segment, bus) =>
     // Find angle of main and first vectors
     const angle1 = calculateAngle(busCoord, endpoint1)
     const angle2 = calculateAngle(busCoord, endpoint2)
+    console.log("Angle 1 " + angle1)
+    console.log("Angle 2 " + angle2)
+
 
     const min1 = Math.abs(angle1 - bearing)
     const min2 = Math.abs(angle2 - bearing)
@@ -101,7 +103,6 @@ export const DirectionCheck = async (busPosition, segmentsList, segment, bus) =>
             array.push(found)
         }
         result = await postNextSegments(array)
-        console.log(await postNextSegments(array))
     }
     else{
         console.log("Bus is coming to endpoint 2")
@@ -114,12 +115,12 @@ export const DirectionCheck = async (busPosition, segmentsList, segment, bus) =>
             const found = segmentsList.find((item) => item.segmentId == object.nextId)
             array.push(found)
         }
-        console.log(await postNextSegments(array))
         result = await postNextSegments(array)
     }
     console.log(result)
+    console.log(bearing)
     return result
-    // console.log(bearing)
+    
     // console.log(busCoord)
     // console.log(busPosition)
 }
