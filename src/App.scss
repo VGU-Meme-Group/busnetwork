@@ -93,6 +93,7 @@
         width: calc(250px * 60 / 100);
         position: absolute;
         z-index: 1002;
+        // background-color: transparent;
         background-color: #ff913d;
         border-radius: 100%;
         display: flex;
@@ -107,6 +108,24 @@
           color: #efefef;
           row-gap: 10px;
           padding: 20px;
+
+          .gif-container{
+            width: 55px;
+            height: 55px;
+            border-radius: 100%;
+            overflow: hidden;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            img{
+              width: 75%;
+              height: 75%;
+              object-fit: cover;
+              // border-radius: 100%;
+            }
+          }
           .icon{
             font-size: 25px;
           }

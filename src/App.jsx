@@ -5,6 +5,7 @@ import 'leaflet-rotatedmarker'
 import io from 'socket.io-client'
 import axios, { isAxiosError } from 'axios'
 import { FaBus } from 'react-icons/fa'
+import gif from './assets/images/bus-gif.gif'
 // CSS
 import './App.scss'
 import "leaflet/dist/leaflet.css";
@@ -39,6 +40,7 @@ function App() {
   const [paths, setPaths] = useState([])
   const [status, setStatus] = useState(true) 
   const [predict, setPredict] = useState([])
+  const [load, setLoad] = useState(false)
   const [level, setLevel] = useState(null)
   const [loading, setLoading] = useState(false)
   function updateSpeed(value){
@@ -77,6 +79,10 @@ function App() {
     setLoading(value)
   }
 
+  function updateLoad(value){
+    setLoad(value)
+  }
+
   function updatePressed(value){
     setIsPressed(false)
   }
@@ -88,6 +94,7 @@ function App() {
   const HandleClose = () => {
     setIsClicked(false)
     setPaths([])
+    setPredict([])
     setFocus([])
   }
 
@@ -186,7 +193,10 @@ function App() {
         <div className='inner-loading'>
           <div className='inner-loading-two'>
             <div className='text-wrapper'>
-              <FaBus className='icon'></FaBus>
+              {/* <FaBus className='icon'></FaBus> */}
+              <div className='gif-container'>
+                <img src={gif} alt='loading'></img>
+              </div>
               <h3>Fetching data may take a few seconds to finish...</h3>
             </div>
           </div>
