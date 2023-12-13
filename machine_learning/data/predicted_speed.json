@@ -1,543 +1,543 @@
 [
   {
-    "_id": "6554e3872f0d7a72a76f8e2d",
+    "_id": "6554e3892f0d7a72a76f8ed8",
     "trip": {
-      "trip_id": "17994664",
-      "route_id": "19-19A/B",
-      "direction_id": 1,
+      "trip_id": "17993481",
+      "route_id": "40",
+      "direction_id": 7,
       "start_date": "20231212"
     },
     "vehicle": {
-      "_id": "2386",
-      "label": "3308"
+      "_id": "4194",
+      "label": "4111"
     },
     "position": {
-      "latitude": 41.41801834106445,
-      "longitude": -81.60682678222656,
-      "bearing": 152,
-      "speed": 11.175999641418457
+      "latitude": 41.47467041015625,
+      "longitude": -81.56507110595703,
+      "bearing": 180,
+      "speed": 2.2351999282836914
     },
-    "timeStamp": 1702406034,
+    "timeStamp": 1702435822,
     "_class": "com.project.Entity.VehicleInfoEntity"
   },
   {
-    "segmentId": "29361",
+    "segmentId": "62281",
     "stop_src": {
-      "stop_lat": 41.417502,
-      "stop_lon": -81.606379
+      "stop_lat": 41.474541,
+      "stop_lon": -81.565024
     },
     "stop_dest": {
-      "stop_lat": 41.417768,
-      "stop_lon": -81.60658
+      "stop_lat": 41.474541,
+      "stop_lon": -81.565024
     },
-    "_id": "6547ea73aa4dcfd33f226c79",
-    "predict_speed": 11.573953628540039
+    "_id": "654803b6aa4dcfd33f237535",
+    "predict_speed": 15.642074584960938
   },
   {
-    "segmentId": "29360",
+    "segmentId": "62282",
     "stop_src": {
-      "stop_lat": 41.417062,
-      "stop_lon": -81.606058
+      "stop_lat": 41.474541,
+      "stop_lon": -81.565024
     },
     "stop_dest": {
-      "stop_lat": 41.417502,
-      "stop_lon": -81.606379
+      "stop_lat": 41.474358,
+      "stop_lon": -81.565022
     },
-    "_id": "6547ea73aa4dcfd33f226c77",
-    "predict_speed": 11.345643997192383
+    "_id": "654803b7aa4dcfd33f237537",
+    "predict_speed": 13.76694107055664
   },
   {
-    "segmentId": "29359",
+    "segmentId": "62283",
     "stop_src": {
-      "stop_lat": 41.416982,
-      "stop_lon": -81.606001
+      "stop_lat": 41.474358,
+      "stop_lon": -81.565022
     },
     "stop_dest": {
-      "stop_lat": 41.417062,
-      "stop_lon": -81.606058
+      "stop_lat": 41.472869,
+      "stop_lon": -81.565005
     },
-    "_id": "6547ea73aa4dcfd33f226c75",
-    "predict_speed": 15.06039810180664
+    "_id": "654803b7aa4dcfd33f237539",
+    "predict_speed": 14.8827543258667
   },
   {
-    "segmentId": "29358",
+    "segmentId": "62284",
     "stop_src": {
-      "stop_lat": 41.416982,
-      "stop_lon": -81.606001
+      "stop_lat": 41.472869,
+      "stop_lon": -81.565005
     },
     "stop_dest": {
-      "stop_lat": 41.416982,
-      "stop_lon": -81.606001
+      "stop_lat": 41.472869,
+      "stop_lon": -81.565005
     },
-    "_id": "6547ea73aa4dcfd33f226c73",
-    "predict_speed": 11.454681396484375
+    "_id": "654803b7aa4dcfd33f23753b",
+    "predict_speed": 14.39089298248291
   },
   {
-    "segmentId": "29357",
+    "segmentId": "62285",
     "stop_src": {
-      "stop_lat": 41.416623,
-      "stop_lon": -81.605745
+      "stop_lat": 41.472869,
+      "stop_lon": -81.565005
     },
     "stop_dest": {
-      "stop_lat": 41.416982,
-      "stop_lon": -81.606001
+      "stop_lat": 41.472761,
+      "stop_lon": -81.565004
     },
-    "_id": "6547ea73aa4dcfd33f226c71",
-    "predict_speed": 20.82274055480957
+    "_id": "654803b7aa4dcfd33f23753d",
+    "predict_speed": 21.939350128173828
   },
   {
-    "segmentId": "29356",
+    "segmentId": "62286",
     "stop_src": {
-      "stop_lat": 41.416444,
-      "stop_lon": -81.605617
+      "stop_lat": 41.472761,
+      "stop_lon": -81.565004
     },
     "stop_dest": {
-      "stop_lat": 41.416623,
-      "stop_lon": -81.605745
+      "stop_lat": 41.47153,
+      "stop_lon": -81.564993
     },
-    "_id": "6547ea73aa4dcfd33f226c6f",
-    "predict_speed": 12.253252029418945
+    "_id": "654803b7aa4dcfd33f23753f",
+    "predict_speed": 14.638372421264648
   },
   {
-    "segmentId": "29355",
+    "segmentId": "62287",
     "stop_src": {
-      "stop_lat": 41.416354,
-      "stop_lon": -81.605553
+      "stop_lat": 41.47153,
+      "stop_lon": -81.564993
     },
     "stop_dest": {
-      "stop_lat": 41.416444,
-      "stop_lon": -81.605617
+      "stop_lat": 41.47153,
+      "stop_lon": -81.564993
     },
-    "_id": "6547ea73aa4dcfd33f226c6d",
-    "predict_speed": 13.790180206298828
+    "_id": "654803b7aa4dcfd33f237541",
+    "predict_speed": 13.455227851867676
   },
   {
-    "segmentId": "29354",
+    "segmentId": "62288",
     "stop_src": {
-      "stop_lat": 41.415561,
-      "stop_lon": -81.604978
+      "stop_lat": 41.47153,
+      "stop_lon": -81.564993
     },
     "stop_dest": {
-      "stop_lat": 41.416354,
-      "stop_lon": -81.605553
+      "stop_lat": 41.471382,
+      "stop_lon": -81.564992
     },
-    "_id": "6547ea73aa4dcfd33f226c6b",
-    "predict_speed": 12.430303573608398
+    "_id": "654803b7aa4dcfd33f237543",
+    "predict_speed": 14.92867374420166
   },
   {
-    "segmentId": "29353",
+    "segmentId": "62289",
     "stop_src": {
-      "stop_lat": 41.415257,
-      "stop_lon": -81.604753
+      "stop_lat": 41.471382,
+      "stop_lon": -81.564992
     },
     "stop_dest": {
-      "stop_lat": 41.415561,
-      "stop_lon": -81.604978
+      "stop_lat": 41.469957,
+      "stop_lon": -81.564986
     },
-    "_id": "6547ea73aa4dcfd33f226c69",
-    "predict_speed": 12.513379096984863
+    "_id": "654803b7aa4dcfd33f237545",
+    "predict_speed": 13.239372253417969
   },
   {
-    "segmentId": "29352",
+    "segmentId": "62290",
     "stop_src": {
-      "stop_lat": 41.415056,
-      "stop_lon": -81.60461
+      "stop_lat": 41.469957,
+      "stop_lon": -81.564986
     },
     "stop_dest": {
-      "stop_lat": 41.415257,
-      "stop_lon": -81.604753
+      "stop_lat": 41.46945,
+      "stop_lon": -81.564994
     },
-    "_id": "6547ea73aa4dcfd33f226c67",
-    "predict_speed": 9.126774787902832
+    "_id": "654803b7aa4dcfd33f237547",
+    "predict_speed": 9.942163467407227
   },
   {
-    "segmentId": "29351",
+    "segmentId": "62291",
     "stop_src": {
-      "stop_lat": 41.415056,
-      "stop_lon": -81.60461
+      "stop_lat": 41.46945,
+      "stop_lon": -81.564994
     },
     "stop_dest": {
-      "stop_lat": 41.415056,
-      "stop_lon": -81.60461
+      "stop_lat": 41.469058,
+      "stop_lon": -81.564999
     },
-    "_id": "6547ea73aa4dcfd33f226c65",
-    "predict_speed": 14.421652793884277
+    "_id": "654803b7aa4dcfd33f237549",
+    "predict_speed": 14.05524730682373
   },
   {
-    "segmentId": "29350",
+    "segmentId": "62292",
     "stop_src": {
-      "stop_lat": 41.414767,
-      "stop_lon": -81.604405
+      "stop_lat": 41.469058,
+      "stop_lon": -81.564999
     },
     "stop_dest": {
-      "stop_lat": 41.415056,
-      "stop_lon": -81.60461
+      "stop_lat": 41.468794,
+      "stop_lon": -81.56502
     },
-    "_id": "6547ea73aa4dcfd33f226c63",
-    "predict_speed": 11.5996732711792
+    "_id": "654803b7aa4dcfd33f23754b",
+    "predict_speed": 14.166800498962402
   },
   {
-    "segmentId": "29349",
+    "segmentId": "62293",
     "stop_src": {
-      "stop_lat": 41.414471,
-      "stop_lon": -81.604192
+      "stop_lat": 41.468794,
+      "stop_lon": -81.56502
     },
     "stop_dest": {
-      "stop_lat": 41.414767,
-      "stop_lon": -81.604405
+      "stop_lat": 41.468017,
+      "stop_lon": -81.565029
     },
-    "_id": "6547ea73aa4dcfd33f226c61",
-    "predict_speed": 18.510364532470703
+    "_id": "654803b7aa4dcfd33f23754d",
+    "predict_speed": 18.156721115112305
   },
   {
-    "segmentId": "29348",
+    "segmentId": "62294",
     "stop_src": {
-      "stop_lat": 41.41387,
-      "stop_lon": -81.603763
+      "stop_lat": 41.468017,
+      "stop_lon": -81.565029
     },
     "stop_dest": {
-      "stop_lat": 41.414471,
-      "stop_lon": -81.604192
+      "stop_lat": 41.467319,
+      "stop_lon": -81.565032
     },
-    "_id": "6547ea73aa4dcfd33f226c5f",
-    "predict_speed": 12.227958679199219
+    "_id": "654803b7aa4dcfd33f23754f",
+    "predict_speed": 12.245062828063965
   },
   {
-    "segmentId": "29347",
+    "segmentId": "62295",
     "stop_src": {
-      "stop_lat": 41.413495,
-      "stop_lon": -81.603497
+      "stop_lat": 41.467319,
+      "stop_lon": -81.565032
     },
     "stop_dest": {
-      "stop_lat": 41.41387,
-      "stop_lon": -81.603763
+      "stop_lat": 41.466996,
+      "stop_lon": -81.565026
     },
-    "_id": "6547ea73aa4dcfd33f226c5d",
-    "predict_speed": 12.159289360046387
+    "_id": "654803b7aa4dcfd33f237551",
+    "predict_speed": 12.428705215454102
   },
   {
-    "segmentId": "29346",
+    "segmentId": "62296",
     "stop_src": {
-      "stop_lat": 41.413309,
-      "stop_lon": -81.60336
+      "stop_lat": 41.466996,
+      "stop_lon": -81.565026
     },
     "stop_dest": {
-      "stop_lat": 41.413495,
-      "stop_lon": -81.603497
+      "stop_lat": 41.466842,
+      "stop_lon": -81.565024
     },
-    "_id": "6547ea73aa4dcfd33f226c5b",
-    "predict_speed": 8.05561637878418
+    "_id": "654803b7aa4dcfd33f237553",
+    "predict_speed": 13.980493545532227
   },
   {
-    "segmentId": "29345",
+    "segmentId": "62297",
     "stop_src": {
-      "stop_lat": 41.413015,
-      "stop_lon": -81.603144
+      "stop_lat": 41.466842,
+      "stop_lon": -81.565024
     },
     "stop_dest": {
-      "stop_lat": 41.413309,
-      "stop_lon": -81.60336
+      "stop_lat": 41.46673,
+      "stop_lon": -81.565018
     },
-    "_id": "6547ea73aa4dcfd33f226c59",
-    "predict_speed": 11.241803169250488
+    "_id": "654803b7aa4dcfd33f237555",
+    "predict_speed": 15.643919944763184
   },
   {
-    "segmentId": "29344",
+    "segmentId": "62298",
     "stop_src": {
-      "stop_lat": 41.412867,
-      "stop_lon": -81.603037
+      "stop_lat": 41.46673,
+      "stop_lon": -81.565018
     },
     "stop_dest": {
-      "stop_lat": 41.413015,
-      "stop_lon": -81.603144
+      "stop_lat": 41.466581,
+      "stop_lon": -81.565018
     },
-    "_id": "6547ea73aa4dcfd33f226c57",
-    "predict_speed": 9.754400253295898
+    "_id": "654803b7aa4dcfd33f237557",
+    "predict_speed": 12.197100639343262
   },
   {
-    "segmentId": "29343",
+    "segmentId": "62299",
     "stop_src": {
-      "stop_lat": 41.412691,
-      "stop_lon": -81.602904
+      "stop_lat": 41.466581,
+      "stop_lon": -81.565018
     },
     "stop_dest": {
-      "stop_lat": 41.412867,
-      "stop_lon": -81.603037
+      "stop_lat": 41.466555,
+      "stop_lon": -81.565017
     },
-    "_id": "6547ea73aa4dcfd33f226c55",
-    "predict_speed": 11.064353942871094
+    "_id": "654803b7aa4dcfd33f237559",
+    "predict_speed": 13.181376457214355
   },
   {
-    "segmentId": "29342",
+    "segmentId": "62300",
     "stop_src": {
-      "stop_lat": 41.412691,
-      "stop_lon": -81.602904
+      "stop_lat": 41.466555,
+      "stop_lon": -81.565017
     },
     "stop_dest": {
-      "stop_lat": 41.412691,
-      "stop_lon": -81.602904
+      "stop_lat": 41.466555,
+      "stop_lon": -81.565017
     },
-    "_id": "6547ea73aa4dcfd33f226c53",
-    "predict_speed": 14.245847702026367
+    "_id": "654803b7aa4dcfd33f23755b",
+    "predict_speed": 20.272769927978516
   },
   {
-    "segmentId": "29341",
+    "segmentId": "62301",
     "stop_src": {
-      "stop_lat": 41.412691,
-      "stop_lon": -81.602904
+      "stop_lat": 41.466555,
+      "stop_lon": -81.565017
     },
     "stop_dest": {
-      "stop_lat": 41.412691,
-      "stop_lon": -81.602904
+      "stop_lat": 41.466435,
+      "stop_lon": -81.565012
     },
-    "_id": "6547ea73aa4dcfd33f226c51",
-    "predict_speed": 15.270013809204102
+    "_id": "654803b7aa4dcfd33f23755d",
+    "predict_speed": 16.154470443725586
   },
   {
-    "segmentId": "29340",
+    "segmentId": "62302",
     "stop_src": {
-      "stop_lat": 41.412365,
-      "stop_lon": -81.602667
+      "stop_lat": 41.466435,
+      "stop_lon": -81.565012
     },
     "stop_dest": {
-      "stop_lat": 41.412691,
-      "stop_lon": -81.602904
+      "stop_lat": 41.4661,
+      "stop_lon": -81.565011
     },
-    "_id": "6547ea73aa4dcfd33f226c4f",
-    "predict_speed": 9.044093132019043
+    "_id": "654803b7aa4dcfd33f23755f",
+    "predict_speed": 10.581565856933594
   },
   {
-    "segmentId": "29339",
+    "segmentId": "62303",
     "stop_src": {
-      "stop_lat": 41.412255,
-      "stop_lon": -81.602586
+      "stop_lat": 41.4661,
+      "stop_lon": -81.565011
     },
     "stop_dest": {
-      "stop_lat": 41.412365,
-      "stop_lon": -81.602667
+      "stop_lat": 41.465483,
+      "stop_lon": -81.565008
     },
-    "_id": "6547ea73aa4dcfd33f226c4d",
-    "predict_speed": 9.3924560546875
+    "_id": "654803b7aa4dcfd33f237561",
+    "predict_speed": 10.74828815460205
   },
   {
-    "segmentId": "29338",
+    "segmentId": "62304",
     "stop_src": {
-      "stop_lat": 41.412091,
-      "stop_lon": -81.602468
+      "stop_lat": 41.465483,
+      "stop_lon": -81.565008
     },
     "stop_dest": {
-      "stop_lat": 41.412255,
-      "stop_lon": -81.602586
+      "stop_lat": 41.465356,
+      "stop_lon": -81.565008
     },
-    "_id": "6547ea73aa4dcfd33f226c4b",
-    "predict_speed": 10.55422592163086
+    "_id": "654803b7aa4dcfd33f237563",
+    "predict_speed": 17.361000061035156
   },
   {
-    "segmentId": "29337",
+    "segmentId": "62305",
     "stop_src": {
-      "stop_lat": 41.411679,
-      "stop_lon": -81.602181
+      "stop_lat": 41.465356,
+      "stop_lon": -81.565008
     },
     "stop_dest": {
-      "stop_lat": 41.412091,
-      "stop_lon": -81.602468
+      "stop_lat": 41.465067,
+      "stop_lon": -81.565004
     },
-    "_id": "6547ea73aa4dcfd33f226c49",
-    "predict_speed": 12.869637489318848
+    "_id": "654803b7aa4dcfd33f237565",
+    "predict_speed": 15.060384750366211
   },
   {
-    "segmentId": "29336",
+    "segmentId": "62306",
     "stop_src": {
-      "stop_lat": 41.411582,
-      "stop_lon": -81.60211
+      "stop_lat": 41.465067,
+      "stop_lon": -81.565004
     },
     "stop_dest": {
-      "stop_lat": 41.411679,
-      "stop_lon": -81.602181
+      "stop_lat": 41.46482,
+      "stop_lon": -81.564986
     },
-    "_id": "6547ea73aa4dcfd33f226c47",
-    "predict_speed": 13.589826583862305
+    "_id": "654803b7aa4dcfd33f237567",
+    "predict_speed": 15.611226081848145
   },
   {
-    "segmentId": "29335",
+    "segmentId": "62307",
     "stop_src": {
-      "stop_lat": 41.411582,
-      "stop_lon": -81.60211
+      "stop_lat": 41.46482,
+      "stop_lon": -81.564986
     },
     "stop_dest": {
-      "stop_lat": 41.411582,
-      "stop_lon": -81.60211
+      "stop_lat": 41.464488,
+      "stop_lon": -81.564963
     },
-    "_id": "6547ea73aa4dcfd33f226c45",
-    "predict_speed": 10.537320137023926
+    "_id": "654803b7aa4dcfd33f237569",
+    "predict_speed": 11.839778900146484
   },
   {
-    "segmentId": "29334",
+    "segmentId": "62308",
     "stop_src": {
-      "stop_lat": 41.411524,
-      "stop_lon": -81.602068
+      "stop_lat": 41.464488,
+      "stop_lon": -81.564963
     },
     "stop_dest": {
-      "stop_lat": 41.411582,
-      "stop_lon": -81.60211
+      "stop_lat": 41.463917,
+      "stop_lon": -81.564955
     },
-    "_id": "6547ea73aa4dcfd33f226c43",
-    "predict_speed": 13.111503601074219
+    "_id": "654803b7aa4dcfd33f23756b",
+    "predict_speed": 19.444625854492188
   },
   {
-    "segmentId": "29333",
+    "segmentId": "62309",
     "stop_src": {
-      "stop_lat": 41.411178,
-      "stop_lon": -81.601794
+      "stop_lat": 41.463917,
+      "stop_lon": -81.564955
     },
     "stop_dest": {
-      "stop_lat": 41.411524,
-      "stop_lon": -81.602068
+      "stop_lat": 41.463895,
+      "stop_lon": -81.564955
     },
-    "_id": "6547ea73aa4dcfd33f226c41",
-    "predict_speed": 10.5139799118042
+    "_id": "654803b7aa4dcfd33f23756d",
+    "predict_speed": 12.256632804870605
   },
   {
-    "segmentId": "29332",
+    "segmentId": "62310",
     "stop_src": {
-      "stop_lat": 41.410972,
-      "stop_lon": -81.601642
+      "stop_lat": 41.463895,
+      "stop_lon": -81.564955
     },
     "stop_dest": {
-      "stop_lat": 41.411178,
-      "stop_lon": -81.601794
+      "stop_lat": 41.463895,
+      "stop_lon": -81.564955
     },
-    "_id": "6547ea73aa4dcfd33f226c3f",
-    "predict_speed": 13.207358360290527
+    "_id": "654803b7aa4dcfd33f23756f",
+    "predict_speed": 15.388750076293945
   },
   {
-    "segmentId": "29331",
+    "segmentId": "62311",
     "stop_src": {
-      "stop_lat": 41.410284,
-      "stop_lon": -81.60112
+      "stop_lat": 41.463895,
+      "stop_lon": -81.564955
     },
     "stop_dest": {
-      "stop_lat": 41.410972,
-      "stop_lon": -81.601642
+      "stop_lat": 41.463421,
+      "stop_lon": -81.564949
     },
-    "_id": "6547ea73aa4dcfd33f226c3d",
-    "predict_speed": 9.120965003967285
+    "_id": "654803b7aa4dcfd33f237571",
+    "predict_speed": 10.41398811340332
   },
   {
-    "segmentId": "29330",
+    "segmentId": "62312",
     "stop_src": {
-      "stop_lat": 41.410015,
-      "stop_lon": -81.600915
+      "stop_lat": 41.463421,
+      "stop_lon": -81.564949
     },
     "stop_dest": {
-      "stop_lat": 41.410284,
-      "stop_lon": -81.60112
+      "stop_lat": 41.463202,
+      "stop_lon": -81.56495
     },
-    "_id": "6547ea73aa4dcfd33f226c3b",
-    "predict_speed": 9.694818496704102
+    "_id": "654803b7aa4dcfd33f237573",
+    "predict_speed": 15.019001007080078
   },
   {
-    "segmentId": "29329",
+    "segmentId": "62313",
     "stop_src": {
-      "stop_lat": 41.409589,
-      "stop_lon": -81.600589
+      "stop_lat": 41.463202,
+      "stop_lon": -81.56495
     },
     "stop_dest": {
-      "stop_lat": 41.410015,
-      "stop_lon": -81.600915
+      "stop_lat": 41.462979,
+      "stop_lon": -81.564942
     },
-    "_id": "6547ea73aa4dcfd33f226c39",
-    "predict_speed": 14.54279613494873
+    "_id": "654803b7aa4dcfd33f237575",
+    "predict_speed": 16.35822105407715
   },
   {
-    "segmentId": "29328",
+    "segmentId": "62314",
     "stop_src": {
-      "stop_lat": 41.409324,
-      "stop_lon": -81.600386
+      "stop_lat": 41.462979,
+      "stop_lon": -81.564942
     },
     "stop_dest": {
-      "stop_lat": 41.409589,
-      "stop_lon": -81.600589
+      "stop_lat": 41.462729,
+      "stop_lon": -81.56493
     },
-    "_id": "6547ea73aa4dcfd33f226c37",
-    "predict_speed": 6.039489269256592
+    "_id": "654803b7aa4dcfd33f237577",
+    "predict_speed": 8.82285213470459
   },
   {
-    "segmentId": "29327",
+    "segmentId": "62315",
     "stop_src": {
-      "stop_lat": 41.408893,
-      "stop_lon": -81.600081
+      "stop_lat": 41.462729,
+      "stop_lon": -81.56493
     },
     "stop_dest": {
-      "stop_lat": 41.409324,
-      "stop_lon": -81.600386
+      "stop_lat": 41.462568,
+      "stop_lon": -81.564932
     },
-    "_id": "6547ea73aa4dcfd33f226c35",
-    "predict_speed": 10.189513206481934
+    "_id": "654803b7aa4dcfd33f237579",
+    "predict_speed": 12.643182754516602
   },
   {
-    "segmentId": "29326",
+    "segmentId": "62316",
     "stop_src": {
-      "stop_lat": 41.408813,
-      "stop_lon": -81.600024
+      "stop_lat": 41.462568,
+      "stop_lon": -81.564932
     },
     "stop_dest": {
-      "stop_lat": 41.408893,
-      "stop_lon": -81.600081
+      "stop_lat": 41.462511,
+      "stop_lon": -81.564931
     },
-    "_id": "6547ea73aa4dcfd33f226c33",
-    "predict_speed": 8.59237289428711
+    "_id": "654803b7aa4dcfd33f23757b",
+    "predict_speed": 15.021258354187012
   },
   {
-    "segmentId": "29325",
+    "segmentId": "62317",
     "stop_src": {
-      "stop_lat": 41.408813,
-      "stop_lon": -81.600024
+      "stop_lat": 41.462511,
+      "stop_lon": -81.564931
     },
     "stop_dest": {
-      "stop_lat": 41.408813,
-      "stop_lon": -81.600024
+      "stop_lat": 41.461054,
+      "stop_lon": -81.564921
     },
-    "_id": "6547ea73aa4dcfd33f226c31",
-    "predict_speed": 8.669979095458984
+    "_id": "654803b7aa4dcfd33f23757d",
+    "predict_speed": 14.122808456420898
   },
   {
-    "segmentId": "29324",
+    "segmentId": "62318",
     "stop_src": {
-      "stop_lat": 41.408452,
-      "stop_lon": -81.59977
+      "stop_lat": 41.461054,
+      "stop_lon": -81.564921
     },
     "stop_dest": {
-      "stop_lat": 41.408813,
-      "stop_lon": -81.600024
+      "stop_lat": 41.460884,
+      "stop_lon": -81.56492
     },
-    "_id": "6547ea73aa4dcfd33f226c2f",
-    "predict_speed": 10.046340942382812
+    "_id": "654803b7aa4dcfd33f23757f",
+    "predict_speed": 15.578386306762695
   },
   {
-    "segmentId": "29323",
+    "segmentId": "62319",
     "stop_src": {
-      "stop_lat": 41.408181,
-      "stop_lon": -81.599586
+      "stop_lat": 41.460884,
+      "stop_lon": -81.56492
     },
     "stop_dest": {
-      "stop_lat": 41.408452,
-      "stop_lon": -81.59977
+      "stop_lat": 41.460884,
+      "stop_lon": -81.56492
     },
-    "_id": "6547ea73aa4dcfd33f226c2d",
-    "predict_speed": 11.00651741027832
+    "_id": "654803b7aa4dcfd33f237581",
+    "predict_speed": 16.73408317565918
   },
   {
-    "segmentId": "29322",
+    "segmentId": "62320",
     "stop_src": {
-      "stop_lat": 41.407626,
-      "stop_lon": -81.599193
+      "stop_lat": 41.460884,
+      "stop_lon": -81.56492
     },
     "stop_dest": {
-      "stop_lat": 41.408181,
-      "stop_lon": -81.599586
+      "stop_lat": 41.459209,
+      "stop_lon": -81.564904
     },
-    "_id": "6547ea73aa4dcfd33f226c2b",
-    "predict_speed": 8.215108871459961
+    "_id": "654803b7aa4dcfd33f237583",
+    "predict_speed": 12.477879524230957
   }
 ]
