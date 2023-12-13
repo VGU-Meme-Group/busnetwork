@@ -27,7 +27,7 @@ vehicle_ids_list = list(unique_vehicle_ids)
 
 # Specify the route_id and trip_id
 # vehicle_id = vehicle_ids_list[10]
-vehicle_id = "3944"
+vehicle_id = "4181"
 
 # Use list comprehension to filter data based on vehicle_id
 matching_positions = [
@@ -70,21 +70,6 @@ model.fit(X_train, y_train)
 # Make predictions on the test data
 predictions = model.predict(X_test)
 
-# Calculate root mean squared error (RMSE) to evaluate the model performance
-rmse = math.sqrt(mean_squared_error(y_test, predictions))
-print(f"Root Mean Squared Error: {rmse}")
-
-# Calculate Mean Absolute Error (MAE)
-mae = mean_absolute_error(y_test, predictions)
-print(f"Mean Absolute Error: {mae}")
-
-# Calculate Mean Absolute Percentage Error (MAPE)
-mape = (mae / df['speed'].mean()) * 100
-print(f"Accuracy: {mape:.2f}%") # Mean Absolute Percentage Error (MAPE) in percentage
-
-# Calculate R-squared (R²)
-r2 = r2_score(y_test, predictions)
-print(f"R-squared: {r2}")
 
 # Example: Predict speed for a specific future timestamp
 future_timestamp = datetime.now() + timedelta(minutes = 15)  # Predict after 15 mins
@@ -97,8 +82,23 @@ future_features = pd.DataFrame([[41.310557, -81.835203, future_hour, future_minu
 
 # Predict speed for the specified future timestamp
 predicted_speed = model.predict(future_features)
-print(f"Predicted speed for {future_timestamp}: {predicted_speed[0]}")
+print(f"Predicted speed for vehicle ID#{vehicle_id} at {future_timestamp} is: {predicted_speed[0]} m/s")
 
+# Calculate root mean squared error (RMSE) to evaluate the model performance
+rmse = math.sqrt(mean_squared_error(y_test, predictions))
+print(f"Root Mean Squared Error: {rmse}")
+
+# Calculate Mean Absolute Error (MAE)
+mae = mean_absolute_error(y_test, predictions)
+print(f"Mean Absolute Error: {mae}")
+
+# Calculate R-squared (R²)
+r2 = r2_score(y_test, predictions)
+print(f"R-squared: {r2}")
+
+# Calculate Mean Absolute Percentage Error (MAPE)
+mape = (mae / df['speed'].mean()) * 100
+print(f"Accuracy: {mape:.2f}%") # Mean Absolute Percentage Error (MAPE) in percentage
 
 # Convert timestamp to a format that can be plotted
 df['timestamp'] = df['timestamp'].apply(lambda x: x.timestamp())
