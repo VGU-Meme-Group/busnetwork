@@ -1,0 +1,7 @@
+com\project\Repository\VehicleInfoRepository.class
+com\project\KafkaConsumer.class
+com\project\Entity\Position.class
+com\project\Entity\VehicleInfoEntity.class
+com\project\Entity\Trip.class
+com\project\SpringBootConsumerApplication.class
+com\project\Entity\Vehicle.class
