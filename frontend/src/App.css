@@ -1,0 +1,71 @@
+#root {
+  width: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #232323;
+}
+
+.page-wrapper .top-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.page-wrapper .top-container h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.page-wrapper .map-container {
+  outline: 2.5px solid #FF6F00;
+  width: calc(100% - 120px);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 12px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.page-wrapper .map-container .map-wrapper {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.page-wrapper .map-container .map-wrapper .leaflet-container {
+  width: 100%;
+}
+
+.page-wrapper .map-container .map-wrapper .leaflet-container .leaflet-popup {
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.page-wrapper .map-container .map-wrapper .leaflet-container .leaflet-popup .leaflet-popup-content-wrapper {
+  display: block;
+}
+
+.page-wrapper .segments-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+/*# sourceMappingURL=App.css.map */

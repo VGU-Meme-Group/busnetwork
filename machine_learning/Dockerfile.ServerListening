@@ -1,0 +1,19 @@
+FROM python:3.11 as BUILD_IMAGE
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+FROM python:3.11 as PRODUCTION_IMAGE
+
+WORKDIR /app
+
+COPY --from=BUILD_IMAGE /app .
+
+EXPOSE 7612
+
+CMD ["python", "ServerListening.py"]
