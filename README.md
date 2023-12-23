@@ -16,14 +16,20 @@ This web application helps the Bus Operator:
 ---
 ## Web Application
 ### Requirements
-- Nodejs v21.4.0 or newer version. Download [here](https://nodejs.org/en). (After downloading, please install)
-- Python 3.12.1 or newer version. Download [here](https://www.python.org/downloads/). (After downloading, please install)
-- Kafka  2.13-3.6.0 or newer verion. Download [here](https://kafka.apache.org/downloads). (After downloading, please leave it and wait for the installation step in the Project Setup section)
+- Nodejs v21.4.0 or newer version. 
+    - Download [here](https://nodejs.org/en). (After downloading, please install)
+- Python 3.12.1 or newer version. 
+    - Download [here](https://www.python.org/downloads/). (After downloading, please install)
+- Kafka 2.13-3.6.0 or newer verion:
+    - There exists Kafka folder in this project
+    - Download [here](https://kafka.apache.org/downloads). (After downloading, please leave it and wait for the installation step in the Project Setup section)
 
 
 ### Project Setup
 This instructions assume that the environment operating system is Windows (Recommend using [Powershell 7](https://github.com/PowerShell/PowerShell) as the main terminal)
 #### 1. Set up Streaming Data Server
+- Locate
+
 - Locate the folder [streaming_data](streaming_data/):
     ```bash
     cd streaming_data
