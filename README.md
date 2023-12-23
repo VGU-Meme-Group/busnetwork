@@ -46,8 +46,11 @@ This instructions assume that the environment operating system is Windows (Recom
     https://github.com/VGU-Meme-Group/busnetwork.git
     ```
 
+#### 2. Open the project
 
-#### 2. Set up Streaming Data Server
+Open the project by using VSCode IDE (Recommended for convenience)
+
+#### 3. Set up Streaming Data Server
 
 - __(Run the Kafka Server)__ Locate the kafka binary file you just downloaded into your machine. Assume the file name is ___kafka_2.13-3.6.0.tgz___
     - Then copy the file ___kafka_2.13-3.6.0.tgz___ to a folder on your machine. Here I copy it to my ___C:/___ drive to avoid the folder name length limit of Kafka. (Now I have ___C:/kafka_2.13-3.6.0.tgz___) 
