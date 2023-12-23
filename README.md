@@ -44,6 +44,20 @@ This instructions assume that the environment operating system is Windows (Recom
         ```bash
         cd kafka_2.13-3.6.0
         ```
+    
+    - After that, open 2 terminals and run these following commands:
+        - 1st Terminal (execute the ZooKeeper Server):
+
+            ```bash
+            .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties 
+            ```
+        
+        - 2nd Terminal (executes the Kafka Server):
+
+            ```bash
+            .\bin\windows\kafka-server-start.bat .\config\server.properties
+            ```
+
 
 - Locate the folder [streaming_data](streaming_data/):
 
