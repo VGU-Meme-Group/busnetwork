@@ -19,10 +19,10 @@ This web application helps the Bus Operator:
 ## Web Application
 ### Requirements
 - Nodejs v21.4.0 or newer version. 
-    - Download [here](https://nodejs.org/en). (After downloading, please install)
+    - Download [here](https://nodejs.org/en). (After downloading, please install immediately)
 - Python 3.12.1 or newer version. 
-    - Download [here](https://www.python.org/downloads/). (After downloading, please install)
-- Kafka 2.13-3.6.0 or newer verion:
+    - Download [here](https://www.python.org/downloads/). (After downloading, please install immediately)
+- Kafka 2.13-3.6.0 or newer version:
     - Download [here](https://kafka.apache.org/downloads). (After downloading, please leave it and wait for the installation step in the Project Setup section)
 
 
