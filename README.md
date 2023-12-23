@@ -48,7 +48,10 @@ This instructions assume that the environment operating system is Windows (Recom
 
 #### 2. Open the project
 
-Open the project by using VSCode IDE (Recommended for convenience)
+- Open the project by using VSCode IDE (Recommended for convenience) <br>
+<img src="readme/img/projectFolderTree.png" width="50%"/>
+
+
 
 #### 3. Set up Streaming Data Server
 
