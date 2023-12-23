@@ -1,4 +1,8 @@
 # Project Bus network
+
+## Team members
+
+
 ## Requirements
 - Nodejs v21.4.0 or newer version
 - Python 3.12.1 or newer version
@@ -14,3 +18,12 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 pip install -r requirements.txt
+
+## Project Setup
+This instructions assume that the environment operating system is Windows (Recommend using Powershell terminal 7)
+### 1. Set up Streaming Data Server
+- Locate the folder [streaming_data](streaming_data/):
+    ```bash
+    cd streaming_data
+    ```
+- From here 

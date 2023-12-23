@@ -87,7 +87,7 @@ export const DirectionCheck = async (busPosition, segmentsList, segment, bus) =>
     const min1 = Math.abs(angle1 - bearing)
     const min2 = Math.abs(angle2 - bearing)
     const segmentId = parseInt(segment.segmentId)
-    const max = 40
+    const max = 30
     let array = []
     let result = []
     array.push(bus)
