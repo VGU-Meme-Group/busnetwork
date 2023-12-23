@@ -93,3 +93,5 @@ This instructions assume that the environment operating system is Windows (Recom
         - 1st: [streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java](streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java)
         - 2nd: [streaming_data\kafka-consumer\src\main\java\com\project\SpringBootConsumerApplication.java](streaming_data\kafka-consumer\src\main\java\com\project\SpringBootConsumerApplication.java)
         - 3rd: [streaming_data\kafka-producer\src\main\java\com\project\SpringBootProducerApplication.java](streaming_data\kafka-producer\src\main\java\com\project\SpringBootProducerApplication.java)
+
+#### 4. Set up Back-end Server
