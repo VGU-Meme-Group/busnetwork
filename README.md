@@ -27,6 +27,8 @@ This web application helps the Bus Operator:
 - Visual Studio Code IDE with Code Runner extension
     - Download VSCode IDE first [here](https://code.visualstudio.com/)
     - Download Code Runner extension for VSCode from [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+- Any Internet Browser:
+    - Google Chrome (Recommend), Firefox, Microsoft Edge, Opera, Brave, Safari, etc.
 
 
 ### Project Setup
@@ -157,3 +159,5 @@ This instructions assume that the environment operating system is Windows (Recom
     ```bash
     npm run dev
     ```
+
+7. Access the 
