@@ -89,5 +89,7 @@ This instructions assume that the environment operating system is Windows (Recom
     cd streaming_data
     ```
 
-    - From here, we locate the next 3 files in the following paths and then execute them respectively using the "Run ▶️" button of the Code Runner extension in VSCode:
-        - [streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java](streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java)
+    - From here, we locate the next 3 files in the following paths and then execute them respectively by clicking the "Run ▶️" button of the Code Runner extension in VSCode:
+        - 1st: [streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java](streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java)
+        - 2nd: [streaming_data\kafka-consumer\src\main\java\com\project\SpringBootConsumerApplication.java](streaming_data\kafka-consumer\src\main\java\com\project\SpringBootConsumerApplication.java)
+        - 3rd: [streaming_data\kafka-producer\src\main\java\com\project\SpringBootProducerApplication.java](streaming_data\kafka-producer\src\main\java\com\project\SpringBootProducerApplication.java)
