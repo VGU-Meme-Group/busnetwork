@@ -49,7 +49,7 @@ This instructions assume that the environment operating system is Windows (Recom
 #### 2. Open the project
 
 - Open the project by using VSCode IDE (Recommended for convenience) <br>
-<img src="readme/img/projectFolderTree.png" width="50%"/>
+<img src="readme/img/projectFolderTree.png" width="30%"/>
 
 
 
