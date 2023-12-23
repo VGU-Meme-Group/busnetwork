@@ -139,3 +139,21 @@ This instructions assume that the environment operating system is Windows (Recom
     python Server.py    
     ```
 
+#### 6. Set up Front-end
+- Locate the [frontend](frontend/) folder:
+
+    ```bash
+    cd frontend
+    ```
+
+- Then install the necessary node modules by using these commands (Make sure that Nodejs have been installed on your machine):
+
+    ```bash
+    npm install
+    ```
+
+- Finally, execute this command to enables the GUI of the Web application:
+
+    ```bash
+    npm run dev
+    ```
