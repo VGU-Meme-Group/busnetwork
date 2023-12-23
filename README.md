@@ -95,3 +95,36 @@ This instructions assume that the environment operating system is Windows (Recom
         - 3rd: [streaming_data\kafka-producer\src\main\java\com\project\SpringBootProducerApplication.java](streaming_data\kafka-producer\src\main\java\com\project\SpringBootProducerApplication.java)
 
 #### 4. Set up Back-end Server
+- Locate the [backend](backend/) folder:
+
+    ```bash
+    cd backend
+    ```
+
+- Then install the necessary node modules by using these commands (Make sure that Nodejs have been installed on your machine):
+
+    ```bash
+    npm install
+    ```
+
+- Then we run 2 API Services of the backend in 2 terminals:
+    - 1st terminal: 
+    
+        ```bash
+        node index.js
+        ```
+
+    - 2nd terminal:
+
+        ```bash
+        node main.js
+        ```
+
+#### 5. Set up Machine Learning Server
+- Locate the [Machine Learning](machine_learning/) folder:
+
+    ```bash
+    cd machine_learning
+    ```
+
+- 
