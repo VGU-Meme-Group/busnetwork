@@ -127,4 +127,15 @@ This instructions assume that the environment operating system is Windows (Recom
     cd machine_learning
     ```
 
-- 
+- Make sure that you have installed Python on your machine, after that, using this command to install all necessary packages:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+- Then we run the Machine Learning (Prediction) Server by using this command:
+
+    ```bash
+    python Server.py    
+    ```
+
