@@ -160,4 +160,6 @@ This instructions assume that the environment operating system is Windows (Recom
     npm run dev
     ```
 
-7. Access the 
+7. Access the Web Application
+- Now, all you need to do is just open your internet browser (E.g: Google Chrome) and then type the address ```localhost:3000``` on your address bar, then press Enter.
+
