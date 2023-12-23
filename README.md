@@ -24,14 +24,32 @@ This web application helps the Bus Operator:
     - Download [here](https://www.python.org/downloads/). (After downloading, please install immediately)
 - Kafka 2.13-3.6.0 or newer version:
     - Download [here](https://kafka.apache.org/downloads). (After downloading, please leave it and wait for the installation step in the Project Setup section)
+- Visual Studio Code IDE with Code Runner extension
+    - Download VSCode IDE first [here](https://code.visualstudio.com/)
+    - Download Code Runner extension for VSCode from [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 
 
 ### Project Setup
 This instructions assume that the environment operating system is Windows (Recommend using [Powershell 7](https://github.com/PowerShell/PowerShell) as the main terminal)
 
-#### 1. Set up Streaming Data Server
+#### 1. Clone the project
 
-- Locate the kafka binary file you just downloaded into your machine. Assume the file name is ___kafka_2.13-3.6.0.tgz___
+- using SSH
+
+    ```bash
+    git clone git@github.com:VGU-Meme-Group/busnetwork.git
+    ```
+
+- or using HTTPS:
+
+    ```bash
+    https://github.com/VGU-Meme-Group/busnetwork.git
+    ```
+
+
+#### 2. Set up Streaming Data Server
+
+- __(Run the Kafka Server)__ Locate the kafka binary file you just downloaded into your machine. Assume the file name is ___kafka_2.13-3.6.0.tgz___
     - Then copy the file ___kafka_2.13-3.6.0.tgz___ to a folder on your machine. Here I copy it to my ___C:/___ drive to avoid the folder name length limit of Kafka. (Now I have ___C:/kafka_2.13-3.6.0.tgz___) 
     - On the ___C:/___ folder, open the terminal and then using this command to extract the Kafka folder:
 
@@ -45,7 +63,7 @@ This instructions assume that the environment operating system is Windows (Recom
         cd kafka_2.13-3.6.0
         ```
     
-    - After that, open 2 terminals and run these following commands:
+    - After that, open 2 terminals from the directory ___C:/kafka_2.13-3.6.0/___ and run these following commands:
         - 1st Terminal (execute the ZooKeeper Server):
 
             ```bash
@@ -59,10 +77,11 @@ This instructions assume that the environment operating system is Windows (Recom
             ```
 
 
-- Locate the folder [streaming_data](streaming_data/):
+- __(Run the Kafka Spring Boot Application)__  Locate the folder [streaming_data](streaming_data/):
 
     ```bash
     cd streaming_data
     ```
 
-- From here 
+    - From here, we locate the next 3 files in the following paths and then execute them respectively using the "Run ▶️" button of the Code Runner extension in VSCode:
+        - [streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java](streaming_data/API/src/main/java/com/project/SpringBootAPIApplication.java)
